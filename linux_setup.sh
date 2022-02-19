@@ -39,7 +39,8 @@ python3 -m pip install --upgrade pip
 #### Install project dependencies
 pip3 install chatterbot
 pip3 install chatterbot_corpus
-pip3 install -U spacy
+pip3 install spacy
+python3 -m spacy download en_core_web_sm
 
 #### Start project code
 #python3 ./linux_chatbot.py

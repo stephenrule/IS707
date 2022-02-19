@@ -8,6 +8,7 @@
 # Imports
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
+import spacy
 
 # Create and Train Chatbot
 # Note: Following: https://www.upgrad.com/blog/how-to-make-chatbot-in-python/
