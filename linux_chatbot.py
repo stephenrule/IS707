@@ -45,9 +45,16 @@ list_trainer = ListTrainer(my_bot)
 for item in (small_talk, math_talk_1, math_talk_2):
     list_trainer.train(item)
     
-print(my_bot.get_resposne("hi"))
-print(my_bot.get_response("i fell awesome today"))
-# Do a loop here to get input with q exiting
+# NOTES - Static Entry
+#print(my_bot.get_resposne("hi"))
+#print(my_bot.get_response("i fell awesome today"))
+
+# Loop to get user response
+text = 'Hi'
+while text != 'q':
+    print(my_bot.get_response(text))
+    text = input("Enter something to test chatbot. Type q to quit: ")
+
 
 # Train chat bot with a corpus of data
 #from chatterbot.trainers import ChatterBotCorpusTrainer
