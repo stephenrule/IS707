@@ -1,0 +1,6 @@
+django
+mysqlclient
+# Linux Note: 
+# yum install python3-devel mysql-devel gcc
+# pip install --upgrade setuptools
+# Then pip install mysqlclient

@@ -1,0 +1,79 @@
+# UPDATES and INSTALLS
+python -m pip install --upgrade pip
+pip install virtualenv
+
+
+# (ONE TIME) - CREATE VIRTUAL ENVIRONMENT
+1. Enter working directory
+2. python -m venv chatbot
+
+
+# ENTER VIRTUAL ENVIRONMENT
+1. Enter working directory
+2a. (LINUX) source chatbot/bin/activate
+2b. (WINDOWS) Enter CMD (type: cmd)
+2b. (WINDOWS) chatbot\Scripts\activate
+
+
+# INSTALL REQUIREMENTS 
+pip install -r requirements.txt
+
+# DATABASE (DJANGO)
+python manage.py migrate
+
+
+# START SERVER - DEVELOPMENT
+python mysite/manage.py runserver
+Go to http://172.0.0.1:8000
+Ctrl + c to shutdown
+
+
+# START SERVER - PRODUCTION
+yum install screen
+screen -S app (Creates a screen instance named app)
+screen -r app (Connects to screen instance app)
+python mysite/manage.py runserver 0.0.0.0:80 or 0:80
+Go to http://x.x.x.x or http://<hostname or FQDN
+Ctrl + c (Shutdown django server)
+Ctrl + a and then press d (Detach from screen instnace)
+screen -ls (List screen sessions)
+
+
+# (PRODUCTION SERVER - LINUX) - NEED TO UPDATE
+1. Open Firewall Ports
+1a. firewall-cmd --permanent --add-service={http,https}
+1b. firewall-cmd --reload
+2. Create a non-root user which also holds the website content in its home directory
+2a. (As root) sudo adduser chatbot_user
+2b. (As root) sudo passwd chatbot_user
+2c. su chatbot_user ~
+2d. NOTE: Probably doesn't need to login via ssh (See Hardening section)
+
+# (PRODUCTION SERVER - LINUX) - HARDENING
+1. vi /etc/ssh/sshd_config
+1a. PermitRootLogin no
+1b. DenyUsers chatbot_user
+1c. sudo systemctl restart ssh
+2. Turn off debug mode
+2a. Edit mysite/settings.py
+2b. DEBUG = False
+3. Secure secret key (Not sure yet)
+3a. Edit mysite/settings.py
+3b. Change secret key / have as a hidden variable in github actions
+
+
+# MySQL (MariaDB) Database - Linux
+1. sudo yum install mysql-server (Might need epel)
+2. sudo systemctl enable mysqld
+3. sudo systemctl start mysqld
+4. Create New User/Database
+4a. mysql -u root -p
+4b. CREATE DATABASE IF NOT EXISTS djangodatabase;
+4c. SHOW DATABASES;
+4d. CREATE USER IF NOT EXISTS 'chatbot_user'@'localhost' IDENTIFIED BY 'user_password';
+4d Note. @'localhost', @'x.x.x.x', @'%' (wildcard)
+4e. GRANT ALL ON djangodatabase.* TO 'chatbot_user'@'localhost';
+4f. FLUSH PRIVILEGES;
+4g. exit
+5. sudo mysql_secure_installation (May lock out root user)
+6. (Connection) mysql -u root -p (Or chatbot_user)
