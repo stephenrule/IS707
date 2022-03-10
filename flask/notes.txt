@@ -18,6 +18,10 @@ pip install virtualenv
 pip install -r requirements.txt
 
 # START SERVER - DEVELOPMENT
-flask run --host 0.0.0.0 (Public) OR flask run (Localhost)
-Go to http://127.0.0.1:5000
+flask run --host 0.0.0.0 --port=80 (Public) OR flask run (Localhost)
+Go to http://127.0.0.1:5000 or http://127.0.0.1 (Public)
 Ctrl + c to shutdown
+
+# NOTES
+Chat Site: http://127.0.0.1:5000/chat
+Home Page (Holder): http://127.0.0.1:5000
