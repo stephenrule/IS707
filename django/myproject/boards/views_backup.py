@@ -1,8 +1,24 @@
-from flask import Flask, render_template, request
-import re
-import long_responses as long
+from django.shortcuts import render
+from django.http import HttpResponse
+from .models import Board
 
-app = Flask(__name__)
+###################################################################################################
+# Chatbot
+import re
+#import long_responses as long
+
+import random
+
+R_EATING = "I don't like eating anything because I'm a bot obviously!"
+R_ADVICE = "If I were you, I would go to the internet and type exactly what you wrote there!"
+
+def unknown():
+    response = ['Could you please re-phrase that?', 
+                "...", 
+               "Sounds about right",
+               "What does that mean?"][random.randrange(4)]
+    return response
+
 
 def message_probability(user_message, recognised_words, single_response=False, required_words=[]):
     message_certainty = 0
@@ -47,21 +63,16 @@ def check_all_messages(message):
     response('Thank you!', ['i', 'love', 'code', 'palace'], required_words=['code', 'palace'])
     response(login, ['website', 'login'], single_response=True)  
     response(image, ['image', 'logo'], single_response=True)
-    response('Small Storage Unit Price: $50', ['small', 'storage', 'unit', 'price'], required_words=['small', 'price'])
-    response('Medium Storage Unit Price: $75', ['medium', 'storage', 'unit', 'price'], required_words=['medium', 'price'])
-    response('Large Storage Unit Price: $95', ['large', 'storage', 'unit', 'price'], required_words=['large', 'price'])
-
-
     # Longer responses
-    response(long.R_ADVICE, ['give', 'advice'], required_words=['advice'])
-    response(long.R_EATING, ['what', 'you', 'eat'], required_words=['you', 'eat'])
+    response(R_ADVICE, ['give', 'advice'], required_words=['advice'])
+    response(R_EATING, ['what', 'you', 'eat'], required_words=['you', 'eat'])
 
     best_match = max(highest_prob_list, key=highest_prob_list.get)
     # DEBUG - Shows us the probability
     print(highest_prob_list)
     
     #return best_match
-    return long.unknown() if highest_prob_list[best_match] < 1 else best_match
+    return unknown() if highest_prob_list[best_match] < 1 else best_match
 
 
 # Used to get the response
@@ -70,23 +81,37 @@ def get_response(user_input):
     response = check_all_messages(split_message)
     return response
 
+def get_bot_response(request):
+    userText = request.args.get('msg')
+    return str(get_response(userText))
+
 
 # Testing the response system
 #while True:
 #    print('Bot: ' + get_response(input('You: ')))
+########################################################################################################
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+# Create your views here.
 
-@app.route("/get")
-def get_bot_response():
-    userText = request.args.get('msg')
-    return str(get_response(userText))
+def home(request):
+    #return HttpResponse('Hello, World!')
+    boards = Board.objects.all()
+    return render(request, 'home.html', {'boards':boards})
+    #boards_names = list()
 
-@app.route("/chat")
-def home():
-    return render_template("chat.html")
+    #for board in boards:
+        #boards_names.append(board.name)
+    
+    #response_html = '<br>'.join(boards_names)
 
-if __name__ == "__main__":
-    app.run()
+    #return HttpResponse(response_html)
+
+def board_topics(request, pk):
+    board = Board.objects.get(pk=pk)
+    #board = Board.objects.get(pk=self.kwargs.get('pk'))
+    return render(request, 'topics.html', {'board': board})
+
+def chat(request):
+    chat = Board.objects.all()
+    return render(request, 'chat.html', {'chat':chat})
+

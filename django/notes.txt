@@ -19,8 +19,27 @@ pip install virtualenv
 pip install -r requirements.txt
 
 # DATABASE (DJANGO)
+-- **Looks at INSTALLED_APPS settings and creates any necessary database tables according to the settings in mysite/settings.py
 python manage.py migrate
 
+-- **Tells Django that we have made some changes to our models and we want them stored as a migration. Files are stored on disk. 
+python manage.py makemigrations polls
+
+-- Display what database commands migrate will runserver
+python manage.py sqlmigrate polls 0001 (Number presented from previous command)
+
+-- Check if there are any problems in our project
+python manage.py check
+
+-- **Migrate (Send the database commands)
+python manage.py migrate
+
+# DJANGO ADMIN USER
+python manage.py createsuperuser
+Username: admin
+Email: admin@lab.lan
+Password: *******
+Note: Run server and navigate to http://x.x.x.x:8000/admin/ and login 
 
 # START SERVER - DEVELOPMENT
 python mysite/manage.py runserver

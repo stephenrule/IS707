@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""myproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -14,11 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path
+from boards import views, ChatterBotAppView, ChatterBotApiView
 
 urlpatterns = [
-    # Path to polls URL
-    path('', include('hello_world.urls')),
-    path('polls/', include('polls.urls')),
+    path('', views.home, name='home'),
+    #path(r'^boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
+    path('boards/<int:pk>/', views.board_topics, name='board_topics'),
+    #path('chat/', views.chat, name='chat'),
+    #path('get/', views.get_bot_response, name='get_bot_response'),
+    path('chat/', ChatterBotAppView.as_view(), name='main'),
+    path('api/chatterbot/', ChatterBotApiView.asview(), name='chatterbot'),
     path('admin/', admin.site.urls),
 ]
