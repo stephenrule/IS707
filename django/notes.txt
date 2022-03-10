@@ -43,7 +43,7 @@ Note: Run server and navigate to http://x.x.x.x:8000/admin/ and login
 
 # START SERVER - DEVELOPMENT
 python mysite/manage.py runserver
-Go to http://172.0.0.1:8000
+Go to http://127.0.0.1:8000
 Ctrl + c to shutdown
 
 

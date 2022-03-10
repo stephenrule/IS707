@@ -1,0 +1,23 @@
+# UPDATES and INSTALLS
+python -m pip install --upgrade pip
+pip install virtualenv
+
+
+# (ONE TIME) - CREATE VIRTUAL ENVIRONMENT
+1. Enter working directory
+2. python -m venv chatbot
+
+
+# ENTER VIRTUAL ENVIRONMENT
+1. Enter working directory
+2a. (LINUX) source chatbot/bin/activate
+2b. (WINDOWS) Enter CMD (type: cmd)
+2b. (WINDOWS) chatbot\Scripts\activate
+
+# INSTALL REQUIREMENTS 
+pip install -r requirements.txt
+
+# START SERVER - DEVELOPMENT
+flask run --host 0.0.0.0 (Public) OR flask run (Localhost)
+Go to http://127.0.0.1:5000
+Ctrl + c to shutdown
