@@ -6,14 +6,27 @@
       {% else %}
       <title>Welcome to UMBC Storage/title>
       {% endif %}
+      <link rel="stylesheet" type="text/css" href="/static/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     </head>
     <body>
-        <div>UMBC Storage: 
+        <div>UMBC Self Storage: 
         <a href="/index">Home</a>
         <a href="/chat">Chat</a>
+        <a href="/cha">Chat Testing</a>
         <a href="/login">Login (IN DEVELOPMENT)</a>
         </div>
         <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
         {% block content %}{% endblock %}
     </body>
 </html>

@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, flash, redirect
 from app import app
 from app.forms import LoginForm
 
@@ -115,6 +115,7 @@ def get_response(user_input):
 # Testing the response system
 #while True:
 #    print('Bot: ' + get_response(input('You: ')))
+####################################################################
 
 @app.route('/get')
 def get_bot_response():
@@ -125,7 +126,15 @@ def get_bot_response():
 def home():
     return render_template("chat.html")
 
-@app.route('/login')
+@app.route('/cha')
+def homea():
+    return render_template("cha.html")
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
+    if form.validate_on_submit():
+        flash('Login requested for user {}, remember_me={}'.format(
+            form.username.data, form.remember_me.data))
+        return redirect('/index')
     return render_template('login.html', title='Sign In', form=form)
