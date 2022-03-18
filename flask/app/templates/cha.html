@@ -2,39 +2,7 @@
 
 {% block content %}
 
-    <h1>UMBC - Storage Facility</h1>
-    <h3>A helpful chatbot</h3>
-    <div>
-      <div id="chatbox">
-        <p class="botText"><span>Hi! I'm Jane. How can I help you today?</span></p>
-      </div>
-      <div id="userInput">
-        <input id="textInput" type="text" name="msg" placeholder="Message">
-        <input id="buttonInput" type="submit" value="Send">
-      </div>
-      <script>
-        function getBotResponse() {
-          var rawText = $("#textInput").val();
-          var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
-          $("#textInput").val("");
-          $("#chatbox").append(userHtml);
-          document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-          $.get("/get", { msg: rawText }).done(function(data) {
-            var botHtml = '<p class="botText"><span>' + data + '</span></p>';
-            $("#chatbox").append(botHtml);
-            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-          });
-        }
-        $("#textInput").keypress(function(e) {
-            if ((e.which == 13) && document.getElementById("textInput").value != "" ){
-                getBotResponse();
-            }
-        });
-        $("#buttonInput").click(function() {
-            if (document.getElementById("textInput").value != "") {
-                getBotResponse();
-            }
-        })
-      </script>
-    </div>
+    <h1>Testing</h1>
+
+
 {% endblock %}

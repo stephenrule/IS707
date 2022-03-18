@@ -78,7 +78,8 @@ def check_all_messages(message):
 
     #login = "Hackers Storage Unit Login Page - <a href=https://www.google.com>Login Page</a>"
     login = "UMBC Storage: <a href=/login>Login Page</a>"
-    image = "<img src=\"static/one.jpg\" alt=\"Test Image\">"
+    site_map = "<img src=\"static/site_map.png\" alt=\"Site Map Image\">"
+    contact = "<img src=\"static/contact.png\" alt=\"Contact Image\">"
 
     # Responses -------------------------------------------------------------------------------------------------------
     response('Hello!', ['hello', 'hi', 'hey', 'sup', 'heyo'], single_response=True)
@@ -87,7 +88,8 @@ def check_all_messages(message):
     response('You\'re welcome!', ['thank', 'thanks'], single_response=True)
     response('Thank you!', ['i', 'love', 'code', 'palace'], required_words=['code', 'palace'])
     response(login, ['website', 'login'], single_response=True)  
-    response(image, ['image', 'logo'], single_response=True)
+    response(site_map, ['sitemap', 'site', 'map'], single_response=True)
+    response(contact, ['contact', 'number', 'address', 'phone'], single_response=True)
     response('Small Storage Unit Price: $50', ['small', 'storage', 'unit', 'price'], required_words=['small', 'price'])
     response('Medium Storage Unit Price: $75', ['medium', 'storage', 'unit', 'price'], required_words=['medium', 'price'])
     response('Large Storage Unit Price: $95', ['large', 'storage', 'unit', 'price'], required_words=['large', 'price'])
