@@ -24,6 +24,7 @@ def index():
 
 ########################## CHAT ###########################
 #### long_responses.py
+import long_responses as lraadfdasfa
 import random
 
 R_EATING = "I don't like eating anything because I'm a bot obviously!"
@@ -82,6 +83,9 @@ def check_all_messages(message):
     contact = "<img src=\"static/contact.png\" alt=\"Contact Image\">"
 
     # Responses -------------------------------------------------------------------------------------------------------
+    # NOTE: Look into stemming and lemmatizing
+    # NOTE: NLTK corpus (For narrowing hello, hi, hey, etc): from nltk.corpus import wordnet
+    # NOTE: syns = wordnet.synsets
     response('Hello!', ['hello', 'hi', 'hey', 'sup', 'heyo'], single_response=True)
     response('See you!', ['bye', 'goodbye'], single_response=True)
     response('I\'m doing fine, and you?', ['how', 'are', 'you', 'doing'], required_words=['how'])
@@ -110,6 +114,9 @@ def check_all_messages(message):
 # Used to get the response
 def get_response(user_input):
     split_message = re.split(r'\s+|[,;?!.-]\s*', user_input.lower())
+    ####################
+    # Remove stop words - nltk
+    #####################
     response = check_all_messages(split_message)
     return response
 
