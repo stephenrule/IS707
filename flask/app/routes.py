@@ -1,3 +1,4 @@
+from turtle import hideturtle
 from flask import render_template, flash, redirect
 from app import app
 from app.forms import LoginForm
@@ -20,11 +21,13 @@ def index():
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
 
-
+##########################  DB  ###########################
+#### db.py
+import db
 
 ########################## CHAT ###########################
 #### long_responses.py
-import long_responses as lraadfdasfa
+import long_responses as long
 import random
 
 R_EATING = "I don't like eating anything because I'm a bot obviously!"
@@ -97,7 +100,12 @@ def check_all_messages(message):
     response('Small Storage Unit Price: $50', ['small', 'storage', 'unit', 'price'], required_words=['small', 'price'])
     response('Medium Storage Unit Price: $75', ['medium', 'storage', 'unit', 'price'], required_words=['medium', 'price'])
     response('Large Storage Unit Price: $95', ['large', 'storage', 'unit', 'price'], required_words=['large', 'price'])
-
+    response('Small Units Available: ' + str(db.getUnitAvailability('SMALL', 'catonsville')), ['small', 'unit', 'units', 'available'], single_response=True)
+    response(db.getUnitAvailability('MEDIUM', 'catonsville'), ['medium', 'unit', 'units', 'available'], single_response=True)
+    response('Small Units Available: ' + str(db.getUnitAvailability('SMALL', 'catonsville')) + 
+             ', Medium Units Available: ' + str(db.getUnitAvailability('MEDIUM', 'catonsville')) +
+             ', Large Units Available: ' + str(db.getUnitAvailability('Large', 'catonsville'))
+             , ['test', 'unit', 'units', 'available'], single_response=True)
 
     # Longer responses
     response(R_ADVICE, ['give', 'advice'], required_words=['advice'])
@@ -105,7 +113,10 @@ def check_all_messages(message):
 
     best_match = max(highest_prob_list, key=highest_prob_list.get)
     # DEBUG - Shows us the probability
-    print(highest_prob_list)
+    for key, value in highest_prob_list.items():
+        print(key, ' : ', value)
+
+    #print(highest_prob_list)
     
     #return best_match
     return unknown() if highest_prob_list[best_match] < 1 else best_match
