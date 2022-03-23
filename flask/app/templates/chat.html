@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  </head>
-  <body>
+{% extends "base.html" %}
+
+{% block content %}
+
     <h1>UMBC - Storage Facility</h1>
     <h3>A helpful chatbot</h3>
     <div>
@@ -40,5 +37,5 @@
         })
       </script>
     </div>
-  </body>
-</html>
+
+{% endblock %}
