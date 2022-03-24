@@ -1,5 +1,5 @@
 # Database: db.py
-import db
+import db as local_db
 
 # Responses: long_responses.py
 import long_responses as long
@@ -65,13 +65,13 @@ def check_all_messages(message):
     response('Small Storage Unit Price: $50', ['small', 'storage', 'unit', 'price'], required_words=['small', 'price'])
     response('Medium Storage Unit Price: $75', ['medium', 'storage', 'unit', 'price'], required_words=['medium', 'price'])
     response('Large Storage Unit Price: $95', ['large', 'storage', 'unit', 'price'], required_words=['large', 'price'])
-    response('Small Units Available: ' + str(db.getUnitAvailability('SMALL', 'catonsville')), ['small', 'unit', 'units', 'available'], single_response=True)
+    response('Small Units Available: ' + str(local_db.getUnitAvailability('SMALL', 'catonsville')), ['small', 'unit', 'units', 'available'], single_response=True)
     
     # Database responses
-    response(db.getUnitAvailability('MEDIUM', 'catonsville'), ['medium', 'unit', 'units', 'available'], single_response=True)
-    response('Small Units Available: ' + str(db.getUnitAvailability('SMALL', 'catonsville')) + 
-             ', Medium Units Available: ' + str(db.getUnitAvailability('MEDIUM', 'catonsville')) +
-             ', Large Units Available: ' + str(db.getUnitAvailability('Large', 'catonsville'))
+    response(local_db.getUnitAvailability('MEDIUM', 'catonsville'), ['medium', 'unit', 'units', 'available'], single_response=True)
+    response('Small Units Available: ' + str(local_db.getUnitAvailability('SMALL', 'catonsville')) + 
+             ', Medium Units Available: ' + str(local_db.getUnitAvailability('MEDIUM', 'catonsville')) +
+             ', Large Units Available: ' + str(local_db.getUnitAvailability('Large', 'catonsville'))
              , ['test', 'unit', 'units', 'available'], single_response=True)
 
     # Longer responses - long_responses.py

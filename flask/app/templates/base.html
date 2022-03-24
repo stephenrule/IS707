@@ -12,10 +12,14 @@
     </head>
     <body>
         <div>UMBC Self Storage: 
-        <a href="/index">Home</a>
-        <a href="/chat">Chat</a>
-        <a href="/test">Testing</a>
-        <a href="/login">Login (IN DEVELOPMENT)</a>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('home') }}">Chat</a>
+        <a href="{{ url_for('test1') }}">Testing</a>
+        {% if current_user.is_anonymous %}
+        <a href="{{ url_for('login') }}">Login</a>
+        {% else %}
+        <a href="{{ url_for('logout')}}">Logout</a>
+        {% endif %}
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}

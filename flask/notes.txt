@@ -26,3 +26,7 @@ Ctrl + c to shutdown
 Chat Site: http://127.0.0.1:5000/chat
 Home Page (Holder): http://127.0.0.1:5000
 
+# Database - Flask
+flask db init
+flask db migrate -m "Some Message"
+flask db upgrade
