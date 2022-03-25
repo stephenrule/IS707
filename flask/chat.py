@@ -84,7 +84,14 @@ def check_all_messages(message):
         print(key, ' : ', value)
     # DEBUG - Shows us the probability all together
     #print(highest_prob_list)
-    
+
+    # FUTURE: AI Approach
+    #if highest_prob_list[best_match] < 1: 
+        #DO AI Approach
+        #bot_response = "AI Approach Returned Message"
+        # Logic: If AI returns then assign 1. If AI returns nothing then return nothing 
+        #highest_prob_list[bot_response] = 1
+
     #return best_match
     return long.unknown() if highest_prob_list[best_match] < 1 else best_match
 
