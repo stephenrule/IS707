@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>USER: {{ user.username }}</h1>
+    <hr>
+
+    <h3>Place holder for testing</h3>
+    {% for post in posts %}
+        <p>
+    {{ post.author.username }} says: <b>{{ post.body }}</b>
+    </p>
+    {% endfor %}
+
+    <h3>Unit Availability</h3>
+    <p>Small Units Available: {{ d }}</p>
+    <p>Medium Units Available: HOLD</p> 
+    <p>Large Units Available: HOLD</p>
+
+    <h3>Your Units</h3>
+    <p>Small Units: HOLD</p>
+    <p>Medium Units: HOLD</p>
+    <p>Large Units: HOLD</p>
+
+    <h3>Purchase or Remove Units</h3>
+    <p>Note: Place a form here with a submit button at the bottom. User will input # in each box and when submitted
+        will adjust databse.
+    </p>
+{% endblock %}

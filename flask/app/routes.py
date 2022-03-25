@@ -7,28 +7,17 @@ from app.models import User
 from werkzeug.urls import url_parse
 
 # Import local python files
-#import db as local_db
+import db as local_db
 import chat
 
 # Main Webpage - Splash Page
 @app.route('/')
 @app.route('/index')
-@login_required
+#@login_required
 def index():
     #return "Hello, World!"
-    user = {'username': 'user'}
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-
-    ]
-    return render_template('index.html', title='Home', posts=posts)
+   
+    return render_template('index.html', title='Home')
 
 # Called from the chatbot page (chat.html - "/get") - $.get("/get", { msg: rawText }).done(function(data) {
 # Takes user input and gets chatbot response from chat (chat.py) to be displayed on Chatbot Page
@@ -48,6 +37,21 @@ def home():
 def test1():
     return render_template("test.html")
 
+# Profile Page - Used to make purchases and update information
+# Thought: Display current information and have a form below to update the information
+#@app.route('/profile')
+@app.route('/user/<username>')
+@login_required
+#def profile():
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    posts = [ 
+        {'author': user, 'body': 'Test post #1'},
+        {'author': user, 'body': 'Test post #2'}
+    ]
+    user_data = local_db.getUnitAvailability('SMALL', 'catonsville')
+    return render_template("profile.html", user=user, posts=posts, d=user_data)
+
 # User Login Page
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -62,7 +66,8 @@ def login():
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('index')
+            #next_page = url_for('profile')
+            next_page = url_for('user', username=current_user.username)
         return redirect(next_page)
         #return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
