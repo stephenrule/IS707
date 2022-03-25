@@ -87,10 +87,13 @@ def check_all_messages(message):
 
     # FUTURE: AI Approach
     #if highest_prob_list[best_match] < 1: 
-        #DO AI Approach
+        #DO AI Approach (Variable = message) Note: message is tokenized list of lowercase words
+
         #bot_response = "AI Approach Returned Message"
-        # Logic: If AI returns then assign 1. If AI returns nothing then return nothing 
-        #highest_prob_list[bot_response] = 1
+        # Logic: If AI returns a message then assign 1. If AI returns nothing then return nothing 
+        #if bot_response != "Nothing":
+            #highest_prob_list[bot_response] = 1
+
 
     #return best_match
     return long.unknown() if highest_prob_list[best_match] < 1 else best_match
