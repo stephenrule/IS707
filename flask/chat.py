@@ -58,7 +58,6 @@ def check_all_messages(message):
     response('See you!', ['bye', 'goodbye'], single_response=True)
     response('I\'m doing fine, and you?', ['how', 'are', 'you', 'doing'], required_words=['how'])
     response('You\'re welcome!', ['thank', 'thanks'], single_response=True)
-    response('Thank you!', ['i', 'love', 'code', 'palace'], required_words=['code', 'palace'])
     response(login, ['website', 'login'], single_response=True)  
     response(site_map, ['sitemap', 'site', 'map'], single_response=True)
     response(contact, ['contact', 'number', 'address', 'phone'], single_response=True)
