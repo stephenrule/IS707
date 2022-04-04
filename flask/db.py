@@ -104,12 +104,13 @@ def getOpenUnits(location):
     finally:
         con.close()
 
-def getUserUnits(userID):
+def getUserUnits(userID, unitSize):
     #return list of unit IDs associated to a user ID
     con = sqlite3.connect('chat.db')
     cur = con.cursor()
-    select_statement = '''SELECT unit_number FROM storage WHERE customer_id = ?'''
-    selectData = cur.execute(select_statement, [userID])
+    select_statement = '''SELECT unit_number FROM storage WHERE customer_id = ? AND WHERE storage_size = ? '''
+    params = userID, unitSize
+    selectData = cur.execute(select_statement, params)
     try:
         return selectData.fetchall()
     finally:
