@@ -159,6 +159,8 @@ def addSimpleUserAccount(cID):
     con.commit()
     con.close()
 
+
+# View Database
 def getUsers():
     #returns number of open units
     con = sqlite3.connect('chat.db')
@@ -170,6 +172,7 @@ def getUsers():
             print(row)
     finally:
         con.close()
+
 def getFacilities():
     #returns number of open units
     con = sqlite3.connect('chat.db')
@@ -181,6 +184,7 @@ def getFacilities():
             print(row)
     finally:
         con.close()
+
 def getUnits():
     #returns number of open units
     con = sqlite3.connect('chat.db')
