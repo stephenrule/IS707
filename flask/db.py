@@ -162,7 +162,6 @@ def addSimpleUserAccount(cID):
 
 # View Database
 def getUsers():
-    #returns number of open units
     con = sqlite3.connect('chat.db')
     cur = con.cursor()
     select_statement = '''SELECT * FROM customer'''
@@ -174,7 +173,6 @@ def getUsers():
         con.close()
 
 def getFacilities():
-    #returns number of open units
     con = sqlite3.connect('chat.db')
     cur = con.cursor()
     select_statement = '''SELECT * FROM facility'''
@@ -186,7 +184,6 @@ def getFacilities():
         con.close()
 
 def getUnits():
-    #returns number of open units
     con = sqlite3.connect('chat.db')
     cur = con.cursor()
     select_statement = '''SELECT * FROM storage'''
