@@ -63,7 +63,7 @@ def getUnitAvailability(location, unitSize):
     #returns number of open units
     con = sqlite3.connect('chat.db')
     cur = con.cursor()
-    select_statement = '''SELECT COUNT(*) FROM storage WHERE storage_size = ? AND facility_id = ?'''
+    select_statement = '''SELECT COUNT(*) FROM storage WHERE storage_size = ? AND facility_id = ? AND customer_id IS NULL'''
     params = unitSize, location
     selectData = cur.execute(select_statement, params)
     try:
