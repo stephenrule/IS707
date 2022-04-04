@@ -12,14 +12,14 @@
     {% endfor %}
 
     <h3>Unit Availability</h3>
-    <p>Small Units Available: {{ d }}</p>
-    <p>Medium Units Available: HOLD</p> 
-    <p>Large Units Available: HOLD</p>
+    <p>Small Units Available: {{ smallUnits }}</p>
+    <p>Medium Units Available: {{ mediumUnits }}</p> 
+    <p>Large Units Available: {{ largeUnits }}</p>
 
     <h3>Your Units</h3>
-    <p>Small Units: HOLD</p>
-    <p>Medium Units: HOLD</p>
-    <p>Large Units: HOLD</p>
+    <p>Small Units: {{ userSmall }} | Unit Number: {{ userUnitSmall }}</p>
+    <p>Medium Units: {{ userMedium }} |  Unit Number: {{ userUnitMedium }}</p>
+    <p>Large Units: {{ userLarge }} | Unit Number: {{ userUnitLarge }}</p>
 
     <h3>Purchase or Remove Units</h3>
     <p>Note: Place a form here with a submit button at the bottom. User will input # in each box and when submitted

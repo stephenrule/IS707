@@ -11,7 +11,7 @@ pip install virtualenv
 # ENTER VIRTUAL ENVIRONMENT
 1. Enter working directory
 2a. (LINUX) source chatbot/bin/activate
-2b. (WINDOWS) Enter CMD (type: cmd)
+2b. (WINDOWS) Enter CMD (type: cmd and cd to flask)
 2b. (WINDOWS) chatbot\Scripts\activate
 
 # INSTALL REQUIREMENTS 
@@ -37,8 +37,10 @@ flask db upgrade
 ## Initialize: In Python Shell (Need to be in flask folder in Python Shell)
 import db
 db.standUpDB()
+exit()
 ## To view database (Need to be in flask folder in Python Shell)
 import db
 db.getUsers()
 db.getFacilities()
 db.getUnits()
+exit()

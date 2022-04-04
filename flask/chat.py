@@ -68,9 +68,9 @@ def check_all_messages(message):
     
     # Database responses
     response(local_db.getUnitAvailability('MEDIUM', 'catonsville'), ['medium', 'unit', 'units', 'available'], single_response=True)
-    response('Small Units Available: ' + str(local_db.getUnitAvailability('SMALL', 'catonsville')) + 
-             ', Medium Units Available: ' + str(local_db.getUnitAvailability('MEDIUM', 'catonsville')) +
-             ', Large Units Available: ' + str(local_db.getUnitAvailability('Large', 'catonsville'))
+    response('Small Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'SMALL')) + 
+             ', Medium Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'MEDIUM')) +
+             ', Large Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'LARGE'))
              , ['test', 'unit', 'units', 'available'], single_response=True)
 
     # Longer responses - long_responses.py

@@ -49,8 +49,19 @@ def user(username):
         {'author': user, 'body': 'Test post #1'},
         {'author': user, 'body': 'Test post #2'}
     ]
-    user_data = local_db.getUnitAvailability('SMALL', 'catonsville')
-    return render_template("profile.html", user=user, posts=posts, d=user_data)
+    small_units = local_db.getUnitAvailability('catonsville', 'SMALL')
+    medium_units = local_db.getUnitAvailability('catonsville', 'MEDIUM')
+    large_units = local_db.getUnitAvailability('catonsville', 'LARGE')
+    get_user_small = len(local_db.getUserUnits(user, 'SMALL'))
+    get_user_medium = len(local_db.getUserUnits(user, 'MEDIUM'))
+    get_user_large = len(local_db.getUserUnits(user, 'LARGE'))
+    get_units_small = local_db.getUserUnits(user, 'SMALL')
+    get_units_medium = local_db.getUserUnits(user, 'MEDIUM')
+    get_units_large = local_db.getUserUnits(user, 'LARGE')
+    return render_template("profile.html", user=user, posts=posts,
+                           smallUnits=small_units, mediumUnits=medium_units, largeUnits=large_units
+                           userSmall=get_user_small, userMedium=get_user_medium, userLarge=get_user_large
+                           userUnitSmall=get_units_small, userUnitMedium=get_units_medium, userUnitLarge=get_units_large)
 
 # User Login Page
 @app.route('/login', methods=['GET', 'POST'])
