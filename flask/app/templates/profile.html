@@ -4,13 +4,6 @@
     <h1>USER: {{ user.username }}</h1>
     <hr>
 
-    <h3>Place holder for testing</h3>
-    {% for post in posts %}
-        <p>
-    {{ post.author.username }} says: <b>{{ post.body }}</b>
-    </p>
-    {% endfor %}
-
     <h3>Unit Availability</h3>
     <p>Small Units Available: {{ smallUnits }}</p>
     <p>Medium Units Available: {{ mediumUnits }}</p> 
@@ -22,13 +15,6 @@
     <p>Large Units: {{ userLarge }} | Unit Number: {{ userUnitLarge }}</p>
 
     <h3>Purchase or Remove Units</h3>
-    <p>Button to add 1 Small Unit | Button to remove 1 Small Unit</p>
-    <p>Add 1 Small Unit | Remove 1 Small Unit</p> 
-    <p>Add 1 Medium Unit | Remove 1 Medium Unit</p> 
-    <p>Add 1 Large Unit | Remove 1 Large Unit</p> 
-    <p>Note: Place a form here with a submit button at the bottom. User will input # in each box and when submitted
-        will adjust databse.
-    </p>
     <form method="post">
         <input type="submit" name="submit_button" value="Add 1 Small Unit">
         <input type="submit" name="submit_button" value="Remove 1 Small Unit"> <BR>

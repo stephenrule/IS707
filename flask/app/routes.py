@@ -44,37 +44,8 @@ def test1():
 @login_required
 #def profile():
 def user(username):
-    # POST - Buttons
-    ## Debug
-    #print('Outside')
-    #print(request.method)
-    #print(request.form)
-    #print(request.form.get)
-
-    ## Trial
-    #if form.validate_on_submit():
-    #    print("Form - download or watch")
-    #    if 'download' in request.form:
-    #        print("DOWNLOAD")
-    #    elif 'watch' in request.form:
-    #        print("WATCH")
-
-    # Test
-    #if "bob" in request.form:
-    #    print('test')
-
-    # Trial
-    #if "download" in request.form:
-    #    print("DOWNLOAD")
-    #    return redirect(url_for('user', username=current_user.username))
-    #if "Watch" in request.form:
-    #    print("WATCH")
-
-    # Working
+    # Post - For Buttons
     if request.method == "POST":
-        # Debug
-        #print("Post - Buttons")
-
         if request.form["submit_button"] == "Add 1 Small Unit":
             print('Add 1 Small Unit')
             # Database Code (Delete Print Above)
@@ -105,16 +76,9 @@ def user(username):
 
     # GET - Display Page
     elif request.method == 'GET':
-        #print('GET')
         user = User.query.filter_by(username=username).first_or_404()
-        posts = [ 
-            {'author': user, 'body': 'Test post #1'},
-            {'author': user, 'body': 'Test post #2'}
-        ]
-        # DEBUG
-        #print(user.username)
-        #print(type(user.username))
 
+        # Database queries to display data on profile page
         small_units = local_db.getUnitAvailability('catonsville', 'SMALL')
         medium_units = local_db.getUnitAvailability('catonsville', 'MEDIUM')
         large_units = local_db.getUnitAvailability('catonsville', 'LARGE')
@@ -124,7 +88,7 @@ def user(username):
         get_units_small = local_db.getUserUnits(user.username, 'SMALL')
         get_units_medium = local_db.getUserUnits(user.username, 'MEDIUM')
         get_units_large = local_db.getUserUnits(user.username, 'LARGE')
-        return render_template("profile.html", user=user, posts=posts,
+        return render_template("profile.html", user=user,
                             smallUnits=small_units, mediumUnits=medium_units, largeUnits=large_units,
                             userSmall=get_user_small, userMedium=get_user_medium, userLarge=get_user_large,
                             userUnitSmall=get_units_small, userUnitMedium=get_units_medium, userUnitLarge=get_units_large)
