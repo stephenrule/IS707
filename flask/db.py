@@ -142,8 +142,53 @@ def addUserAccount(cName, cAddr, cCity, cState, cCountry, cPhone, cID):
     insert_statement = '''INSERT INTO customer
         (customer_name, customer_address, customer_city, customer_state, customer_country, customer_phone, customer_id)
         VALUES (?,?,?,?,?,?,?)'''
-    params = cName, cAddr, cCity, cState, cCountry, cPhone, cID
+    params = cName, cAddr, cCity, cState, cCountry, cPhone, [cID]
     insert = cur.execute(insert_statement, params)
     con.commit()
     con.close()
 
+def addSimpleUserAccount(cID):
+    #cName, cAddr, cCity, cState, cCountry, cPhone, cID
+    con = sqlite3.connect('chat.db')
+    cur = con.cursor()
+    insert_statement = '''INSERT INTO customer
+        (customer_id)
+        VALUES (?)'''
+    params = [cID]
+    insert = cur.execute(insert_statement, params)
+    con.commit()
+    con.close()
+
+def getUsers():
+    #returns number of open units
+    con = sqlite3.connect('chat.db')
+    cur = con.cursor()
+    select_statement = '''SELECT * FROM customer'''
+    selectData = cur.execute(select_statement)
+    try:
+        for row in selectData:
+            print(row)
+    finally:
+        con.close()
+def getFacilities():
+    #returns number of open units
+    con = sqlite3.connect('chat.db')
+    cur = con.cursor()
+    select_statement = '''SELECT * FROM facility'''
+    selectData = cur.execute(select_statement)
+    try:
+        for row in selectData:
+            print(row)
+    finally:
+        con.close()
+def getUnits():
+    #returns number of open units
+    con = sqlite3.connect('chat.db')
+    cur = con.cursor()
+    select_statement = '''SELECT * FROM storage'''
+    selectData = cur.execute(select_statement)
+    try:
+        for row in selectData:
+            print(row)
+    finally:
+        con.close()

@@ -91,7 +91,8 @@ def register():
         db.session.commit()
 
         # 2nd Database
-        
+        local_db.addSimpleUserAccount(form.username.data)
+
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
