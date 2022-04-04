@@ -47,16 +47,16 @@ def insertStorageData(cur):
             VALUES (?,?,?,?,?)'''
         cur.execute(sqlite_insert_params, data_tuple)
     for i in it.chain(range(100,115), range(600,615)):
-        data_tuple = (i, 'A', 'LARGE', 150, 'catonsville', 'UID')
+        data_tuple = (i, 'A', 'LARGE', 150, 'catonsville')
         sqlite_insert_params = '''INSERT INTO storage 
-            (unit_number, storage_type, storage_size, storage_price, facility_id, customer_id)
-            VALUES (?,?,?,?,?,?)'''
+            (unit_number, storage_type, storage_size, storage_price, facility_id)
+            VALUES (?,?,?,?,?)'''
         cur.execute(sqlite_insert_params, data_tuple)
     for i in range(1,43):
-        data_tuple = (i, 'A', 'SMALL', 50, 'catonsville', 'UID')
+        data_tuple = (i, 'A', 'SMALL', 50, 'catonsville')
         sqlite_insert_params = '''INSERT INTO storage 
-            (unit_number, storage_type, storage_size, storage_price, facility_id, customer_id)
-            VALUES (?,?,?,?,?,?)'''
+            (unit_number, storage_type, storage_size, storage_price, facility_id)
+            VALUES (?,?,?,?,?)'''
         cur.execute(sqlite_insert_params, data_tuple)
 
 def getUnitAvailability(location, unitSize):
