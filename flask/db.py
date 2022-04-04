@@ -108,7 +108,7 @@ def getUserUnits(userID, unitSize):
     #return list of unit IDs associated to a user ID
     con = sqlite3.connect('chat.db')
     cur = con.cursor()
-    select_statement = '''SELECT unit_number FROM storage WHERE customer_id = ? AND WHERE storage_size = ? '''
+    select_statement = '''SELECT unit_number FROM storage WHERE customer_id = ? AND storage_size = ? '''
     params = userID, unitSize
     selectData = cur.execute(select_statement, params)
     try:
