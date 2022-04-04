@@ -27,6 +27,18 @@ Chat Site: http://127.0.0.1:5000/chat
 Home Page (Holder): http://127.0.0.1:5000
 
 # Database - Flask
+## Initialize Database (Need to be in flask folder in CMD)
 flask db init
+## Update Database from models.py (Need to be in flask folder in CMD)
 flask db migrate -m "Some Message"
 flask db upgrade
+
+# Python Database
+## Initialize: In Python Shell (Need to be in flask folder in Python Shell)
+import db
+db.standUpDB()
+## To view database (Need to be in flask folder in Python Shell)
+import db
+db.getUsers()
+db.getFacilities()
+db.getUnits()
