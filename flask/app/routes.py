@@ -40,30 +40,94 @@ def test1():
 # Profile Page - Used to make purchases and update information
 # Thought: Display current information and have a form below to update the information
 #@app.route('/profile')
-@app.route('/user/<username>')
+@app.route('/user/<username>', methods=['GET', 'POST'])
 @login_required
 #def profile():
 def user(username):
-    user = User.query.filter_by(username=username).first_or_404()
-    posts = [ 
-        {'author': user, 'body': 'Test post #1'},
-        {'author': user, 'body': 'Test post #2'}
-    ]
-    print(user.username)
-    print(type(user.username))
-    small_units = local_db.getUnitAvailability('catonsville', 'SMALL')
-    medium_units = local_db.getUnitAvailability('catonsville', 'MEDIUM')
-    large_units = local_db.getUnitAvailability('catonsville', 'LARGE')
-    get_user_small = len(local_db.getUserUnits(user.username, 'SMALL'))
-    get_user_medium = len(local_db.getUserUnits(user.username, 'MEDIUM'))
-    get_user_large = len(local_db.getUserUnits(user.username, 'LARGE'))
-    get_units_small = local_db.getUserUnits(user.username, 'SMALL')
-    get_units_medium = local_db.getUserUnits(user.username, 'MEDIUM')
-    get_units_large = local_db.getUserUnits(user.username, 'LARGE')
-    return render_template("profile.html", user=user, posts=posts,
-                           smallUnits=small_units, mediumUnits=medium_units, largeUnits=large_units,
-                           userSmall=get_user_small, userMedium=get_user_medium, userLarge=get_user_large,
-                           userUnitSmall=get_units_small, userUnitMedium=get_units_medium, userUnitLarge=get_units_large)
+    # POST - Buttons
+    ## Debug
+    #print('Outside')
+    #print(request.method)
+    #print(request.form)
+    #print(request.form.get)
+
+    ## Trial
+    #if form.validate_on_submit():
+    #    print("Form - download or watch")
+    #    if 'download' in request.form:
+    #        print("DOWNLOAD")
+    #    elif 'watch' in request.form:
+    #        print("WATCH")
+
+    # Test
+    #if "bob" in request.form:
+    #    print('test')
+
+    # Trial
+    #if "download" in request.form:
+    #    print("DOWNLOAD")
+    #    return redirect(url_for('user', username=current_user.username))
+    #if "Watch" in request.form:
+    #    print("WATCH")
+
+    # Working
+    if request.method == "POST":
+        # Debug
+        #print("Post - Buttons")
+
+        if request.form["submit_button"] == "Add 1 Small Unit":
+            print('Add 1 Small Unit')
+            # Database Code (Delete Print Above)
+            return redirect(url_for('user', username=current_user.username))
+        elif request.form["submit_button"] == "Remove 1 Small Unit":
+            print('Remove 1 Small Unit')
+            # Database Code (Delete Print Above)
+            return redirect(url_for('user', username=current_user.username))
+        elif request.form["submit_button"] == "Add 1 Medium Unit":
+            print('Add 1 Medium Unit')
+            # Database Code (Delete Print Above)
+            return redirect(url_for('user', username=current_user.username))
+        elif request.form["submit_button"] == "Remove 1 Medium Unit":
+            print('Remove 1 Medium Unit')
+            # Database Code (Delete Print Above)
+            return redirect(url_for('user', username=current_user.username))
+        elif request.form["submit_button"] == "Add 1 Large Unit":
+            print('Add 1 Large Unit')
+            # Database Code (Delete Print Above)
+            return redirect(url_for('user', username=current_user.username))
+        elif request.form["submit_button"] == "Remove 1 Large Unit":
+            print('Remove 1 Large Unit')
+            # Database Code (Delete Print Above)
+            return redirect(url_for('user', username=current_user.username)) 
+        else: 
+            print('Everything Else')
+            return redirect(url_for('user', username=current_user.username))
+
+    # GET - Display Page
+    elif request.method == 'GET':
+        #print('GET')
+        user = User.query.filter_by(username=username).first_or_404()
+        posts = [ 
+            {'author': user, 'body': 'Test post #1'},
+            {'author': user, 'body': 'Test post #2'}
+        ]
+        # DEBUG
+        #print(user.username)
+        #print(type(user.username))
+
+        small_units = local_db.getUnitAvailability('catonsville', 'SMALL')
+        medium_units = local_db.getUnitAvailability('catonsville', 'MEDIUM')
+        large_units = local_db.getUnitAvailability('catonsville', 'LARGE')
+        get_user_small = len(local_db.getUserUnits(user.username, 'SMALL'))
+        get_user_medium = len(local_db.getUserUnits(user.username, 'MEDIUM'))
+        get_user_large = len(local_db.getUserUnits(user.username, 'LARGE'))
+        get_units_small = local_db.getUserUnits(user.username, 'SMALL')
+        get_units_medium = local_db.getUserUnits(user.username, 'MEDIUM')
+        get_units_large = local_db.getUserUnits(user.username, 'LARGE')
+        return render_template("profile.html", user=user, posts=posts,
+                            smallUnits=small_units, mediumUnits=medium_units, largeUnits=large_units,
+                            userSmall=get_user_small, userMedium=get_user_medium, userLarge=get_user_large,
+                            userUnitSmall=get_units_small, userUnitMedium=get_units_medium, userUnitLarge=get_units_large)
 
 # User Login Page
 @app.route('/login', methods=['GET', 'POST'])
