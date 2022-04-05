@@ -5,6 +5,7 @@ from app.forms import LoginForm, RegistrationForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User
 from werkzeug.urls import url_parse
+import re
 
 # Import local python files
 import db as local_db
@@ -79,15 +80,31 @@ def user(username):
         user = User.query.filter_by(username=username).first_or_404()
 
         # Database queries to display data on profile page
+        ## Get units available for each unit size
         small_units = local_db.getUnitAvailability('catonsville', 'SMALL')
         medium_units = local_db.getUnitAvailability('catonsville', 'MEDIUM')
         large_units = local_db.getUnitAvailability('catonsville', 'LARGE')
+        
+        ## Get total number of units the user owns for each unit size
         get_user_small = len(local_db.getUserUnits(user.username, 'SMALL'))
         get_user_medium = len(local_db.getUserUnits(user.username, 'MEDIUM'))
         get_user_large = len(local_db.getUserUnits(user.username, 'LARGE'))
-        get_units_small = local_db.getUserUnits(user.username, 'SMALL')
-        get_units_medium = local_db.getUserUnits(user.username, 'MEDIUM')
-        get_units_large = local_db.getUserUnits(user.username, 'LARGE')
+
+        ## Get the unit numbers for each unit the user owns for each unit size
+        get_units_small = str(local_db.getUserUnits(user.username, 'SMALL'))
+        get_units_medium = str(local_db.getUserUnits(user.username, 'MEDIUM'))
+        get_units_large = str(local_db.getUserUnits(user.username, 'LARGE'))
+        #### Remove the [ ] ( ) ,
+        # Debug
+        #print(type(get_units_small))
+        #print(get_units_small)
+        get_units_small = re.sub(r'[\(\)\[\]\,]','',get_units_small)
+        # Debug
+        #print(get_units_small)
+        get_units_medium = re.sub(r'[\(\)\[\]\,]','',get_units_medium)
+        get_units_large = re.sub(r'[\(\)\[\]\,]','',get_units_large)
+
+        # Render profile.html and pas all variables
         return render_template("profile.html", user=user,
                             smallUnits=small_units, mediumUnits=medium_units, largeUnits=large_units,
                             userSmall=get_user_small, userMedium=get_user_medium, userLarge=get_user_large,
