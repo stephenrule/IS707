@@ -36,7 +36,7 @@ def message_probability(user_message, recognised_words, single_response=False, r
         return 0
 
 # Take user input and see if any word matches predefined text
-def check_all_messages(message):
+def check_all_messages(message, ai_string):
     highest_prob_list = {}
 
     # Simplifies response creation / adds it to the dict
@@ -51,9 +51,10 @@ def check_all_messages(message):
     contact = "<img src=\"static/contact.png\" alt=\"Contact Image\">"
 
     # Responses -------------------------------------------------------------------------------------------------------
-    # NOTE: Look into stemming and lemmatizing
+    # NOTE: Look into stemming and **lemmatizing
     # NOTE: NLTK corpus (For narrowing hello, hi, hey, etc): from nltk.corpus import wordnet
     # NOTE: syns = wordnet.synsets
+    # NOTE: Do a print statement of the results after lemmatizing and synsets just to see everything before applying rules
     response('Hello!', ['hello', 'hi', 'hey', 'sup', 'heyo'], single_response=True)
     response('See you!', ['bye', 'goodbye'], single_response=True)
     response('I\'m doing fine, and you?', ['how', 'are', 'you', 'doing'], required_words=['how'])
@@ -85,8 +86,9 @@ def check_all_messages(message):
     #print(highest_prob_list)
 
     # FUTURE: AI Approach
+    print(ai_string)
     #if highest_prob_list[best_match] < 1: 
-        #DO AI Approach (Variable = message) Note: message is tokenized list of lowercase words
+        #DO AI Approach (Variables: message (Tokenized), ai_string (String)) Note: message is tokenized list of lowercase words
 
         #bot_response = "AI Approach Returned Message"
         # Logic: If AI returns a message then assign 1. If AI returns nothing then return nothing 
@@ -102,7 +104,8 @@ def check_all_messages(message):
 def get_response(user_input):
     split_message = re.split(r'\s+|[,;?!.-]\s*', user_input.lower())
     ####################
+    # Tokenize using NLTK (If works comment line above "split_message....")
     # Remove stop words - Use nltk
     #####################
-    response = check_all_messages(split_message)
+    response = check_all_messages(split_message, user_input)
     return response
