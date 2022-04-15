@@ -1,0 +1,1385 @@
+2022-04-14 23:28:10,962 - INFO - allennlp.common.params - random_seed = 13370
+2022-04-14 23:28:10,962 - INFO - allennlp.common.params - numpy_seed = 1337
+2022-04-14 23:28:10,962 - INFO - allennlp.common.params - pytorch_seed = 133
+2022-04-14 23:28:10,962 - INFO - allennlp.common.checks - Pytorch version: 1.11.0+cu113
+2022-04-14 23:28:10,962 - INFO - allennlp.common.params - type = default
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.type = squad1
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.max_instances = None
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.manual_distributed_sharding = False
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.manual_multiprocess_sharding = False
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.tokenizer = None
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.type = characters
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.namespace = token_characters
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.character_tokenizer.byte_encoding = utf-8
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.character_tokenizer.lowercase_characters = False
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.character_tokenizer.start_tokens = [259]
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.character_tokenizer.end_tokens = [260]
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.start_tokens = None
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.end_tokens = None
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.min_padding_length = 5
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.token_min_padding_length = 0
+2022-04-14 23:28:10,963 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.type = single_id
+2022-04-14 23:28:10,964 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.namespace = tokens
+2022-04-14 23:28:10,964 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.lowercase_tokens = True
+2022-04-14 23:28:10,964 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.start_tokens = None
+2022-04-14 23:28:10,964 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.end_tokens = None
+2022-04-14 23:28:10,964 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.feature_name = text
+2022-04-14 23:28:10,964 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.default_value = THIS IS A REALLY UNLIKELY VALUE THAT HAS TO BE A STRING
+2022-04-14 23:28:10,964 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.token_min_padding_length = 0
+2022-04-14 23:28:10,964 - INFO - allennlp.common.params - dataset_reader.passage_length_limit = None
+2022-04-14 23:28:10,964 - INFO - allennlp.common.params - dataset_reader.question_length_limit = None
+2022-04-14 23:28:10,964 - INFO - allennlp.common.params - dataset_reader.skip_impossible_questions = False
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - train_data_path = https://allennlp.s3.amazonaws.com/datasets/squad/squad-train-v1.1.json
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - vocabulary = <allennlp.common.lazy.Lazy object at 0x7f59270580d0>
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - datasets_for_vocab_creation = None
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - validation_dataset_reader = None
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - validation_data_path = https://allennlp.s3.amazonaws.com/datasets/squad/squad-dev-v1.1.json
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - validation_data_loader = None
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - test_data_path = None
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - evaluate_on_test = False
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - batch_weight_key = 
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - data_loader.type = multiprocess
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - data_loader.batch_size = None
+2022-04-14 23:28:11,182 - INFO - allennlp.common.params - data_loader.drop_last = False
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.shuffle = False
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.batch_sampler.type = bucket
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.batch_sampler.batch_size = 40
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.batch_sampler.sorting_keys = None
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.batch_sampler.padding_noise = 0.1
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.batch_sampler.drop_last = False
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.batch_sampler.shuffle = True
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.max_instances_in_memory = None
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.start_method = fork
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.cuda_device = None
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.quiet = False
+2022-04-14 23:28:11,183 - INFO - allennlp.common.params - data_loader.collate_fn = <allennlp.data.data_loaders.data_collator.DefaultDataCollator object at 0x7f592ba13bb0>
+2022-04-14 23:28:11,183 - INFO - tqdm - loading instances: 0it [00:00, ?it/s]
+2022-04-14 23:28:11,723 - INFO - cached_path - cache of https://allennlp.s3.amazonaws.com/datasets/squad/squad-train-v1.1.json is up-to-date
+2022-04-14 23:28:11,723 - INFO - allennlp_models.rc.dataset_readers.squad - Reading file at /home/kxt/.allennlp/cache/8004ccd3bb28578ee87e5dc83239c650fa9644d7182521d5d8256002bb625053.ecb722fee55bf415b85baaa96fa6da0785e392b5d122301c710b06bf51f7bdc3
+2022-04-14 23:28:11,961 - INFO - allennlp_models.rc.dataset_readers.squad - Reading the dataset
+2022-04-14 23:28:21,281 - INFO - tqdm - loading instances: 4521it [00:10, 506.72it/s]
+2022-04-14 23:28:31,346 - INFO - tqdm - loading instances: 9188it [00:20, 457.60it/s]
+2022-04-14 23:28:41,419 - INFO - tqdm - loading instances: 13530it [00:30, 501.13it/s]
+2022-04-14 23:28:51,430 - INFO - tqdm - loading instances: 18320it [00:40, 451.85it/s]
+2022-04-14 23:29:01,474 - INFO - tqdm - loading instances: 23086it [00:50, 473.95it/s]
+2022-04-14 23:29:11,538 - INFO - tqdm - loading instances: 27681it [01:00, 363.29it/s]
+2022-04-14 23:29:21,551 - INFO - tqdm - loading instances: 32125it [01:10, 414.30it/s]
+2022-04-14 23:29:31,560 - INFO - tqdm - loading instances: 36522it [01:20, 482.50it/s]
+2022-04-14 23:29:41,660 - INFO - tqdm - loading instances: 41237it [01:30, 384.22it/s]
+2022-04-14 23:29:51,709 - INFO - tqdm - loading instances: 45635it [01:40, 384.78it/s]
+2022-04-14 23:30:01,729 - INFO - tqdm - loading instances: 50072it [01:50, 460.67it/s]
+2022-04-14 23:30:11,806 - INFO - tqdm - loading instances: 54443it [02:00, 249.86it/s]
+2022-04-14 23:30:21,861 - INFO - tqdm - loading instances: 58983it [02:10, 398.33it/s]
+2022-04-14 23:30:31,914 - INFO - tqdm - loading instances: 63543it [02:20, 480.73it/s]
+2022-04-14 23:30:41,928 - INFO - tqdm - loading instances: 67752it [02:30, 436.82it/s]
+2022-04-14 23:30:51,929 - INFO - tqdm - loading instances: 72399it [02:40, 491.72it/s]
+2022-04-14 23:31:01,955 - INFO - tqdm - loading instances: 77049it [02:50, 490.47it/s]
+2022-04-14 23:31:11,972 - INFO - tqdm - loading instances: 81749it [03:00, 467.76it/s]
+2022-04-14 23:31:22,039 - INFO - tqdm - loading instances: 86029it [03:10, 483.71it/s]
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.type = multiprocess
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.batch_size = None
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.drop_last = False
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.shuffle = False
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.batch_sampler.type = bucket
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.batch_sampler.batch_size = 40
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.batch_sampler.sorting_keys = None
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.batch_sampler.padding_noise = 0.1
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.batch_sampler.drop_last = False
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.batch_sampler.shuffle = True
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.max_instances_in_memory = None
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.start_method = fork
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.cuda_device = None
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.quiet = False
+2022-04-14 23:31:25,249 - INFO - allennlp.common.params - data_loader.collate_fn = <allennlp.data.data_loaders.data_collator.DefaultDataCollator object at 0x7f592ba13bb0>
+2022-04-14 23:31:25,249 - INFO - tqdm - loading instances: 0it [00:00, ?it/s]
+2022-04-14 23:31:25,762 - INFO - cached_path - https://allennlp.s3.amazonaws.com/datasets/squad/squad-dev-v1.1.json not found in cache, downloading to /home/kxt/.allennlp/cache/4a5f91e1a79ec70b17eb31b7251a2efbfa571fc63c78f43e1a8321567e897e8d.59d8c2ca3fa946cc02db572aec4395c09c9477e1fbcd8fd7b86d9a3e1d580e0a
+2022-04-14 23:31:26,293 - INFO - tqdm - downloading:   0%|          | 0.00/4.63M [00:00<?, ?iB/s]
+2022-04-14 23:31:28,033 - INFO - tqdm - downloading: 100%|##########| 4.63M/4.63M [00:01<00:00, 2.79MiB/s]
+2022-04-14 23:31:28,038 - INFO - allennlp_models.rc.dataset_readers.squad - Reading file at /home/kxt/.allennlp/cache/4a5f91e1a79ec70b17eb31b7251a2efbfa571fc63c78f43e1a8321567e897e8d.59d8c2ca3fa946cc02db572aec4395c09c9477e1fbcd8fd7b86d9a3e1d580e0a
+2022-04-14 23:31:28,067 - INFO - allennlp_models.rc.dataset_readers.squad - Reading the dataset
+2022-04-14 23:31:35,281 - INFO - tqdm - loading instances: 3744it [00:10, 475.52it/s]
+2022-04-14 23:31:45,375 - INFO - tqdm - loading instances: 8319it [00:20, 441.94it/s]
+2022-04-14 23:31:50,202 - INFO - allennlp.common.params - type = from_instances
+2022-04-14 23:31:50,202 - INFO - allennlp.common.params - min_count = None
+2022-04-14 23:31:50,202 - INFO - allennlp.common.params - max_vocab_size = None
+2022-04-14 23:31:50,202 - INFO - allennlp.common.params - non_padded_namespaces = ('*tags', '*labels')
+2022-04-14 23:31:50,202 - INFO - allennlp.common.params - pretrained_files = None
+2022-04-14 23:31:50,202 - INFO - allennlp.common.params - only_include_pretrained_words = False
+2022-04-14 23:31:50,202 - INFO - allennlp.common.params - tokens_to_add = None
+2022-04-14 23:31:50,202 - INFO - allennlp.common.params - min_pretrained_embeddings = None
+2022-04-14 23:31:50,202 - INFO - allennlp.common.params - padding_token = @@PADDING@@
+2022-04-14 23:31:50,202 - INFO - allennlp.common.params - oov_token = @@UNKNOWN@@
+2022-04-14 23:31:50,202 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+2022-04-14 23:31:50,202 - INFO - tqdm - building vocab: 0it [00:00, ?it/s]
+2022-04-14 23:32:00,261 - INFO - tqdm - building vocab: 26979it [00:10, 2305.02it/s]
+2022-04-14 23:32:10,282 - INFO - tqdm - building vocab: 48533it [00:20, 2256.39it/s]
+2022-04-14 23:32:20,353 - INFO - tqdm - building vocab: 70498it [00:30, 2180.90it/s]
+2022-04-14 23:32:30,361 - INFO - tqdm - building vocab: 93043it [00:40, 2065.53it/s]
+2022-04-14 23:32:32,797 - INFO - allennlp.common.params - model.type = bidaf
+2022-04-14 23:32:32,797 - INFO - allennlp.common.params - model.text_field_embedder.type = basic
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.type = character_encoding
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.embedding_dim = 16
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.num_embeddings = 262
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.projection_dim = None
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.weight = None
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.padding_index = None
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.trainable = True
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.max_norm = None
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.norm_type = 2.0
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.scale_grad_by_freq = False
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.sparse = False
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.vocab_namespace = tokens
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.pretrained_file = None
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.type = cnn
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.embedding_dim = 16
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.num_filters = 100
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.ngram_filter_sizes = [5]
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.conv_layer_activation = None
+2022-04-14 23:32:32,798 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.output_dim = None
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.dropout = 0.2
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.type = embedding
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.embedding_dim = 100
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.num_embeddings = None
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.projection_dim = None
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.weight = None
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.padding_index = None
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.trainable = False
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.max_norm = None
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.norm_type = 2.0
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.scale_grad_by_freq = False
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.sparse = False
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.vocab_namespace = tokens
+2022-04-14 23:32:32,799 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.pretrained_file = https://allennlp.s3.amazonaws.com/datasets/glove/glove.6B.100d.txt.gz
+2022-04-14 23:32:32,802 - INFO - allennlp.modules.token_embedders.embedding - Reading pretrained embeddings from file
+2022-04-14 23:32:33,236 - INFO - cached_path - https://allennlp.s3.amazonaws.com/datasets/glove/glove.6B.100d.txt.gz not found in cache, downloading to /home/kxt/.allennlp/cache/874263ddfe401310bf96483d6b6be1cbb9f71de11f60c6532cf05c17912f980e.9b668cee1337bb1f7412a189dada21c5dda914dd6dd91bc24a5d437b5949cbaf
+2022-04-14 23:32:33,857 - INFO - tqdm - downloading:   0%|          | 0.00/128M [00:00<?, ?iB/s]
+2022-04-14 23:32:43,931 - INFO - tqdm - downloading:   8%|8         | 10.8M/128M [00:10<01:25, 1.44MiB/s]
+2022-04-14 23:32:54,004 - INFO - tqdm - downloading:  20%|#9        | 25.0M/128M [00:20<01:23, 1.30MiB/s]
+2022-04-14 23:33:04,083 - INFO - tqdm - downloading:  27%|##6       | 34.1M/128M [00:30<03:31, 465kiB/s]
+2022-04-14 23:33:14,116 - INFO - tqdm - downloading:  32%|###1      | 40.7M/128M [00:40<02:02, 749kiB/s]
+2022-04-14 23:33:24,168 - INFO - tqdm - downloading:  38%|###7      | 48.2M/128M [00:50<01:41, 828kiB/s]
+2022-04-14 23:33:34,200 - INFO - tqdm - downloading:  48%|####7     | 60.9M/128M [01:00<00:44, 1.57MiB/s]
+2022-04-14 23:33:44,269 - INFO - tqdm - downloading:  60%|#####9    | 76.3M/128M [01:10<00:34, 1.58MiB/s]
+2022-04-14 23:33:54,359 - INFO - tqdm - downloading:  69%|######8   | 87.8M/128M [01:20<00:37, 1.12MiB/s]
+2022-04-14 23:34:04,442 - INFO - tqdm - downloading:  75%|#######5  | 96.4M/128M [01:30<00:29, 1.13MiB/s]
+2022-04-14 23:34:14,519 - INFO - tqdm - downloading:  85%|########5 | 109M/128M [01:40<00:18, 1.09MiB/s]
+2022-04-14 23:34:24,540 - INFO - tqdm - downloading:  93%|#########2| 119M/128M [01:50<00:07, 1.24MiB/s]
+2022-04-14 23:34:31,771 - INFO - tqdm - downloading: 100%|#########9| 127M/128M [01:57<00:00, 1.32MiB/s]
+2022-04-14 23:34:31,874 - INFO - tqdm - downloading: 100%|#########9| 128M/128M [01:58<00:00, 1.32MiB/s]
+2022-04-14 23:34:31,977 - INFO - tqdm - downloading: 100%|#########9| 128M/128M [01:58<00:00, 1.31MiB/s]
+2022-04-14 23:34:32,163 - INFO - tqdm - downloading: 100%|#########9| 128M/128M [01:58<00:00, 1.06MiB/s]
+2022-04-14 23:34:32,290 - INFO - tqdm - downloading: 100%|#########9| 128M/128M [01:58<00:00, 1.01MiB/s]
+2022-04-14 23:34:32,354 - INFO - tqdm - downloading: 100%|##########| 128M/128M [01:58<00:00, 1.13MiB/s]
+2022-04-14 23:34:32,362 - INFO - tqdm - 0it [00:00, ?it/s]
+2022-04-14 23:34:34,563 - INFO - allennlp.modules.token_embedders.embedding - Initializing pre-trained embedding layer
+2022-04-14 23:34:34,850 - INFO - allennlp.modules.token_embedders.embedding - Pretrained embeddings were found for 72846 out of 96673 tokens
+2022-04-14 23:34:34,858 - INFO - allennlp.common.params - model.num_highway_layers = 2
+2022-04-14 23:34:34,858 - INFO - allennlp.common.params - model.phrase_layer.type = lstm
+2022-04-14 23:34:34,858 - INFO - allennlp.common.params - model.phrase_layer.input_size = 200
+2022-04-14 23:34:34,858 - INFO - allennlp.common.params - model.phrase_layer.hidden_size = 100
+2022-04-14 23:34:34,858 - INFO - allennlp.common.params - model.phrase_layer.num_layers = 1
+2022-04-14 23:34:34,858 - INFO - allennlp.common.params - model.phrase_layer.bias = True
+2022-04-14 23:34:34,858 - INFO - allennlp.common.params - model.phrase_layer.dropout = 0.0
+2022-04-14 23:34:34,858 - INFO - allennlp.common.params - model.phrase_layer.bidirectional = True
+2022-04-14 23:34:34,858 - INFO - allennlp.common.params - model.phrase_layer.stateful = False
+2022-04-14 23:34:34,859 - INFO - allennlp.common.params - model.matrix_attention.type = linear
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.matrix_attention.tensor_1_dim = 200
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.matrix_attention.tensor_2_dim = 200
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.matrix_attention.combination = x,y,x*y
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.matrix_attention.activation = None
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.modeling_layer.type = lstm
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.modeling_layer.input_size = 800
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.modeling_layer.hidden_size = 100
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.modeling_layer.num_layers = 2
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.modeling_layer.bias = True
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.modeling_layer.dropout = 0.2
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.modeling_layer.bidirectional = True
+2022-04-14 23:34:34,860 - INFO - allennlp.common.params - model.modeling_layer.stateful = False
+2022-04-14 23:34:34,863 - INFO - allennlp.common.params - model.span_end_encoder.type = lstm
+2022-04-14 23:34:34,863 - INFO - allennlp.common.params - model.span_end_encoder.input_size = 1400
+2022-04-14 23:34:34,863 - INFO - allennlp.common.params - model.span_end_encoder.hidden_size = 100
+2022-04-14 23:34:34,863 - INFO - allennlp.common.params - model.span_end_encoder.num_layers = 1
+2022-04-14 23:34:34,863 - INFO - allennlp.common.params - model.span_end_encoder.bias = True
+2022-04-14 23:34:34,863 - INFO - allennlp.common.params - model.span_end_encoder.dropout = 0.0
+2022-04-14 23:34:34,863 - INFO - allennlp.common.params - model.span_end_encoder.bidirectional = True
+2022-04-14 23:34:34,863 - INFO - allennlp.common.params - model.span_end_encoder.stateful = False
+2022-04-14 23:34:34,867 - INFO - allennlp.common.params - model.dropout = 0.2
+2022-04-14 23:34:34,867 - INFO - allennlp.common.params - model.mask_lstms = True
+2022-04-14 23:34:34,867 - INFO - allennlp.common.params - model.initializer = <allennlp.nn.initializers.InitializerApplicator object at 0x7f5926fc2850>
+2022-04-14 23:34:34,867 - INFO - allennlp.common.params - model.regularizer = None
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers - Initializing parameters
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers - Done initializing parameters; the following parameters are using their default initialization from their code
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _highway_layer._module._layers.0.bias
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _highway_layer._module._layers.0.weight
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _highway_layer._module._layers.1.bias
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _highway_layer._module._layers.1.weight
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _matrix_attention._bias
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _matrix_attention._weight_vector
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_hh_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_hh_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_hh_l1
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_hh_l1_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_ih_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_ih_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_ih_l1
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.bias_ih_l1_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_hh_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_hh_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_hh_l1
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_hh_l1_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_ih_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_ih_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_ih_l1
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _modeling_layer._module.weight_ih_l1_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _phrase_layer._module.bias_hh_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _phrase_layer._module.bias_hh_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _phrase_layer._module.bias_ih_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _phrase_layer._module.bias_ih_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _phrase_layer._module.weight_hh_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _phrase_layer._module.weight_hh_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _phrase_layer._module.weight_ih_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _phrase_layer._module.weight_ih_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.bias_hh_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.bias_hh_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.bias_ih_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.bias_ih_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.weight_hh_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.weight_hh_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.weight_ih_l0
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_end_encoder._module.weight_ih_l0_reverse
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_end_predictor._module.bias
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_end_predictor._module.weight
+2022-04-14 23:34:34,868 - INFO - allennlp.nn.initializers -    _span_start_predictor._module.bias
+2022-04-14 23:34:34,869 - INFO - allennlp.nn.initializers -    _span_start_predictor._module.weight
+2022-04-14 23:34:34,869 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_token_characters._embedding._module.weight
+2022-04-14 23:34:34,869 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.bias
+2022-04-14 23:34:34,869 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.weight
+2022-04-14 23:34:34,869 - INFO - allennlp.nn.initializers -    _text_field_embedder.token_embedder_tokens.weight
+2022-04-14 23:35:28,591 - INFO - allennlp.common.params - trainer.type = gradient_descent
+2022-04-14 23:35:28,591 - INFO - allennlp.common.params - trainer.cuda_device = 0
+2022-04-14 23:35:28,591 - INFO - allennlp.common.params - trainer.distributed = False
+2022-04-14 23:35:28,591 - INFO - allennlp.common.params - trainer.world_size = 1
+2022-04-14 23:35:28,591 - INFO - allennlp.common.params - trainer.patience = 10
+2022-04-14 23:35:28,591 - INFO - allennlp.common.params - trainer.validation_metric = +em
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.num_epochs = 20
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.grad_norm = 5
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.grad_clipping = None
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.num_gradient_accumulation_steps = 1
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.use_amp = False
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.no_grad = None
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.momentum_scheduler = None
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.moving_average = None
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.checkpointer = <allennlp.common.lazy.Lazy object at 0x7f592708b7f0>
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.callbacks = ['tensorboard']
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.enable_default_callbacks = True
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.run_confidence_checks = True
+2022-04-14 23:35:28,592 - INFO - allennlp.common.params - trainer.grad_scaling = True
+2022-04-14 23:35:30,537 - INFO - allennlp.common.params - trainer.optimizer.type = adam
+2022-04-14 23:35:30,537 - INFO - allennlp.common.params - trainer.optimizer.parameter_groups = None
+2022-04-14 23:35:30,537 - INFO - allennlp.common.params - trainer.optimizer.lr = 0.001
+2022-04-14 23:35:30,537 - INFO - allennlp.common.params - trainer.optimizer.betas = [0.9, 0.9]
+2022-04-14 23:35:30,537 - INFO - allennlp.common.params - trainer.optimizer.eps = 1e-08
+2022-04-14 23:35:30,537 - INFO - allennlp.common.params - trainer.optimizer.weight_decay = 0.0
+2022-04-14 23:35:30,537 - INFO - allennlp.common.params - trainer.optimizer.amsgrad = False
+2022-04-14 23:35:30,537 - INFO - allennlp.training.optimizers - Number of trainable parameters: 2582095
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - The following parameters are Frozen (without gradient):
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _text_field_embedder.token_embedder_tokens.weight
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - The following parameters are Tunable (with gradient):
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _text_field_embedder.token_embedder_token_characters._embedding._module.weight
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.weight
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.bias
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _highway_layer._module._layers.0.weight
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _highway_layer._module._layers.0.bias
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _highway_layer._module._layers.1.weight
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _highway_layer._module._layers.1.bias
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _phrase_layer._module.weight_ih_l0
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _phrase_layer._module.weight_hh_l0
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _phrase_layer._module.bias_ih_l0
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _phrase_layer._module.bias_hh_l0
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _phrase_layer._module.weight_ih_l0_reverse
+2022-04-14 23:35:30,537 - INFO - allennlp.common.util - _phrase_layer._module.weight_hh_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _phrase_layer._module.bias_ih_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _phrase_layer._module.bias_hh_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _matrix_attention._weight_vector
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _matrix_attention._bias
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.weight_ih_l0
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.weight_hh_l0
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.bias_ih_l0
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.bias_hh_l0
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.weight_ih_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.weight_hh_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.bias_ih_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.bias_hh_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.weight_ih_l1
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.weight_hh_l1
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.bias_ih_l1
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.bias_hh_l1
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.weight_ih_l1_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.weight_hh_l1_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.bias_ih_l1_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _modeling_layer._module.bias_hh_l1_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_end_encoder._module.weight_ih_l0
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_end_encoder._module.weight_hh_l0
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_end_encoder._module.bias_ih_l0
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_end_encoder._module.bias_hh_l0
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_end_encoder._module.weight_ih_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_end_encoder._module.weight_hh_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_end_encoder._module.bias_ih_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_end_encoder._module.bias_hh_l0_reverse
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_start_predictor._module.weight
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_start_predictor._module.bias
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_end_predictor._module.weight
+2022-04-14 23:35:30,538 - INFO - allennlp.common.util - _span_end_predictor._module.bias
+2022-04-14 23:35:30,538 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.type = reduce_on_plateau
+2022-04-14 23:35:30,538 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.mode = max
+2022-04-14 23:35:30,538 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.factor = 0.5
+2022-04-14 23:35:30,538 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.patience = 2
+2022-04-14 23:35:30,538 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.verbose = False
+2022-04-14 23:35:30,538 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.threshold_mode = rel
+2022-04-14 23:35:30,538 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.threshold = 0.0001
+2022-04-14 23:35:30,538 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.cooldown = 0
+2022-04-14 23:35:30,538 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.min_lr = 0
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.eps = 1e-08
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - type = default
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - save_completed_epochs = True
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - save_every_num_seconds = None
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - save_every_num_batches = None
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - keep_most_recent_by_count = 2
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - keep_most_recent_by_age = None
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - type = tensorboard
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - summary_interval = 100
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - distribution_interval = None
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - batch_size_interval = None
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - should_log_parameter_statistics = False
+2022-04-14 23:35:30,539 - INFO - allennlp.common.params - should_log_learning_rate = False
+2022-04-14 23:35:30,540 - INFO - allennlp.training.gradient_descent_trainer - Beginning training.
+2022-04-14 23:35:30,540 - INFO - allennlp.training.gradient_descent_trainer - Epoch 0/19
+2022-04-14 23:35:30,540 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:35:30,540 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 52M
+2022-04-14 23:35:30,541 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:35:30,541 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:35:30,559 - INFO - allennlp.data.samplers.bucket_batch_sampler - No sorting keys given; trying to guess a good one
+2022-04-14 23:35:30,559 - INFO - allennlp.data.samplers.bucket_batch_sampler - Using ['passage'] as the sorting keys
+2022-04-14 23:35:30,768 - INFO - allennlp.training.callbacks.console_logger - Batch inputs
+2022-04-14 23:35:30,768 - INFO - allennlp.training.callbacks.console_logger - batch_input/passage/token_characters/token_characters (Shape: 40 x 151 x 19)
+tensor([[[259,  74, 110,  ...,   0,   0,   0],
+         [259,  40, 116,  ...,   0,   0,   0],
+         [259, 110,  98,  ...,   0,   0,   0],
+         ...,
+         [259, 110, 112,  ...,   0,   0,   0],
+         [259,  99, 118,  ...,   0,   0,   0],
+         [259,  47, 260,  ...,   0,   0,   0]],
+
+        [[259,  81, 105,  ...,   0,   0,   0],
+         [259,  68,  69,  ...,   0,   0,   0],
+         [259, 106, 116,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  66, 116,  ...,   0,   0,   0],
+         [259,  98, 260,  ...,   0,   0,   0],
+         [259, 115,  98,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        ...,
+
+        [[259,  85, 105,  ...,   0,   0,   0],
+         [259, 118, 113,  ...,   0,   0,   0],
+         [259,  98, 101,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  69, 118,  ...,   0,   0,   0],
+         [259, 105, 106,  ...,   0,   0,   0],
+         [259, 117, 106,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  78, 112,  ...,   0,   0,   0],
+         [259, 116, 117,  ...,   0,   0,   0],
+         [259,  99,  98,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]]], device='cuda:0')
+2022-04-14 23:35:30,773 - INFO - allennlp.training.callbacks.console_logger - batch_input/passage/tokens/tokens (Shape: 40 x 151)
+tensor([[ 674,   22,  276,  ...,  175,  603,    5],
+        [6596, 2132,   11,  ...,    0,    0,    0],
+        [  14,    9, 3430,  ...,    0,    0,    0],
+        ...,
+        [   2, 7963, 5085,  ...,    0,    0,    0],
+        [  61,   34,   67,  ...,    0,    0,    0],
+        [3040,  650,  152,  ...,    0,    0,    0]], device='cuda:0')
+2022-04-14 23:35:30,775 - INFO - allennlp.training.callbacks.console_logger - batch_input/question/token_characters/token_characters (Shape: 40 x 27 x 16)
+tensor([[[259,  74, 111,  ...,   0,   0,   0],
+         [259, 120, 105,  ...,   0,   0,   0],
+         [259,  98, 115,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  88, 105,  ...,   0,   0,   0],
+         [259, 120, 102,  ...,   0,   0,   0],
+         [259,  81, 105,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  88, 105,  ...,   0,   0,   0],
+         [259, 106, 116,  ...,   0,   0,   0],
+         [259, 117, 105,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        ...,
+
+        [[259,  73, 112,  ...,   0,   0,   0],
+         [259, 110,  98,  ...,   0,   0,   0],
+         [259,  98, 113,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  88, 105,  ...,   0,   0,   0],
+         [259, 103, 106,  ...,   0,   0,   0],
+         [259, 113, 118,  ...,   0,   0,   0],
+         ...,
+         [259,  64, 260,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  69, 118,  ...,   0,   0,   0],
+         [259, 117, 105,  ...,   0,   0,   0],
+         [259,  78, 112,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]]], device='cuda:0')
+2022-04-14 23:35:30,780 - INFO - allennlp.training.callbacks.console_logger - batch_input/question/tokens/tokens (Shape: 40 x 27)
+tensor([[   7,   27,  124,  ...,    0,    0,    0],
+        [  57,   28, 6596,  ...,    0,    0,    0],
+        [  25,   11,    2,  ...,    0,    0,    0],
+        ...,
+        [  89,   52, 5001,  ...,    0,    0,    0],
+        [  43,   47,  466,  ...,   17,    0,    0],
+        [  61,   77, 3040,  ...,    0,    0,    0]], device='cuda:0')
+2022-04-14 23:35:30,781 - INFO - allennlp.training.callbacks.console_logger - batch_input/span_start (Shape: 40 x 1)
+tensor([[  8],
+        [ 19],
+        [100],
+        ...,
+        [ 39],
+        [ 10],
+        [ 49]], device='cuda:0')
+2022-04-14 23:35:30,782 - INFO - allennlp.training.callbacks.console_logger - batch_input/span_end (Shape: 40 x 1)
+tensor([[  9],
+        [ 19],
+        [102],
+        ...,
+        [ 41],
+        [ 11],
+        [ 54]], device='cuda:0')
+2022-04-14 23:35:30,782 - INFO - allennlp.training.callbacks.console_logger - Field : "batch_input/metadata" : (Length 40 of type "<class 'dict'>")
+2022-04-14 23:35:40,630 - INFO - tqdm - start_acc: 0.0612, end_acc: 0.0719, span_acc: 0.0230, em: 0.0250, f1: 0.0862, batch_loss: 7.8200, loss: 8.2969 ||:   7%|7         | 161/2190 [00:10<01:54, 17.74it/s]
+2022-04-14 23:35:50,736 - INFO - tqdm - start_acc: 0.0787, end_acc: 0.0872, span_acc: 0.0344, em: 0.0366, f1: 0.1009, batch_loss: 8.5766, loss: 7.9066 ||:  15%|#4        | 325/2190 [00:20<02:16, 13.70it/s]
+2022-04-14 23:36:00,740 - INFO - tqdm - start_acc: 0.1043, end_acc: 0.1132, span_acc: 0.0549, em: 0.0595, f1: 0.1306, batch_loss: 7.1990, loss: 7.5559 ||:  22%|##2       | 488/2190 [00:30<01:58, 14.31it/s]
+2022-04-14 23:36:10,804 - INFO - tqdm - start_acc: 0.1272, end_acc: 0.1373, span_acc: 0.0732, em: 0.0799, f1: 0.1570, batch_loss: 6.6360, loss: 7.2558 ||:  30%|##9       | 648/2190 [00:40<01:31, 16.78it/s]
+2022-04-14 23:36:20,909 - INFO - tqdm - start_acc: 0.1480, end_acc: 0.1604, span_acc: 0.0893, em: 0.0985, f1: 0.1815, batch_loss: 5.4396, loss: 6.9965 ||:  37%|###7      | 813/2190 [00:50<01:24, 16.36it/s]
+2022-04-14 23:36:30,997 - INFO - tqdm - start_acc: 0.1679, end_acc: 0.1823, span_acc: 0.1058, em: 0.1165, f1: 0.2050, batch_loss: 5.7019, loss: 6.7464 ||:  45%|####4     | 981/2190 [01:00<01:13, 16.43it/s]
+2022-04-14 23:36:41,102 - INFO - tqdm - start_acc: 0.1900, end_acc: 0.2072, span_acc: 0.1250, em: 0.1381, f1: 0.2320, batch_loss: 5.2608, loss: 6.5230 ||:  52%|#####2    | 1141/2190 [01:10<01:00, 17.27it/s]
+2022-04-14 23:36:51,179 - INFO - tqdm - start_acc: 0.2167, end_acc: 0.2378, span_acc: 0.1481, em: 0.1640, f1: 0.2644, batch_loss: 3.5788, loss: 6.2494 ||:  60%|#####9    | 1312/2190 [01:20<00:52, 16.74it/s]
+2022-04-14 23:37:01,308 - INFO - tqdm - start_acc: 0.2405, end_acc: 0.2643, span_acc: 0.1693, em: 0.1878, f1: 0.2929, batch_loss: 3.4027, loss: 6.0151 ||:  68%|######7   | 1481/2190 [01:30<00:49, 14.18it/s]
+2022-04-14 23:37:11,428 - INFO - tqdm - start_acc: 0.2621, end_acc: 0.2874, span_acc: 0.1876, em: 0.2088, f1: 0.3184, batch_loss: 4.3540, loss: 5.8005 ||:  75%|#######5  | 1653/2190 [01:40<00:33, 16.20it/s]
+2022-04-14 23:37:21,538 - INFO - tqdm - start_acc: 0.2806, end_acc: 0.3070, span_acc: 0.2037, em: 0.2267, f1: 0.3398, batch_loss: 3.8392, loss: 5.6233 ||:  83%|########3 | 1820/2190 [01:50<00:20, 18.11it/s]
+2022-04-14 23:37:31,700 - INFO - tqdm - start_acc: 0.2974, end_acc: 0.3260, span_acc: 0.2185, em: 0.2435, f1: 0.3603, batch_loss: 4.2964, loss: 5.4576 ||:  91%|#########1| 1994/2190 [02:01<00:10, 18.70it/s]
+2022-04-14 23:37:41,745 - INFO - tqdm - start_acc: 0.3127, end_acc: 0.3428, span_acc: 0.2325, em: 0.2590, f1: 0.3780, batch_loss: 3.0594, loss: 5.3130 ||:  99%|#########8| 2164/2190 [02:11<00:01, 16.17it/s]
+2022-04-14 23:37:42,636 - INFO - tqdm - start_acc: 0.3141, end_acc: 0.3442, span_acc: 0.2337, em: 0.2603, f1: 0.3795, batch_loss: 4.0177, loss: 5.3006 ||: 100%|#########9| 2180/2190 [02:12<00:00, 18.71it/s]
+2022-04-14 23:37:42,738 - INFO - tqdm - start_acc: 0.3142, end_acc: 0.3444, span_acc: 0.2338, em: 0.2604, f1: 0.3797, batch_loss: 2.7283, loss: 5.2988 ||: 100%|#########9| 2182/2190 [02:12<00:00, 18.96it/s]
+2022-04-14 23:37:42,870 - INFO - tqdm - start_acc: 0.3144, end_acc: 0.3446, span_acc: 0.2340, em: 0.2606, f1: 0.3800, batch_loss: 3.3402, loss: 5.2971 ||: 100%|#########9| 2184/2190 [02:12<00:00, 17.75it/s]
+2022-04-14 23:37:43,058 - INFO - tqdm - start_acc: 0.3146, end_acc: 0.3448, span_acc: 0.2342, em: 0.2609, f1: 0.3802, batch_loss: 2.8294, loss: 5.2951 ||: 100%|#########9| 2186/2190 [02:12<00:00, 14.97it/s]
+2022-04-14 23:37:43,160 - INFO - tqdm - start_acc: 0.3148, end_acc: 0.3450, span_acc: 0.2344, em: 0.2610, f1: 0.3804, batch_loss: 3.1910, loss: 5.2933 ||: 100%|#########9| 2188/2190 [02:12<00:00, 16.06it/s]
+2022-04-14 23:37:43,324 - INFO - tqdm - start_acc: 0.3149, end_acc: 0.3451, span_acc: 0.2345, em: 0.2612, f1: 0.3805, batch_loss: 4.8416, loss: 5.2925 ||: 100%|##########| 2190/2190 [02:12<00:00, 14.70it/s]
+2022-04-14 23:37:43,329 - INFO - tqdm - start_acc: 0.3149, end_acc: 0.3451, span_acc: 0.2345, em: 0.2612, f1: 0.3805, batch_loss: 4.8416, loss: 5.2925 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.49it/s]
+2022-04-14 23:37:43,329 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-14 23:37:43,329 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-14 23:37:43,331 - INFO - allennlp.data.samplers.bucket_batch_sampler - No sorting keys given; trying to guess a good one
+2022-04-14 23:37:43,331 - INFO - allennlp.data.samplers.bucket_batch_sampler - Using ['passage'] as the sorting keys
+2022-04-14 23:37:43,373 - INFO - allennlp.training.callbacks.console_logger - Batch inputs
+2022-04-14 23:37:43,373 - INFO - allennlp.training.callbacks.console_logger - batch_input/passage/token_characters/token_characters (Shape: 40 x 159 x 23)
+tensor([[[259,  85, 105,  ...,   0,   0,   0],
+         [259,  78, 118,  ...,   0,   0,   0],
+         [259,  74, 111,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  84, 112,  ...,   0,   0,   0],
+         [259, 117, 105,  ...,   0,   0,   0],
+         [259, 113, 115,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  80, 111,  ...,   0,   0,   0],
+         [259,  50,  56,  ...,   0,   0,   0],
+         [259,  78,  98,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        ...,
+
+        [[259,  83, 105,  ...,   0,   0,   0],
+         [259, 105,  98,  ...,   0,   0,   0],
+         [259,  98, 260,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  73,  98,  ...,   0,   0,   0],
+         [259,  40, 116,  ...,   0,   0,   0],
+         [259, 103,  98,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  85, 105,  ...,   0,   0,   0],
+         [259, 106, 111,  ...,   0,   0,   0],
+         [259, 112, 103,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]]], device='cuda:0')
+2022-04-14 23:37:43,378 - INFO - allennlp.training.callbacks.console_logger - batch_input/passage/tokens/tokens (Shape: 40 x 159)
+tensor([[    2,  1167,  1448,  ...,     0,     0,     0],
+        [  411,     2,  7692,  ...,     0,     0,     0],
+        [   23,  1070,    80,  ...,     0,     0,     0],
+        ...,
+        [25800,    36,     9,  ...,     0,     0,     0],
+        [ 2260,    22,  2985,  ...,     0,     0,     0],
+        [    2,  2488,     4,  ...,     0,     0,     0]], device='cuda:0')
+2022-04-14 23:37:43,379 - INFO - allennlp.training.callbacks.console_logger - batch_input/question/token_characters/token_characters (Shape: 40 x 25 x 16)
+tensor([[[259,  66, 113,  ..., 122, 260,   0],
+         [259, 105, 112,  ...,   0,   0,   0],
+         [259, 110,  98,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  88, 105,  ...,   0,   0,   0],
+         [259, 103,  98,  ...,   0,   0,   0],
+         [259,  74, 111,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  74, 111,  ...,   0,   0,   0],
+         [259, 120, 105,  ...,   0,   0,   0],
+         [259, 122, 102,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        ...,
+
+        [[259,  88, 105,  ...,   0,   0,   0],
+         [259,  98, 115,  ...,   0,   0,   0],
+         [259, 115, 105,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  88, 105,  ...,   0,   0,   0],
+         [259,  84, 105,  ...,   0,   0,   0],
+         [259,  84, 100,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]],
+
+        [[259,  88, 105,  ...,   0,   0,   0],
+         [259, 101, 112,  ...,   0,   0,   0],
+         [259,  84,  98,  ...,   0,   0,   0],
+         ...,
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0],
+         [  0,   0,   0,  ...,   0,   0,   0]]], device='cuda:0')
+2022-04-14 23:37:43,385 - INFO - allennlp.training.callbacks.console_logger - batch_input/question/tokens/tokens (Shape: 40 x 25)
+tensor([[  699,    89,    52,  ...,     0,     0,     0],
+        [   27,   771,   538,  ...,     0,     0,     0],
+        [    7,    25,    86,  ...,     0,     0,     0],
+        ...,
+        [   25,    26, 25800,  ...,     0,     0,     0],
+        [   25,  8305,  3625,  ...,     0,     0,     0],
+        [   25,   140, 36124,  ...,     0,     0,     0]], device='cuda:0')
+2022-04-14 23:37:43,386 - INFO - allennlp.training.callbacks.console_logger - batch_input/span_start (Shape: 40 x 1)
+tensor([[137],
+        [ 83],
+        [  3],
+        ...,
+        [ 14],
+        [ 47],
+        [ 44]], device='cuda:0')
+2022-04-14 23:37:43,387 - INFO - allennlp.training.callbacks.console_logger - batch_input/span_end (Shape: 40 x 1)
+tensor([[137],
+        [ 84],
+        [  3],
+        ...,
+        [ 14],
+        [ 48],
+        [ 48]], device='cuda:0')
+2022-04-14 23:37:43,387 - INFO - allennlp.training.callbacks.console_logger - Field : "batch_input/metadata" : (Length 40 of type "<class 'dict'>")
+2022-04-14 23:37:50,926 - INFO - tqdm - start_acc: 0.5440, end_acc: 0.5748, span_acc: 0.4483, em: 0.5579, f1: 0.6720, batch_loss: 2.9925, loss: 3.2246 ||: 100%|#########9| 264/265 [00:07<00:00, 36.55it/s]
+2022-04-14 23:37:50,941 - INFO - tqdm - start_acc: 0.5440, end_acc: 0.5751, span_acc: 0.4485, em: 0.5582, f1: 0.6722, batch_loss: 2.4364, loss: 3.2216 ||: 100%|##########| 265/265 [00:07<00:00, 34.82it/s]
+2022-04-14 23:37:50,942 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-14 23:37:50,942 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.261  |     0.558
+2022-04-14 23:37:50,943 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.345  |     0.575
+2022-04-14 23:37:50,943 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.381  |     0.672
+2022-04-14 23:37:50,943 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |    51.614  |       N/A
+2022-04-14 23:37:50,943 - INFO - allennlp.training.callbacks.console_logger - loss               |     5.292  |     3.222
+2022-04-14 23:37:50,943 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.234  |     0.449
+2022-04-14 23:37:50,943 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.315  |     0.544
+2022-04-14 23:37:50,943 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10256.590  |       N/A
+2022-04-14 23:37:51,001 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:20.460812
+2022-04-14 23:37:51,001 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:44:27
+2022-04-14 23:37:51,001 - INFO - allennlp.training.gradient_descent_trainer - Epoch 1/19
+2022-04-14 23:37:51,001 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:37:51,001 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-14 23:37:51,001 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:37:51,002 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:38:01,079 - INFO - tqdm - start_acc: 0.5096, end_acc: 0.5621, span_acc: 0.4132, em: 0.4625, f1: 0.6099, batch_loss: 3.5780, loss: 3.4446 ||:   8%|7         | 172/2190 [00:10<01:51, 18.09it/s]
+2022-04-14 23:38:11,181 - INFO - tqdm - start_acc: 0.5119, end_acc: 0.5575, span_acc: 0.4134, em: 0.4616, f1: 0.6069, batch_loss: 3.1525, loss: 3.4412 ||:  15%|#5        | 335/2190 [00:20<01:59, 15.54it/s]
+2022-04-14 23:38:21,212 - INFO - tqdm - start_acc: 0.5180, end_acc: 0.5622, span_acc: 0.4201, em: 0.4699, f1: 0.6145, batch_loss: 3.0478, loss: 3.3943 ||:  23%|##3       | 505/2190 [00:30<01:34, 17.74it/s]
+2022-04-14 23:38:31,279 - INFO - tqdm - start_acc: 0.5169, end_acc: 0.5624, span_acc: 0.4198, em: 0.4699, f1: 0.6157, batch_loss: 3.9429, loss: 3.3870 ||:  31%|###       | 672/2190 [00:40<01:30, 16.81it/s]
+2022-04-14 23:38:41,308 - INFO - tqdm - start_acc: 0.5185, end_acc: 0.5644, span_acc: 0.4216, em: 0.4717, f1: 0.6176, batch_loss: 3.4410, loss: 3.3676 ||:  38%|###8      | 839/2190 [00:50<01:17, 17.48it/s]
+2022-04-14 23:38:51,315 - INFO - tqdm - start_acc: 0.5206, end_acc: 0.5673, span_acc: 0.4240, em: 0.4735, f1: 0.6198, batch_loss: 3.4200, loss: 3.3491 ||:  46%|####5     | 1007/2190 [01:00<01:06, 17.89it/s]
+2022-04-14 23:39:01,342 - INFO - tqdm - start_acc: 0.5220, end_acc: 0.5664, span_acc: 0.4244, em: 0.4746, f1: 0.6209, batch_loss: 3.1933, loss: 3.3377 ||:  54%|#####3    | 1176/2190 [01:10<01:04, 15.82it/s]
+2022-04-14 23:39:11,449 - INFO - tqdm - start_acc: 0.5238, end_acc: 0.5683, span_acc: 0.4266, em: 0.4769, f1: 0.6231, batch_loss: 3.3000, loss: 3.3193 ||:  61%|######1   | 1338/2190 [01:20<00:49, 17.06it/s]
+2022-04-14 23:39:21,498 - INFO - tqdm - start_acc: 0.5240, end_acc: 0.5692, span_acc: 0.4268, em: 0.4779, f1: 0.6245, batch_loss: 2.7926, loss: 3.3108 ||:  68%|######8   | 1500/2190 [01:30<00:39, 17.50it/s]
+2022-04-14 23:39:31,612 - INFO - tqdm - start_acc: 0.5250, end_acc: 0.5701, span_acc: 0.4277, em: 0.4794, f1: 0.6261, batch_loss: 2.9050, loss: 3.3019 ||:  76%|#######5  | 1664/2190 [01:40<00:34, 15.33it/s]
+2022-04-14 23:39:41,616 - INFO - tqdm - start_acc: 0.5278, end_acc: 0.5720, span_acc: 0.4299, em: 0.4815, f1: 0.6283, batch_loss: 2.5634, loss: 3.2854 ||:  84%|########3 | 1831/2190 [01:50<00:20, 17.31it/s]
+2022-04-14 23:39:51,624 - INFO - tqdm - start_acc: 0.5288, end_acc: 0.5734, span_acc: 0.4310, em: 0.4826, f1: 0.6298, batch_loss: 4.1570, loss: 3.2748 ||:  91%|#########1| 1994/2190 [02:00<00:13, 14.45it/s]
+2022-04-14 23:40:01,700 - INFO - tqdm - start_acc: 0.5303, end_acc: 0.5756, span_acc: 0.4329, em: 0.4846, f1: 0.6319, batch_loss: 4.0000, loss: 3.2563 ||:  98%|#########8| 2155/2190 [02:10<00:02, 17.41it/s]
+2022-04-14 23:40:03,171 - INFO - tqdm - start_acc: 0.5305, end_acc: 0.5756, span_acc: 0.4328, em: 0.4846, f1: 0.6320, batch_loss: 3.3394, loss: 3.2559 ||: 100%|#########9| 2180/2190 [02:12<00:00, 17.19it/s]
+2022-04-14 23:40:03,306 - INFO - tqdm - start_acc: 0.5306, end_acc: 0.5757, span_acc: 0.4330, em: 0.4848, f1: 0.6322, batch_loss: 2.2817, loss: 3.2548 ||: 100%|#########9| 2183/2190 [02:12<00:00, 18.79it/s]
+2022-04-14 23:40:03,434 - INFO - tqdm - start_acc: 0.5306, end_acc: 0.5757, span_acc: 0.4330, em: 0.4848, f1: 0.6321, batch_loss: 2.8945, loss: 3.2549 ||: 100%|#########9| 2185/2190 [02:12<00:00, 17.86it/s]
+2022-04-14 23:40:03,591 - INFO - tqdm - start_acc: 0.5306, end_acc: 0.5757, span_acc: 0.4330, em: 0.4849, f1: 0.6322, batch_loss: 3.9258, loss: 3.2549 ||: 100%|#########9| 2188/2190 [02:12<00:00, 18.29it/s]
+2022-04-14 23:40:03,710 - INFO - tqdm - start_acc: 0.5306, end_acc: 0.5757, span_acc: 0.4330, em: 0.4849, f1: 0.6322, batch_loss: 3.0111, loss: 3.2549 ||: 100%|##########| 2190/2190 [02:12<00:00, 17.89it/s]
+2022-04-14 23:40:03,715 - INFO - tqdm - start_acc: 0.5306, end_acc: 0.5757, span_acc: 0.4330, em: 0.4849, f1: 0.6322, batch_loss: 3.0111, loss: 3.2549 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.50it/s]
+2022-04-14 23:40:03,715 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-14 23:40:03,716 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-14 23:40:11,246 - INFO - tqdm - start_acc: 0.5870, end_acc: 0.6282, span_acc: 0.4919, em: 0.6082, f1: 0.7240, batch_loss: 3.3612, loss: 2.7962 ||: 100%|#########9| 264/265 [00:07<00:00, 38.65it/s]
+2022-04-14 23:40:11,284 - INFO - tqdm - start_acc: 0.5868, end_acc: 0.6283, span_acc: 0.4917, em: 0.6079, f1: 0.7239, batch_loss: 2.4381, loss: 2.7949 ||: 100%|##########| 265/265 [00:07<00:00, 35.01it/s]
+2022-04-14 23:40:11,284 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-14 23:40:11,285 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.485  |     0.608
+2022-04-14 23:40:11,285 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.576  |     0.628
+2022-04-14 23:40:11,285 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.632  |     0.724
+2022-04-14 23:40:11,285 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2471.273  |       N/A
+2022-04-14 23:40:11,285 - INFO - allennlp.training.callbacks.console_logger - loss               |     3.255  |     2.795
+2022-04-14 23:40:11,285 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.433  |     0.492
+2022-04-14 23:40:11,285 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.531  |     0.587
+2022-04-14 23:40:11,285 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10377.723  |       N/A
+2022-04-14 23:40:11,343 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:20.342097
+2022-04-14 23:40:11,343 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:42:06
+2022-04-14 23:40:11,343 - INFO - allennlp.training.gradient_descent_trainer - Epoch 2/19
+2022-04-14 23:40:11,343 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:40:11,344 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-14 23:40:11,344 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:40:11,344 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:40:21,347 - INFO - tqdm - start_acc: 0.5854, end_acc: 0.6250, span_acc: 0.4840, em: 0.5361, f1: 0.6836, batch_loss: 2.4224, loss: 2.8090 ||:   6%|5         | 128/2190 [00:10<02:07, 16.13it/s]
+2022-04-14 23:40:31,386 - INFO - tqdm - start_acc: 0.5781, end_acc: 0.6202, span_acc: 0.4759, em: 0.5339, f1: 0.6799, batch_loss: 2.7752, loss: 2.8618 ||:  14%|#3        | 298/2190 [00:20<01:57, 16.08it/s]
+2022-04-14 23:40:41,423 - INFO - tqdm - start_acc: 0.5792, end_acc: 0.6209, span_acc: 0.4800, em: 0.5372, f1: 0.6822, batch_loss: 3.0597, loss: 2.8684 ||:  21%|##1       | 461/2190 [00:30<01:46, 16.20it/s]
+2022-04-14 23:40:51,435 - INFO - tqdm - start_acc: 0.5768, end_acc: 0.6195, span_acc: 0.4789, em: 0.5349, f1: 0.6798, batch_loss: 2.7005, loss: 2.8836 ||:  29%|##8       | 631/2190 [00:40<01:26, 17.96it/s]
+2022-04-14 23:41:01,522 - INFO - tqdm - start_acc: 0.5771, end_acc: 0.6201, span_acc: 0.4794, em: 0.5349, f1: 0.6799, batch_loss: 2.9378, loss: 2.8752 ||:  36%|###6      | 794/2190 [00:50<01:23, 16.69it/s]
+2022-04-14 23:41:11,629 - INFO - tqdm - start_acc: 0.5786, end_acc: 0.6219, span_acc: 0.4808, em: 0.5351, f1: 0.6811, batch_loss: 3.1078, loss: 2.8612 ||:  44%|####3     | 961/2190 [01:00<01:20, 15.31it/s]
+2022-04-14 23:41:21,704 - INFO - tqdm - start_acc: 0.5804, end_acc: 0.6231, span_acc: 0.4826, em: 0.5360, f1: 0.6818, batch_loss: 2.9317, loss: 2.8567 ||:  52%|#####1    | 1129/2190 [01:10<01:01, 17.33it/s]
+2022-04-14 23:41:31,743 - INFO - tqdm - start_acc: 0.5789, end_acc: 0.6224, span_acc: 0.4809, em: 0.5346, f1: 0.6808, batch_loss: 3.1393, loss: 2.8623 ||:  59%|#####8    | 1290/2190 [01:20<00:57, 15.75it/s]
+2022-04-14 23:41:41,858 - INFO - tqdm - start_acc: 0.5793, end_acc: 0.6221, span_acc: 0.4813, em: 0.5354, f1: 0.6809, batch_loss: 2.5159, loss: 2.8623 ||:  67%|######6   | 1458/2190 [01:30<00:42, 17.40it/s]
+2022-04-14 23:41:51,928 - INFO - tqdm - start_acc: 0.5794, end_acc: 0.6228, span_acc: 0.4819, em: 0.5354, f1: 0.6808, batch_loss: 3.0367, loss: 2.8589 ||:  74%|#######4  | 1628/2190 [01:40<00:33, 16.56it/s]
+2022-04-14 23:42:01,994 - INFO - tqdm - start_acc: 0.5786, end_acc: 0.6228, span_acc: 0.4812, em: 0.5352, f1: 0.6809, batch_loss: 3.1390, loss: 2.8614 ||:  82%|########1 | 1790/2190 [01:50<00:27, 14.69it/s]
+2022-04-14 23:42:12,053 - INFO - tqdm - start_acc: 0.5786, end_acc: 0.6235, span_acc: 0.4814, em: 0.5358, f1: 0.6818, batch_loss: 3.6704, loss: 2.8582 ||:  89%|########9 | 1953/2190 [02:00<00:18, 12.91it/s]
+2022-04-14 23:42:22,144 - INFO - tqdm - start_acc: 0.5787, end_acc: 0.6241, span_acc: 0.4813, em: 0.5360, f1: 0.6826, batch_loss: 2.6105, loss: 2.8529 ||:  97%|#########7| 2128/2190 [02:10<00:03, 18.37it/s]
+2022-04-14 23:42:25,229 - INFO - tqdm - start_acc: 0.5786, end_acc: 0.6241, span_acc: 0.4813, em: 0.5360, f1: 0.6828, batch_loss: 2.5078, loss: 2.8527 ||: 100%|#########9| 2181/2190 [02:13<00:00, 17.76it/s]
+2022-04-14 23:42:25,372 - INFO - tqdm - start_acc: 0.5786, end_acc: 0.6242, span_acc: 0.4813, em: 0.5360, f1: 0.6828, batch_loss: 2.2185, loss: 2.8526 ||: 100%|#########9| 2183/2190 [02:14<00:00, 16.54it/s]
+2022-04-14 23:42:25,535 - INFO - tqdm - start_acc: 0.5785, end_acc: 0.6242, span_acc: 0.4813, em: 0.5360, f1: 0.6828, batch_loss: 3.6201, loss: 2.8532 ||: 100%|#########9| 2185/2190 [02:14<00:00, 15.05it/s]
+2022-04-14 23:42:25,702 - INFO - tqdm - start_acc: 0.5785, end_acc: 0.6242, span_acc: 0.4813, em: 0.5360, f1: 0.6828, batch_loss: 2.4085, loss: 2.8533 ||: 100%|#########9| 2188/2190 [02:14<00:00, 16.03it/s]
+2022-04-14 23:42:25,824 - INFO - tqdm - start_acc: 0.5785, end_acc: 0.6241, span_acc: 0.4813, em: 0.5359, f1: 0.6828, batch_loss: 2.6974, loss: 2.8532 ||: 100%|##########| 2190/2190 [02:14<00:00, 16.14it/s]
+2022-04-14 23:42:25,829 - INFO - tqdm - start_acc: 0.5785, end_acc: 0.6241, span_acc: 0.4813, em: 0.5359, f1: 0.6828, batch_loss: 2.6974, loss: 2.8532 ||: 100%|##########| 2190/2190 [02:14<00:00, 16.28it/s]
+2022-04-14 23:42:25,829 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-14 23:42:25,830 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-14 23:42:33,345 - INFO - tqdm - start_acc: 0.6161, end_acc: 0.6465, span_acc: 0.5219, em: 0.6439, f1: 0.7493, batch_loss: 2.5872, loss: 2.5933 ||: 100%|#########9| 264/265 [00:07<00:00, 36.91it/s]
+2022-04-14 23:42:33,373 - INFO - tqdm - start_acc: 0.6164, end_acc: 0.6468, span_acc: 0.5221, em: 0.6439, f1: 0.7493, batch_loss: 2.5735, loss: 2.5932 ||: 100%|##########| 265/265 [00:07<00:00, 35.13it/s]
+2022-04-14 23:42:33,373 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-14 23:42:33,373 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.536  |     0.644
+2022-04-14 23:42:33,373 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.624  |     0.647
+2022-04-14 23:42:33,374 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.683  |     0.749
+2022-04-14 23:42:33,374 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2469.899  |       N/A
+2022-04-14 23:42:33,374 - INFO - allennlp.training.callbacks.console_logger - loss               |     2.853  |     2.593
+2022-04-14 23:42:33,374 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.481  |     0.522
+2022-04-14 23:42:33,374 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.578  |     0.616
+2022-04-14 23:42:33,374 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10380.102  |       N/A
+2022-04-14 23:42:33,436 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:22.092780
+2022-04-14 23:42:33,436 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:39:56
+2022-04-14 23:42:33,436 - INFO - allennlp.training.gradient_descent_trainer - Epoch 3/19
+2022-04-14 23:42:33,436 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:42:33,436 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-14 23:42:33,437 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:42:33,437 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:42:43,457 - INFO - tqdm - start_acc: 0.6026, end_acc: 0.6492, span_acc: 0.5048, em: 0.5643, f1: 0.7115, batch_loss: 2.7583, loss: 2.6021 ||:   7%|7         | 163/2190 [00:10<02:02, 16.57it/s]
+2022-04-14 23:42:53,541 - INFO - tqdm - start_acc: 0.6045, end_acc: 0.6530, span_acc: 0.5087, em: 0.5671, f1: 0.7141, batch_loss: 2.5323, loss: 2.5768 ||:  15%|#4        | 321/2190 [00:20<02:13, 14.00it/s]
+2022-04-14 23:43:03,553 - INFO - tqdm - start_acc: 0.6046, end_acc: 0.6513, span_acc: 0.5062, em: 0.5648, f1: 0.7119, batch_loss: 2.1881, loss: 2.5993 ||:  22%|##1       | 475/2190 [00:30<02:12, 12.98it/s]
+2022-04-14 23:43:13,574 - INFO - tqdm - start_acc: 0.6098, end_acc: 0.6526, span_acc: 0.5103, em: 0.5690, f1: 0.7144, batch_loss: 1.6929, loss: 2.5791 ||:  29%|##9       | 641/2190 [00:40<01:29, 17.36it/s]
+2022-04-14 23:43:23,689 - INFO - tqdm - start_acc: 0.6082, end_acc: 0.6495, span_acc: 0.5085, em: 0.5662, f1: 0.7121, batch_loss: 2.7585, loss: 2.5963 ||:  36%|###6      | 797/2190 [00:50<01:24, 16.43it/s]
+2022-04-14 23:43:33,754 - INFO - tqdm - start_acc: 0.6056, end_acc: 0.6479, span_acc: 0.5062, em: 0.5646, f1: 0.7102, batch_loss: 1.9865, loss: 2.6107 ||:  44%|####3     | 958/2190 [01:00<01:24, 14.60it/s]
+2022-04-14 23:43:43,811 - INFO - tqdm - start_acc: 0.6071, end_acc: 0.6499, span_acc: 0.5081, em: 0.5663, f1: 0.7117, batch_loss: 2.1438, loss: 2.6010 ||:  51%|#####1    | 1119/2190 [01:10<01:05, 16.37it/s]
+2022-04-14 23:43:53,872 - INFO - tqdm - start_acc: 0.6068, end_acc: 0.6498, span_acc: 0.5072, em: 0.5654, f1: 0.7115, batch_loss: 2.4306, loss: 2.6060 ||:  59%|#####8    | 1282/2190 [01:20<00:55, 16.35it/s]
+2022-04-14 23:44:03,971 - INFO - tqdm - start_acc: 0.6067, end_acc: 0.6506, span_acc: 0.5075, em: 0.5656, f1: 0.7116, batch_loss: 2.8575, loss: 2.6053 ||:  66%|######5   | 1440/2190 [01:30<00:47, 15.81it/s]
+2022-04-14 23:44:13,982 - INFO - tqdm - start_acc: 0.6068, end_acc: 0.6512, span_acc: 0.5084, em: 0.5660, f1: 0.7119, batch_loss: 2.5162, loss: 2.6042 ||:  73%|#######3  | 1601/2190 [01:40<00:39, 14.84it/s]
+2022-04-14 23:44:24,097 - INFO - tqdm - start_acc: 0.6057, end_acc: 0.6517, span_acc: 0.5080, em: 0.5655, f1: 0.7114, batch_loss: 3.3386, loss: 2.6058 ||:  81%|########  | 1770/2190 [01:50<00:27, 15.47it/s]
+2022-04-14 23:44:34,102 - INFO - tqdm - start_acc: 0.6062, end_acc: 0.6518, span_acc: 0.5087, em: 0.5659, f1: 0.7114, batch_loss: 2.2511, loss: 2.6047 ||:  88%|########8 | 1932/2190 [02:00<00:16, 15.49it/s]
+2022-04-14 23:44:44,234 - INFO - tqdm - start_acc: 0.6061, end_acc: 0.6517, span_acc: 0.5087, em: 0.5656, f1: 0.7110, batch_loss: 2.1905, loss: 2.6061 ||:  96%|#########6| 2108/2190 [02:10<00:05, 14.47it/s]
+2022-04-14 23:44:48,465 - INFO - tqdm - start_acc: 0.6055, end_acc: 0.6518, span_acc: 0.5084, em: 0.5653, f1: 0.7109, batch_loss: 2.9218, loss: 2.6057 ||: 100%|#########9| 2180/2190 [02:15<00:00, 16.63it/s]
+2022-04-14 23:44:48,614 - INFO - tqdm - start_acc: 0.6055, end_acc: 0.6517, span_acc: 0.5083, em: 0.5653, f1: 0.7108, batch_loss: 2.7918, loss: 2.6063 ||: 100%|#########9| 2182/2190 [02:15<00:00, 15.52it/s]
+2022-04-14 23:44:48,722 - INFO - tqdm - start_acc: 0.6055, end_acc: 0.6516, span_acc: 0.5083, em: 0.5653, f1: 0.7108, batch_loss: 2.4523, loss: 2.6063 ||: 100%|#########9| 2184/2190 [02:15<00:00, 16.31it/s]
+2022-04-14 23:44:48,867 - INFO - tqdm - start_acc: 0.6055, end_acc: 0.6517, span_acc: 0.5083, em: 0.5653, f1: 0.7108, batch_loss: 2.1974, loss: 2.6060 ||: 100%|#########9| 2186/2190 [02:15<00:00, 15.46it/s]
+2022-04-14 23:44:48,969 - INFO - tqdm - start_acc: 0.6054, end_acc: 0.6517, span_acc: 0.5083, em: 0.5652, f1: 0.7108, batch_loss: 3.2392, loss: 2.6062 ||: 100%|#########9| 2188/2190 [02:15<00:00, 16.52it/s]
+2022-04-14 23:44:49,071 - INFO - tqdm - start_acc: 0.6053, end_acc: 0.6517, span_acc: 0.5082, em: 0.5651, f1: 0.7107, batch_loss: 2.3757, loss: 2.6064 ||: 100%|##########| 2190/2190 [02:15<00:00, 17.34it/s]
+2022-04-14 23:44:49,076 - INFO - tqdm - start_acc: 0.6053, end_acc: 0.6517, span_acc: 0.5082, em: 0.5651, f1: 0.7107, batch_loss: 2.3757, loss: 2.6064 ||: 100%|##########| 2190/2190 [02:15<00:00, 16.15it/s]
+2022-04-14 23:44:49,076 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-14 23:44:49,077 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-14 23:44:56,661 - INFO - tqdm - start_acc: 0.6256, end_acc: 0.6538, span_acc: 0.5291, em: 0.6539, f1: 0.7589, batch_loss: 2.2305, loss: 2.5362 ||: 100%|##########| 265/265 [00:07<00:00, 34.94it/s]
+2022-04-14 23:44:56,662 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-14 23:44:56,662 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.565  |     0.654
+2022-04-14 23:44:56,662 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.652  |     0.654
+2022-04-14 23:44:56,662 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.711  |     0.759
+2022-04-14 23:44:56,662 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2469.374  |       N/A
+2022-04-14 23:44:56,662 - INFO - allennlp.training.callbacks.console_logger - loss               |     2.606  |     2.536
+2022-04-14 23:44:56,662 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.508  |     0.529
+2022-04-14 23:44:56,662 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.605  |     0.626
+2022-04-14 23:44:56,662 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10380.102  |       N/A
+2022-04-14 23:44:56,725 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:23.288494
+2022-04-14 23:44:56,725 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:37:44
+2022-04-14 23:44:56,725 - INFO - allennlp.training.gradient_descent_trainer - Epoch 4/19
+2022-04-14 23:44:56,725 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:44:56,725 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-14 23:44:56,725 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:44:56,725 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:45:06,798 - INFO - tqdm - start_acc: 0.6539, end_acc: 0.6889, span_acc: 0.5532, em: 0.6116, f1: 0.7512, batch_loss: 2.3470, loss: 2.2900 ||:   7%|7         | 162/2190 [00:10<01:53, 17.80it/s]
+2022-04-14 23:45:16,839 - INFO - tqdm - start_acc: 0.6476, end_acc: 0.6876, span_acc: 0.5488, em: 0.6063, f1: 0.7486, batch_loss: 2.5802, loss: 2.3000 ||:  15%|#4        | 328/2190 [00:20<02:09, 14.34it/s]
+2022-04-14 23:45:26,889 - INFO - tqdm - start_acc: 0.6435, end_acc: 0.6852, span_acc: 0.5456, em: 0.6018, f1: 0.7445, batch_loss: 2.5949, loss: 2.3218 ||:  23%|##2       | 502/2190 [00:30<01:44, 16.19it/s]
+2022-04-14 23:45:37,002 - INFO - tqdm - start_acc: 0.6421, end_acc: 0.6846, span_acc: 0.5452, em: 0.6010, f1: 0.7428, batch_loss: 2.2743, loss: 2.3308 ||:  30%|###       | 666/2190 [00:40<01:44, 14.63it/s]
+2022-04-14 23:45:47,025 - INFO - tqdm - start_acc: 0.6407, end_acc: 0.6832, span_acc: 0.5436, em: 0.5997, f1: 0.7420, batch_loss: 2.0164, loss: 2.3406 ||:  38%|###7      | 831/2190 [00:50<01:26, 15.77it/s]
+2022-04-14 23:45:57,080 - INFO - tqdm - start_acc: 0.6374, end_acc: 0.6811, span_acc: 0.5396, em: 0.5968, f1: 0.7400, batch_loss: 3.3905, loss: 2.3570 ||:  46%|####5     | 1005/2190 [01:00<01:01, 19.33it/s]
+2022-04-14 23:46:07,147 - INFO - tqdm - start_acc: 0.6354, end_acc: 0.6797, span_acc: 0.5387, em: 0.5957, f1: 0.7388, batch_loss: 2.3477, loss: 2.3668 ||:  53%|#####3    | 1171/2190 [01:10<00:54, 18.58it/s]
+2022-04-14 23:46:17,303 - INFO - tqdm - start_acc: 0.6357, end_acc: 0.6786, span_acc: 0.5387, em: 0.5957, f1: 0.7379, batch_loss: 2.2390, loss: 2.3714 ||:  61%|######1   | 1343/2190 [01:20<00:57, 14.77it/s]
+2022-04-14 23:46:27,340 - INFO - tqdm - start_acc: 0.6338, end_acc: 0.6784, span_acc: 0.5377, em: 0.5947, f1: 0.7371, batch_loss: 2.2745, loss: 2.3805 ||:  69%|######8   | 1503/2190 [01:30<00:40, 17.02it/s]
+2022-04-14 23:46:37,394 - INFO - tqdm - start_acc: 0.6327, end_acc: 0.6780, span_acc: 0.5368, em: 0.5944, f1: 0.7366, batch_loss: 2.6387, loss: 2.3839 ||:  76%|#######6  | 1666/2190 [01:40<00:31, 16.68it/s]
+2022-04-14 23:46:47,536 - INFO - tqdm - start_acc: 0.6309, end_acc: 0.6769, span_acc: 0.5348, em: 0.5924, f1: 0.7355, batch_loss: 2.1711, loss: 2.3943 ||:  84%|########3 | 1834/2190 [01:50<00:22, 15.63it/s]
+2022-04-14 23:46:57,679 - INFO - tqdm - start_acc: 0.6306, end_acc: 0.6767, span_acc: 0.5344, em: 0.5921, f1: 0.7353, batch_loss: 3.4761, loss: 2.3934 ||:  91%|#########1| 2001/2190 [02:00<00:11, 15.90it/s]
+2022-04-14 23:47:07,693 - INFO - tqdm - start_acc: 0.6298, end_acc: 0.6759, span_acc: 0.5333, em: 0.5916, f1: 0.7348, batch_loss: 3.1863, loss: 2.4016 ||:  99%|#########8| 2165/2190 [02:10<00:01, 15.18it/s]
+2022-04-14 23:47:08,594 - INFO - tqdm - start_acc: 0.6298, end_acc: 0.6758, span_acc: 0.5333, em: 0.5916, f1: 0.7348, batch_loss: 2.3739, loss: 2.4017 ||: 100%|#########9| 2181/2190 [02:11<00:00, 17.02it/s]
+2022-04-14 23:47:08,719 - INFO - tqdm - start_acc: 0.6298, end_acc: 0.6758, span_acc: 0.5333, em: 0.5915, f1: 0.7348, batch_loss: 2.7020, loss: 2.4016 ||: 100%|#########9| 2183/2190 [02:11<00:00, 16.73it/s]
+2022-04-14 23:47:08,846 - INFO - tqdm - start_acc: 0.6298, end_acc: 0.6758, span_acc: 0.5333, em: 0.5916, f1: 0.7348, batch_loss: 2.3313, loss: 2.4013 ||: 100%|#########9| 2185/2190 [02:12<00:00, 16.44it/s]
+2022-04-14 23:47:08,968 - INFO - tqdm - start_acc: 0.6297, end_acc: 0.6758, span_acc: 0.5333, em: 0.5916, f1: 0.7348, batch_loss: 2.5659, loss: 2.4013 ||: 100%|#########9| 2187/2190 [02:12<00:00, 16.44it/s]
+2022-04-14 23:47:09,084 - INFO - tqdm - start_acc: 0.6298, end_acc: 0.6758, span_acc: 0.5333, em: 0.5915, f1: 0.7348, batch_loss: 2.1546, loss: 2.4013 ||: 100%|#########9| 2189/2190 [02:12<00:00, 16.65it/s]
+2022-04-14 23:47:09,122 - INFO - tqdm - start_acc: 0.6298, end_acc: 0.6758, span_acc: 0.5333, em: 0.5916, f1: 0.7348, batch_loss: 1.7361, loss: 2.4010 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.54it/s]
+2022-04-14 23:47:09,122 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-14 23:47:09,122 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-14 23:47:16,675 - INFO - tqdm - start_acc: 0.6260, end_acc: 0.6572, span_acc: 0.5371, em: 0.6640, f1: 0.7607, batch_loss: 2.0340, loss: 2.4972 ||: 100%|##########| 265/265 [00:07<00:00, 35.09it/s]
+2022-04-14 23:47:16,676 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-14 23:47:16,676 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.592  |     0.664
+2022-04-14 23:47:16,676 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.676  |     0.657
+2022-04-14 23:47:16,677 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.735  |     0.761
+2022-04-14 23:47:16,677 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2472.913  |       N/A
+2022-04-14 23:47:16,677 - INFO - allennlp.training.callbacks.console_logger - loss               |     2.401  |     2.497
+2022-04-14 23:47:16,677 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.533  |     0.537
+2022-04-14 23:47:16,677 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.630  |     0.626
+2022-04-14 23:47:16,677 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.035  |       N/A
+2022-04-14 23:47:16,738 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:20.013155
+2022-04-14 23:47:16,738 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:35:18
+2022-04-14 23:47:16,738 - INFO - allennlp.training.gradient_descent_trainer - Epoch 5/19
+2022-04-14 23:47:16,738 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:47:16,738 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-14 23:47:16,738 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:47:16,739 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:47:26,745 - INFO - tqdm - start_acc: 0.6591, end_acc: 0.6995, span_acc: 0.5674, em: 0.6261, f1: 0.7644, batch_loss: 2.5892, loss: 2.1684 ||:   8%|7         | 165/2190 [00:10<01:44, 19.35it/s]
+2022-04-14 23:47:36,796 - INFO - tqdm - start_acc: 0.6590, end_acc: 0.7025, span_acc: 0.5667, em: 0.6280, f1: 0.7622, batch_loss: 1.5172, loss: 2.1643 ||:  15%|#5        | 336/2190 [00:20<01:55, 16.12it/s]
+2022-04-14 23:47:46,813 - INFO - tqdm - start_acc: 0.6601, end_acc: 0.7014, span_acc: 0.5659, em: 0.6255, f1: 0.7617, batch_loss: 2.2689, loss: 2.1583 ||:  23%|##2       | 495/2190 [00:30<01:44, 16.20it/s]
+2022-04-14 23:47:56,975 - INFO - tqdm - start_acc: 0.6603, end_acc: 0.7003, span_acc: 0.5648, em: 0.6228, f1: 0.7597, batch_loss: 2.5498, loss: 2.1766 ||:  31%|###       | 672/2190 [00:40<01:44, 14.55it/s]
+2022-04-14 23:48:07,071 - INFO - tqdm - start_acc: 0.6574, end_acc: 0.7007, span_acc: 0.5625, em: 0.6216, f1: 0.7591, batch_loss: 2.7753, loss: 2.1804 ||:  38%|###8      | 840/2190 [00:50<01:18, 17.22it/s]
+2022-04-14 23:48:17,077 - INFO - tqdm - start_acc: 0.6551, end_acc: 0.7005, span_acc: 0.5606, em: 0.6193, f1: 0.7581, batch_loss: 2.2282, loss: 2.1853 ||:  46%|####5     | 1007/2190 [01:00<01:08, 17.22it/s]
+2022-04-14 23:48:27,120 - INFO - tqdm - start_acc: 0.6537, end_acc: 0.6996, span_acc: 0.5592, em: 0.6170, f1: 0.7570, batch_loss: 2.1650, loss: 2.1964 ||:  54%|#####3    | 1175/2190 [01:10<00:45, 22.07it/s]
+2022-04-14 23:48:37,192 - INFO - tqdm - start_acc: 0.6526, end_acc: 0.6980, span_acc: 0.5573, em: 0.6155, f1: 0.7560, batch_loss: 2.9785, loss: 2.2109 ||:  61%|######1   | 1337/2190 [01:20<00:46, 18.52it/s]
+2022-04-14 23:48:47,306 - INFO - tqdm - start_acc: 0.6509, end_acc: 0.6976, span_acc: 0.5564, em: 0.6143, f1: 0.7550, batch_loss: 1.6718, loss: 2.2222 ||:  69%|######8   | 1501/2190 [01:30<00:42, 16.25it/s]
+2022-04-14 23:48:57,357 - INFO - tqdm - start_acc: 0.6500, end_acc: 0.6964, span_acc: 0.5549, em: 0.6125, f1: 0.7536, batch_loss: 2.2633, loss: 2.2273 ||:  77%|#######6  | 1678/2190 [01:40<00:28, 18.03it/s]
+2022-04-14 23:49:07,432 - INFO - tqdm - start_acc: 0.6503, end_acc: 0.6964, span_acc: 0.5548, em: 0.6124, f1: 0.7536, batch_loss: 1.7156, loss: 2.2308 ||:  84%|########4 | 1840/2190 [01:50<00:23, 14.93it/s]
+2022-04-14 23:49:17,558 - INFO - tqdm - start_acc: 0.6496, end_acc: 0.6954, span_acc: 0.5539, em: 0.6115, f1: 0.7532, batch_loss: 1.8558, loss: 2.2374 ||:  91%|#########1| 2002/2190 [02:00<00:12, 15.38it/s]
+2022-04-14 23:49:27,575 - INFO - tqdm - start_acc: 0.6492, end_acc: 0.6958, span_acc: 0.5537, em: 0.6116, f1: 0.7534, batch_loss: 1.8403, loss: 2.2385 ||:  99%|#########8| 2167/2190 [02:10<00:01, 16.90it/s]
+2022-04-14 23:49:28,290 - INFO - tqdm - start_acc: 0.6490, end_acc: 0.6955, span_acc: 0.5534, em: 0.6113, f1: 0.7532, batch_loss: 2.4763, loss: 2.2401 ||: 100%|#########9| 2180/2190 [02:11<00:00, 17.39it/s]
+2022-04-14 23:49:28,410 - INFO - tqdm - start_acc: 0.6490, end_acc: 0.6956, span_acc: 0.5534, em: 0.6114, f1: 0.7532, batch_loss: 1.8004, loss: 2.2401 ||: 100%|#########9| 2182/2190 [02:11<00:00, 17.15it/s]
+2022-04-14 23:49:28,534 - INFO - tqdm - start_acc: 0.6489, end_acc: 0.6955, span_acc: 0.5534, em: 0.6113, f1: 0.7532, batch_loss: 2.0085, loss: 2.2404 ||: 100%|#########9| 2184/2190 [02:11<00:00, 16.84it/s]
+2022-04-14 23:49:28,665 - INFO - tqdm - start_acc: 0.6489, end_acc: 0.6955, span_acc: 0.5534, em: 0.6113, f1: 0.7532, batch_loss: 2.7425, loss: 2.2409 ||: 100%|#########9| 2186/2190 [02:11<00:00, 16.35it/s]
+2022-04-14 23:49:28,799 - INFO - tqdm - start_acc: 0.6489, end_acc: 0.6955, span_acc: 0.5534, em: 0.6113, f1: 0.7532, batch_loss: 2.5621, loss: 2.2412 ||: 100%|#########9| 2188/2190 [02:12<00:00, 15.89it/s]
+2022-04-14 23:49:28,891 - INFO - tqdm - start_acc: 0.6488, end_acc: 0.6954, span_acc: 0.5533, em: 0.6112, f1: 0.7531, batch_loss: 2.3347, loss: 2.2415 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.57it/s]
+2022-04-14 23:49:28,891 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-14 23:49:28,891 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-14 23:49:36,473 - INFO - tqdm - start_acc: 0.6329, end_acc: 0.6604, span_acc: 0.5373, em: 0.6671, f1: 0.7679, batch_loss: 2.0424, loss: 2.5083 ||: 100%|##########| 265/265 [00:07<00:00, 34.95it/s]
+2022-04-14 23:49:36,474 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-14 23:49:36,474 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.611  |     0.667
+2022-04-14 23:49:36,474 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.695  |     0.660
+2022-04-14 23:49:36,474 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.753  |     0.768
+2022-04-14 23:49:36,474 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2462.311  |       N/A
+2022-04-14 23:49:36,474 - INFO - allennlp.training.callbacks.console_logger - loss               |     2.241  |     2.508
+2022-04-14 23:49:36,474 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.553  |     0.537
+2022-04-14 23:49:36,474 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.649  |     0.633
+2022-04-14 23:49:36,474 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.090  |       N/A
+2022-04-14 23:49:36,536 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:19.798105
+2022-04-14 23:49:36,536 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:32:53
+2022-04-14 23:49:36,536 - INFO - allennlp.training.gradient_descent_trainer - Epoch 6/19
+2022-04-14 23:49:36,536 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:49:36,537 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-14 23:49:36,537 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:49:36,537 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:49:46,570 - INFO - tqdm - start_acc: 0.6778, end_acc: 0.7274, span_acc: 0.5881, em: 0.6481, f1: 0.7857, batch_loss: 2.1767, loss: 1.9655 ||:   8%|7         | 170/2190 [00:10<02:07, 15.87it/s]
+2022-04-14 23:49:56,650 - INFO - tqdm - start_acc: 0.6779, end_acc: 0.7294, span_acc: 0.5887, em: 0.6484, f1: 0.7861, batch_loss: 2.5467, loss: 1.9847 ||:  15%|#5        | 337/2190 [00:20<01:50, 16.80it/s]
+2022-04-14 23:50:06,701 - INFO - tqdm - start_acc: 0.6750, end_acc: 0.7270, span_acc: 0.5848, em: 0.6433, f1: 0.7822, batch_loss: 2.8818, loss: 2.0039 ||:  23%|##2       | 501/2190 [00:30<01:52, 15.06it/s]
+2022-04-14 23:50:16,793 - INFO - tqdm - start_acc: 0.6729, end_acc: 0.7256, span_acc: 0.5825, em: 0.6412, f1: 0.7805, batch_loss: 1.6531, loss: 2.0100 ||:  30%|###       | 664/2190 [00:40<01:41, 15.06it/s]
+2022-04-14 23:50:26,913 - INFO - tqdm - start_acc: 0.6730, end_acc: 0.7236, span_acc: 0.5813, em: 0.6394, f1: 0.7785, batch_loss: 1.4454, loss: 2.0183 ||:  38%|###8      | 837/2190 [00:50<01:22, 16.47it/s]
+2022-04-14 23:50:36,953 - INFO - tqdm - start_acc: 0.6713, end_acc: 0.7218, span_acc: 0.5793, em: 0.6377, f1: 0.7769, batch_loss: 1.5836, loss: 2.0343 ||:  45%|####5     | 995/2190 [01:00<01:07, 17.58it/s]
+2022-04-14 23:50:47,055 - INFO - tqdm - start_acc: 0.6700, end_acc: 0.7209, span_acc: 0.5777, em: 0.6361, f1: 0.7754, batch_loss: 2.4476, loss: 2.0495 ||:  53%|#####3    | 1163/2190 [01:10<00:59, 17.35it/s]
+2022-04-14 23:50:57,141 - INFO - tqdm - start_acc: 0.6689, end_acc: 0.7191, span_acc: 0.5755, em: 0.6342, f1: 0.7740, batch_loss: 2.2755, loss: 2.0575 ||:  61%|######    | 1332/2190 [01:20<00:49, 17.46it/s]
+2022-04-14 23:51:07,200 - INFO - tqdm - start_acc: 0.6680, end_acc: 0.7174, span_acc: 0.5743, em: 0.6332, f1: 0.7733, batch_loss: 2.9170, loss: 2.0649 ||:  68%|######8   | 1496/2190 [01:30<00:53, 13.04it/s]
+2022-04-14 23:51:17,274 - INFO - tqdm - start_acc: 0.6672, end_acc: 0.7160, span_acc: 0.5736, em: 0.6323, f1: 0.7723, batch_loss: 2.1826, loss: 2.0749 ||:  76%|#######5  | 1663/2190 [01:40<00:30, 17.36it/s]
+2022-04-14 23:51:27,338 - INFO - tqdm - start_acc: 0.6658, end_acc: 0.7146, span_acc: 0.5717, em: 0.6307, f1: 0.7710, batch_loss: 2.3811, loss: 2.0851 ||:  83%|########3 | 1825/2190 [01:50<00:23, 15.60it/s]
+2022-04-14 23:51:37,416 - INFO - tqdm - start_acc: 0.6650, end_acc: 0.7136, span_acc: 0.5708, em: 0.6297, f1: 0.7700, batch_loss: 2.4093, loss: 2.0923 ||:  91%|#########1| 1993/2190 [02:00<00:13, 15.08it/s]
+2022-04-14 23:51:47,605 - INFO - tqdm - start_acc: 0.6642, end_acc: 0.7129, span_acc: 0.5699, em: 0.6285, f1: 0.7693, batch_loss: 1.7643, loss: 2.0986 ||:  99%|#########9| 2169/2190 [02:11<00:01, 17.37it/s]
+2022-04-14 23:51:48,226 - INFO - tqdm - start_acc: 0.6644, end_acc: 0.7130, span_acc: 0.5702, em: 0.6287, f1: 0.7693, batch_loss: 1.6997, loss: 2.0975 ||: 100%|#########9| 2180/2190 [02:11<00:00, 17.36it/s]
+2022-04-14 23:51:48,337 - INFO - tqdm - start_acc: 0.6643, end_acc: 0.7130, span_acc: 0.5702, em: 0.6287, f1: 0.7693, batch_loss: 1.8563, loss: 2.0976 ||: 100%|#########9| 2182/2190 [02:11<00:00, 17.56it/s]
+2022-04-14 23:51:48,452 - INFO - tqdm - start_acc: 0.6644, end_acc: 0.7130, span_acc: 0.5702, em: 0.6287, f1: 0.7694, batch_loss: 1.9220, loss: 2.0970 ||: 100%|#########9| 2184/2190 [02:11<00:00, 17.52it/s]
+2022-04-14 23:51:48,556 - INFO - tqdm - start_acc: 0.6644, end_acc: 0.7130, span_acc: 0.5703, em: 0.6288, f1: 0.7694, batch_loss: 1.6179, loss: 2.0966 ||: 100%|#########9| 2186/2190 [02:12<00:00, 17.95it/s]
+2022-04-14 23:51:48,721 - INFO - tqdm - start_acc: 0.6644, end_acc: 0.7130, span_acc: 0.5703, em: 0.6287, f1: 0.7694, batch_loss: 2.2811, loss: 2.0968 ||: 100%|#########9| 2188/2190 [02:12<00:00, 15.76it/s]
+2022-04-14 23:51:48,837 - INFO - tqdm - start_acc: 0.6644, end_acc: 0.7129, span_acc: 0.5702, em: 0.6287, f1: 0.7694, batch_loss: 2.5226, loss: 2.0972 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.15it/s]
+2022-04-14 23:51:48,843 - INFO - tqdm - start_acc: 0.6644, end_acc: 0.7129, span_acc: 0.5702, em: 0.6287, f1: 0.7694, batch_loss: 2.5226, loss: 2.0972 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.55it/s]
+2022-04-14 23:51:48,843 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-14 23:51:48,843 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-14 23:51:56,379 - INFO - tqdm - start_acc: 0.6306, end_acc: 0.6715, span_acc: 0.5447, em: 0.6729, f1: 0.7717, batch_loss: 2.4000, loss: 2.5224 ||: 100%|##########| 265/265 [00:07<00:00, 39.14it/s]
+2022-04-14 23:51:56,380 - INFO - tqdm - start_acc: 0.6306, end_acc: 0.6715, span_acc: 0.5447, em: 0.6729, f1: 0.7717, batch_loss: 2.4000, loss: 2.5224 ||: 100%|##########| 265/265 [00:07<00:00, 35.16it/s]
+2022-04-14 23:51:56,380 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-14 23:51:56,381 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.629  |     0.673
+2022-04-14 23:51:56,381 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.713  |     0.672
+2022-04-14 23:51:56,381 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.769  |     0.772
+2022-04-14 23:51:56,381 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2465.938  |       N/A
+2022-04-14 23:51:56,381 - INFO - allennlp.training.callbacks.console_logger - loss               |     2.097  |     2.522
+2022-04-14 23:51:56,381 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.570  |     0.545
+2022-04-14 23:51:56,381 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.664  |     0.631
+2022-04-14 23:51:56,381 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.223  |       N/A
+2022-04-14 23:51:56,442 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:19.906044
+2022-04-14 23:51:56,442 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:30:30
+2022-04-14 23:51:56,443 - INFO - allennlp.training.gradient_descent_trainer - Epoch 7/19
+2022-04-14 23:51:56,443 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:51:56,443 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-14 23:51:56,443 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:51:56,443 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:52:06,513 - INFO - tqdm - start_acc: 0.6804, end_acc: 0.7411, span_acc: 0.5883, em: 0.6465, f1: 0.7885, batch_loss: 1.5931, loss: 1.9060 ||:   7%|7         | 163/2190 [00:10<02:02, 16.60it/s]
+2022-04-14 23:52:16,606 - INFO - tqdm - start_acc: 0.6813, end_acc: 0.7382, span_acc: 0.5867, em: 0.6481, f1: 0.7894, batch_loss: 2.2213, loss: 1.9095 ||:  15%|#5        | 332/2190 [00:20<01:55, 16.09it/s]
+2022-04-14 23:52:26,606 - INFO - tqdm - start_acc: 0.6864, end_acc: 0.7378, span_acc: 0.5909, em: 0.6494, f1: 0.7900, batch_loss: 2.1021, loss: 1.8983 ||:  23%|##2       | 498/2190 [00:30<01:33, 18.13it/s]
+2022-04-14 23:52:36,730 - INFO - tqdm - start_acc: 0.6860, end_acc: 0.7343, span_acc: 0.5901, em: 0.6478, f1: 0.7886, batch_loss: 1.9810, loss: 1.9185 ||:  31%|###       | 669/2190 [00:40<01:34, 16.06it/s]
+2022-04-14 23:52:46,744 - INFO - tqdm - start_acc: 0.6869, end_acc: 0.7341, span_acc: 0.5908, em: 0.6489, f1: 0.7884, batch_loss: 1.7941, loss: 1.9200 ||:  38%|###7      | 829/2190 [00:50<01:23, 16.31it/s]
+2022-04-14 23:52:56,816 - INFO - tqdm - start_acc: 0.6867, end_acc: 0.7353, span_acc: 0.5909, em: 0.6499, f1: 0.7895, batch_loss: 1.9317, loss: 1.9185 ||:  46%|####5     | 997/2190 [01:00<01:08, 17.31it/s]
+2022-04-14 23:53:06,909 - INFO - tqdm - start_acc: 0.6861, end_acc: 0.7352, span_acc: 0.5910, em: 0.6499, f1: 0.7892, batch_loss: 2.1844, loss: 1.9267 ||:  53%|#####3    | 1167/2190 [01:10<01:02, 16.37it/s]
+2022-04-14 23:53:16,935 - INFO - tqdm - start_acc: 0.6833, end_acc: 0.7336, span_acc: 0.5888, em: 0.6484, f1: 0.7879, batch_loss: 2.8640, loss: 1.9383 ||:  61%|######    | 1330/2190 [01:20<00:50, 16.93it/s]
+2022-04-14 23:53:26,966 - INFO - tqdm - start_acc: 0.6823, end_acc: 0.7318, span_acc: 0.5873, em: 0.6473, f1: 0.7864, batch_loss: 1.9608, loss: 1.9503 ||:  68%|######8   | 1500/2190 [01:30<00:40, 16.86it/s]
+2022-04-14 23:53:37,004 - INFO - tqdm - start_acc: 0.6801, end_acc: 0.7302, span_acc: 0.5851, em: 0.6447, f1: 0.7850, batch_loss: 1.9938, loss: 1.9612 ||:  76%|#######5  | 1662/2190 [01:40<00:29, 17.81it/s]
+2022-04-14 23:53:47,070 - INFO - tqdm - start_acc: 0.6800, end_acc: 0.7291, span_acc: 0.5846, em: 0.6443, f1: 0.7844, batch_loss: 2.1546, loss: 1.9644 ||:  84%|########3 | 1829/2190 [01:50<00:23, 15.11it/s]
+2022-04-14 23:53:57,113 - INFO - tqdm - start_acc: 0.6791, end_acc: 0.7282, span_acc: 0.5842, em: 0.6439, f1: 0.7835, batch_loss: 1.4124, loss: 1.9673 ||:  91%|#########1| 2000/2190 [02:00<00:14, 13.52it/s]
+2022-04-14 23:54:07,143 - INFO - tqdm - start_acc: 0.6783, end_acc: 0.7278, span_acc: 0.5837, em: 0.6436, f1: 0.7829, batch_loss: 1.9678, loss: 1.9738 ||:  99%|#########8| 2160/2190 [02:10<00:02, 14.89it/s]
+2022-04-14 23:54:08,271 - INFO - tqdm - start_acc: 0.6785, end_acc: 0.7279, span_acc: 0.5840, em: 0.6438, f1: 0.7829, batch_loss: 1.9595, loss: 1.9732 ||: 100%|#########9| 2180/2190 [02:11<00:00, 18.21it/s]
+2022-04-14 23:54:08,467 - INFO - tqdm - start_acc: 0.6785, end_acc: 0.7278, span_acc: 0.5840, em: 0.6438, f1: 0.7829, batch_loss: 2.6381, loss: 1.9734 ||: 100%|#########9| 2182/2190 [02:12<00:00, 14.89it/s]
+2022-04-14 23:54:08,569 - INFO - tqdm - start_acc: 0.6784, end_acc: 0.7278, span_acc: 0.5840, em: 0.6438, f1: 0.7828, batch_loss: 2.7289, loss: 1.9742 ||: 100%|#########9| 2184/2190 [02:12<00:00, 15.99it/s]
+2022-04-14 23:54:08,677 - INFO - tqdm - start_acc: 0.6783, end_acc: 0.7278, span_acc: 0.5839, em: 0.6437, f1: 0.7828, batch_loss: 1.9775, loss: 1.9743 ||: 100%|#########9| 2186/2190 [02:12<00:00, 16.67it/s]
+2022-04-14 23:54:08,791 - INFO - tqdm - start_acc: 0.6783, end_acc: 0.7278, span_acc: 0.5839, em: 0.6437, f1: 0.7828, batch_loss: 2.1897, loss: 1.9745 ||: 100%|#########9| 2189/2190 [02:12<00:00, 19.39it/s]
+2022-04-14 23:54:08,892 - INFO - tqdm - start_acc: 0.6783, end_acc: 0.7278, span_acc: 0.5839, em: 0.6436, f1: 0.7828, batch_loss: 2.0625, loss: 1.9745 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.53it/s]
+2022-04-14 23:54:08,892 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-14 23:54:08,893 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-14 23:54:16,448 - INFO - tqdm - start_acc: 0.6276, end_acc: 0.6677, span_acc: 0.5439, em: 0.6668, f1: 0.7651, batch_loss: 2.3893, loss: 2.5378 ||: 100%|##########| 265/265 [00:07<00:00, 35.08it/s]
+2022-04-14 23:54:16,448 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-14 23:54:16,449 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.644  |     0.667
+2022-04-14 23:54:16,449 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.728  |     0.668
+2022-04-14 23:54:16,449 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.783  |     0.765
+2022-04-14 23:54:16,449 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2470.521  |       N/A
+2022-04-14 23:54:16,449 - INFO - allennlp.training.callbacks.console_logger - loss               |     1.975  |     2.538
+2022-04-14 23:54:16,449 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.584  |     0.544
+2022-04-14 23:54:16,449 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.678  |     0.628
+2022-04-14 23:54:16,449 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.223  |       N/A
+2022-04-14 23:54:16,510 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:20.067939
+2022-04-14 23:54:16,511 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:28:08
+2022-04-14 23:54:16,511 - INFO - allennlp.training.gradient_descent_trainer - Epoch 8/19
+2022-04-14 23:54:16,511 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:54:16,511 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-14 23:54:16,511 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:54:16,511 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:54:26,559 - INFO - tqdm - start_acc: 0.7162, end_acc: 0.7605, span_acc: 0.6239, em: 0.6829, f1: 0.8125, batch_loss: 1.7556, loss: 1.7032 ||:   7%|7         | 163/2190 [00:10<01:58, 17.04it/s]
+2022-04-14 23:54:36,593 - INFO - tqdm - start_acc: 0.7087, end_acc: 0.7571, span_acc: 0.6160, em: 0.6762, f1: 0.8088, batch_loss: 1.6967, loss: 1.7619 ||:  15%|#4        | 328/2190 [00:20<02:05, 14.89it/s]
+2022-04-14 23:54:46,737 - INFO - tqdm - start_acc: 0.7036, end_acc: 0.7520, span_acc: 0.6083, em: 0.6690, f1: 0.8046, batch_loss: 1.7370, loss: 1.7861 ||:  22%|##2       | 488/2190 [00:30<01:54, 14.82it/s]
+2022-04-14 23:54:56,803 - INFO - tqdm - start_acc: 0.7005, end_acc: 0.7495, span_acc: 0.6042, em: 0.6667, f1: 0.8028, batch_loss: 1.7267, loss: 1.7970 ||:  30%|##9       | 653/2190 [00:40<01:39, 15.51it/s]
+2022-04-14 23:55:06,837 - INFO - tqdm - start_acc: 0.7003, end_acc: 0.7470, span_acc: 0.6033, em: 0.6663, f1: 0.8024, batch_loss: 2.6950, loss: 1.8083 ||:  38%|###7      | 827/2190 [00:50<01:17, 17.48it/s]
+2022-04-14 23:55:16,911 - INFO - tqdm - start_acc: 0.6989, end_acc: 0.7471, span_acc: 0.6032, em: 0.6663, f1: 0.8018, batch_loss: 2.0672, loss: 1.8164 ||:  45%|####5     | 995/2190 [01:00<01:14, 16.02it/s]
+2022-04-14 23:55:27,066 - INFO - tqdm - start_acc: 0.6965, end_acc: 0.7447, span_acc: 0.6008, em: 0.6631, f1: 0.7999, batch_loss: 1.9440, loss: 1.8356 ||:  53%|#####3    | 1165/2190 [01:10<01:17, 13.22it/s]
+2022-04-14 23:55:37,217 - INFO - tqdm - start_acc: 0.6955, end_acc: 0.7424, span_acc: 0.5991, em: 0.6607, f1: 0.7979, batch_loss: 2.1996, loss: 1.8495 ||:  61%|######    | 1335/2190 [01:20<01:03, 13.56it/s]
+2022-04-14 23:55:47,221 - INFO - tqdm - start_acc: 0.6951, end_acc: 0.7410, span_acc: 0.5986, em: 0.6594, f1: 0.7964, batch_loss: 1.9336, loss: 1.8542 ||:  69%|######8   | 1501/2190 [01:30<00:44, 15.58it/s]
+2022-04-14 23:55:57,230 - INFO - tqdm - start_acc: 0.6952, end_acc: 0.7419, span_acc: 0.5999, em: 0.6600, f1: 0.7964, batch_loss: 1.4549, loss: 1.8547 ||:  76%|#######5  | 1664/2190 [01:40<00:33, 15.58it/s]
+2022-04-14 23:56:07,266 - INFO - tqdm - start_acc: 0.6941, end_acc: 0.7418, span_acc: 0.5997, em: 0.6596, f1: 0.7959, batch_loss: 1.8061, loss: 1.8587 ||:  84%|########3 | 1830/2190 [01:50<00:19, 18.06it/s]
+2022-04-14 23:56:17,271 - INFO - tqdm - start_acc: 0.6938, end_acc: 0.7407, span_acc: 0.5994, em: 0.6591, f1: 0.7953, batch_loss: 2.7880, loss: 1.8673 ||:  91%|#########1| 1995/2190 [02:00<00:10, 18.65it/s]
+2022-04-14 23:56:27,283 - INFO - tqdm - start_acc: 0.6925, end_acc: 0.7400, span_acc: 0.5981, em: 0.6578, f1: 0.7943, batch_loss: 1.9035, loss: 1.8728 ||:  99%|#########8| 2162/2190 [02:10<00:01, 16.56it/s]
+2022-04-14 23:56:28,372 - INFO - tqdm - start_acc: 0.6927, end_acc: 0.7401, span_acc: 0.5982, em: 0.6577, f1: 0.7944, batch_loss: 2.2725, loss: 1.8718 ||: 100%|#########9| 2180/2190 [02:11<00:00, 16.39it/s]
+2022-04-14 23:56:28,482 - INFO - tqdm - start_acc: 0.6927, end_acc: 0.7401, span_acc: 0.5982, em: 0.6577, f1: 0.7944, batch_loss: 2.3143, loss: 1.8718 ||: 100%|#########9| 2182/2190 [02:11<00:00, 16.87it/s]
+2022-04-14 23:56:28,597 - INFO - tqdm - start_acc: 0.6928, end_acc: 0.7401, span_acc: 0.5982, em: 0.6577, f1: 0.7944, batch_loss: 2.2285, loss: 1.8719 ||: 100%|#########9| 2184/2190 [02:12<00:00, 17.02it/s]
+2022-04-14 23:56:28,736 - INFO - tqdm - start_acc: 0.6927, end_acc: 0.7401, span_acc: 0.5982, em: 0.6577, f1: 0.7944, batch_loss: 2.1535, loss: 1.8719 ||: 100%|#########9| 2186/2190 [02:12<00:00, 16.15it/s]
+2022-04-14 23:56:28,883 - INFO - tqdm - start_acc: 0.6927, end_acc: 0.7401, span_acc: 0.5982, em: 0.6577, f1: 0.7943, batch_loss: 1.7044, loss: 1.8718 ||: 100%|#########9| 2188/2190 [02:12<00:00, 15.32it/s]
+2022-04-14 23:56:28,987 - INFO - tqdm - start_acc: 0.6927, end_acc: 0.7402, span_acc: 0.5982, em: 0.6577, f1: 0.7943, batch_loss: 2.1904, loss: 1.8716 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.28it/s]
+2022-04-14 23:56:28,992 - INFO - tqdm - start_acc: 0.6927, end_acc: 0.7402, span_acc: 0.5982, em: 0.6577, f1: 0.7943, batch_loss: 2.1904, loss: 1.8716 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.53it/s]
+2022-04-14 23:56:28,992 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-14 23:56:28,993 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-14 23:56:36,572 - INFO - tqdm - start_acc: 0.6342, end_acc: 0.6695, span_acc: 0.5470, em: 0.6756, f1: 0.7727, batch_loss: 1.9428, loss: 2.6249 ||: 100%|##########| 265/265 [00:07<00:00, 34.97it/s]
+2022-04-14 23:56:36,572 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-14 23:56:36,572 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.658  |     0.676
+2022-04-14 23:56:36,573 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.740  |     0.670
+2022-04-14 23:56:36,573 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.794  |     0.773
+2022-04-14 23:56:36,573 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2474.842  |       N/A
+2022-04-14 23:56:36,573 - INFO - allennlp.training.callbacks.console_logger - loss               |     1.872  |     2.625
+2022-04-14 23:56:36,573 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.598  |     0.547
+2022-04-14 23:56:36,573 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.693  |     0.634
+2022-04-14 23:56:36,573 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-14 23:56:36,635 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:20.124377
+2022-04-14 23:56:36,635 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:25:47
+2022-04-14 23:56:36,635 - INFO - allennlp.training.gradient_descent_trainer - Epoch 9/19
+2022-04-14 23:56:36,635 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:56:36,635 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-14 23:56:36,635 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:56:36,635 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:56:46,811 - INFO - tqdm - start_acc: 0.7264, end_acc: 0.7714, span_acc: 0.6342, em: 0.6905, f1: 0.8213, batch_loss: 2.0161, loss: 1.6373 ||:   7%|7         | 160/2190 [00:10<02:21, 14.34it/s]
+2022-04-14 23:56:56,913 - INFO - tqdm - start_acc: 0.7242, end_acc: 0.7703, span_acc: 0.6340, em: 0.6908, f1: 0.8221, batch_loss: 2.0813, loss: 1.6363 ||:  15%|#5        | 329/2190 [00:20<01:36, 19.22it/s]
+2022-04-14 23:57:07,032 - INFO - tqdm - start_acc: 0.7178, end_acc: 0.7651, span_acc: 0.6258, em: 0.6852, f1: 0.8179, batch_loss: 1.9612, loss: 1.6758 ||:  23%|##2       | 495/2190 [00:30<01:37, 17.45it/s]
+2022-04-14 23:57:17,126 - INFO - tqdm - start_acc: 0.7155, end_acc: 0.7626, span_acc: 0.6215, em: 0.6819, f1: 0.8166, batch_loss: 1.4119, loss: 1.6819 ||:  30%|###       | 663/2190 [00:40<01:30, 16.90it/s]
+2022-04-14 23:57:27,208 - INFO - tqdm - start_acc: 0.7126, end_acc: 0.7607, span_acc: 0.6188, em: 0.6805, f1: 0.8152, batch_loss: 1.6455, loss: 1.7012 ||:  38%|###7      | 825/2190 [00:50<01:24, 16.17it/s]
+2022-04-14 23:57:37,269 - INFO - tqdm - start_acc: 0.7122, end_acc: 0.7599, span_acc: 0.6191, em: 0.6793, f1: 0.8135, batch_loss: 1.7797, loss: 1.7126 ||:  45%|####5     | 991/2190 [01:00<01:25, 14.00it/s]
+2022-04-14 23:57:47,317 - INFO - tqdm - start_acc: 0.7113, end_acc: 0.7589, span_acc: 0.6180, em: 0.6778, f1: 0.8121, batch_loss: 1.5208, loss: 1.7205 ||:  53%|#####3    | 1167/2190 [01:10<00:49, 20.52it/s]
+2022-04-14 23:57:57,342 - INFO - tqdm - start_acc: 0.7106, end_acc: 0.7580, span_acc: 0.6171, em: 0.6767, f1: 0.8111, batch_loss: 1.7459, loss: 1.7286 ||:  60%|######    | 1321/2190 [01:20<00:55, 15.79it/s]
+2022-04-14 23:58:07,464 - INFO - tqdm - start_acc: 0.7096, end_acc: 0.7576, span_acc: 0.6164, em: 0.6761, f1: 0.8105, batch_loss: 1.5545, loss: 1.7356 ||:  68%|######8   | 1490/2190 [01:30<00:45, 15.47it/s]
+2022-04-14 23:58:17,499 - INFO - tqdm - start_acc: 0.7074, end_acc: 0.7564, span_acc: 0.6146, em: 0.6746, f1: 0.8093, batch_loss: 2.2890, loss: 1.7498 ||:  76%|#######5  | 1654/2190 [01:40<00:30, 17.46it/s]
+2022-04-14 23:58:27,530 - INFO - tqdm - start_acc: 0.7064, end_acc: 0.7557, span_acc: 0.6135, em: 0.6732, f1: 0.8083, batch_loss: 1.9159, loss: 1.7551 ||:  83%|########2 | 1816/2190 [01:50<00:20, 18.12it/s]
+2022-04-14 23:58:37,657 - INFO - tqdm - start_acc: 0.7052, end_acc: 0.7546, span_acc: 0.6120, em: 0.6719, f1: 0.8077, batch_loss: 1.9593, loss: 1.7626 ||:  91%|######### | 1987/2190 [02:01<00:13, 14.75it/s]
+2022-04-14 23:58:47,698 - INFO - tqdm - start_acc: 0.7048, end_acc: 0.7537, span_acc: 0.6118, em: 0.6711, f1: 0.8066, batch_loss: 1.1820, loss: 1.7696 ||:  99%|#########8| 2164/2190 [02:11<00:01, 18.23it/s]
+2022-04-14 23:58:48,722 - INFO - tqdm - start_acc: 0.7049, end_acc: 0.7535, span_acc: 0.6117, em: 0.6710, f1: 0.8066, batch_loss: 2.2848, loss: 1.7707 ||: 100%|#########9| 2181/2190 [02:12<00:00, 16.24it/s]
+2022-04-14 23:58:48,835 - INFO - tqdm - start_acc: 0.7050, end_acc: 0.7536, span_acc: 0.6118, em: 0.6711, f1: 0.8067, batch_loss: 1.1480, loss: 1.7704 ||: 100%|#########9| 2184/2190 [02:12<00:00, 19.02it/s]
+2022-04-14 23:58:48,976 - INFO - tqdm - start_acc: 0.7049, end_acc: 0.7536, span_acc: 0.6118, em: 0.6711, f1: 0.8066, batch_loss: 1.9847, loss: 1.7702 ||: 100%|#########9| 2187/2190 [02:12<00:00, 19.75it/s]
+2022-04-14 23:58:49,115 - INFO - tqdm - start_acc: 0.7049, end_acc: 0.7537, span_acc: 0.6118, em: 0.6711, f1: 0.8067, batch_loss: 1.5331, loss: 1.7699 ||: 100%|#########9| 2189/2190 [02:12<00:00, 18.05it/s]
+2022-04-14 23:58:49,218 - INFO - tqdm - start_acc: 0.7049, end_acc: 0.7537, span_acc: 0.6118, em: 0.6711, f1: 0.8067, batch_loss: 1.6820, loss: 1.7698 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.52it/s]
+2022-04-14 23:58:49,218 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-14 23:58:49,219 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-14 23:58:56,780 - INFO - tqdm - start_acc: 0.6310, end_acc: 0.6711, span_acc: 0.5456, em: 0.6737, f1: 0.7695, batch_loss: 2.2787, loss: 2.5569 ||: 100%|#########9| 264/265 [00:07<00:00, 37.26it/s]
+2022-04-14 23:58:56,816 - INFO - tqdm - start_acc: 0.6304, end_acc: 0.6709, span_acc: 0.5452, em: 0.6732, f1: 0.7691, batch_loss: 3.1236, loss: 2.5590 ||: 100%|##########| 265/265 [00:07<00:00, 34.88it/s]
+2022-04-14 23:58:56,817 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-14 23:58:56,817 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.671  |     0.673
+2022-04-14 23:58:56,817 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.754  |     0.671
+2022-04-14 23:58:56,817 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.807  |     0.769
+2022-04-14 23:58:56,817 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2472.721  |       N/A
+2022-04-14 23:58:56,817 - INFO - allennlp.training.callbacks.console_logger - loss               |     1.770  |     2.559
+2022-04-14 23:58:56,818 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.612  |     0.545
+2022-04-14 23:58:56,818 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.705  |     0.630
+2022-04-14 23:58:56,818 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-14 23:58:56,879 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:20.244370
+2022-04-14 23:58:56,880 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:23:26
+2022-04-14 23:58:56,880 - INFO - allennlp.training.gradient_descent_trainer - Epoch 10/19
+2022-04-14 23:58:56,880 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-14 23:58:56,880 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-14 23:58:56,880 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-14 23:58:56,880 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-14 23:59:06,950 - INFO - tqdm - start_acc: 0.7250, end_acc: 0.7792, span_acc: 0.6384, em: 0.6940, f1: 0.8279, batch_loss: 2.1038, loss: 1.6015 ||:   7%|7         | 162/2190 [00:10<02:04, 16.25it/s]
+2022-04-14 23:59:17,025 - INFO - tqdm - start_acc: 0.7242, end_acc: 0.7797, span_acc: 0.6360, em: 0.6949, f1: 0.8281, batch_loss: 1.3761, loss: 1.5897 ||:  15%|#4        | 327/2190 [00:20<01:44, 17.83it/s]
+2022-04-14 23:59:27,046 - INFO - tqdm - start_acc: 0.7201, end_acc: 0.7764, span_acc: 0.6328, em: 0.6916, f1: 0.8244, batch_loss: 1.1720, loss: 1.6089 ||:  22%|##2       | 489/2190 [00:30<01:43, 16.36it/s]
+2022-04-14 23:59:37,100 - INFO - tqdm - start_acc: 0.7209, end_acc: 0.7741, span_acc: 0.6312, em: 0.6907, f1: 0.8235, batch_loss: 1.7362, loss: 1.6148 ||:  30%|###       | 661/2190 [00:40<01:41, 15.01it/s]
+2022-04-14 23:59:47,212 - INFO - tqdm - start_acc: 0.7188, end_acc: 0.7720, span_acc: 0.6295, em: 0.6882, f1: 0.8215, batch_loss: 1.5962, loss: 1.6327 ||:  38%|###8      | 836/2190 [00:50<01:24, 15.94it/s]
+2022-04-14 23:59:57,286 - INFO - tqdm - start_acc: 0.7173, end_acc: 0.7696, span_acc: 0.6277, em: 0.6862, f1: 0.8195, batch_loss: 1.1587, loss: 1.6446 ||:  46%|####5     | 1005/2190 [01:00<01:15, 15.71it/s]
+2022-04-15 00:00:07,351 - INFO - tqdm - start_acc: 0.7159, end_acc: 0.7669, span_acc: 0.6257, em: 0.6843, f1: 0.8177, batch_loss: 1.2082, loss: 1.6553 ||:  54%|#####3    | 1174/2190 [01:10<01:02, 16.18it/s]
+2022-04-15 00:00:17,450 - INFO - tqdm - start_acc: 0.7152, end_acc: 0.7665, span_acc: 0.6249, em: 0.6831, f1: 0.8170, batch_loss: 1.8123, loss: 1.6599 ||:  61%|######1   | 1342/2190 [01:20<00:54, 15.57it/s]
+2022-04-15 00:00:27,493 - INFO - tqdm - start_acc: 0.7131, end_acc: 0.7657, span_acc: 0.6233, em: 0.6814, f1: 0.8159, batch_loss: 1.2627, loss: 1.6696 ||:  69%|######8   | 1507/2190 [01:30<00:40, 16.76it/s]
+2022-04-15 00:00:37,626 - INFO - tqdm - start_acc: 0.7131, end_acc: 0.7651, span_acc: 0.6231, em: 0.6815, f1: 0.8156, batch_loss: 2.0075, loss: 1.6743 ||:  77%|#######6  | 1677/2190 [01:40<00:33, 15.38it/s]
+2022-04-15 00:00:47,707 - INFO - tqdm - start_acc: 0.7126, end_acc: 0.7641, span_acc: 0.6223, em: 0.6807, f1: 0.8147, batch_loss: 2.1467, loss: 1.6832 ||:  84%|########4 | 1850/2190 [01:50<00:19, 17.85it/s]
+2022-04-15 00:00:57,761 - INFO - tqdm - start_acc: 0.7117, end_acc: 0.7623, span_acc: 0.6208, em: 0.6791, f1: 0.8134, batch_loss: 1.2166, loss: 1.6912 ||:  92%|#########2| 2017/2190 [02:00<00:10, 16.69it/s]
+2022-04-15 00:01:07,496 - INFO - tqdm - start_acc: 0.7114, end_acc: 0.7612, span_acc: 0.6202, em: 0.6788, f1: 0.8129, batch_loss: 1.1115, loss: 1.6974 ||: 100%|#########9| 2180/2190 [02:10<00:00, 15.67it/s]
+2022-04-15 00:01:07,633 - INFO - tqdm - start_acc: 0.7113, end_acc: 0.7613, span_acc: 0.6202, em: 0.6788, f1: 0.8129, batch_loss: 1.9022, loss: 1.6974 ||: 100%|#########9| 2182/2190 [02:10<00:00, 15.33it/s]
+2022-04-15 00:01:07,806 - INFO - tqdm - start_acc: 0.7113, end_acc: 0.7612, span_acc: 0.6202, em: 0.6787, f1: 0.8129, batch_loss: 1.6244, loss: 1.6976 ||: 100%|#########9| 2185/2190 [02:10<00:00, 16.05it/s]
+2022-04-15 00:01:07,948 - INFO - tqdm - start_acc: 0.7113, end_acc: 0.7611, span_acc: 0.6202, em: 0.6787, f1: 0.8129, batch_loss: 2.2569, loss: 1.6976 ||: 100%|#########9| 2188/2190 [02:11<00:00, 17.54it/s]
+2022-04-15 00:01:08,032 - INFO - tqdm - start_acc: 0.7114, end_acc: 0.7612, span_acc: 0.6203, em: 0.6788, f1: 0.8129, batch_loss: 1.2263, loss: 1.6972 ||: 100%|##########| 2190/2190 [02:11<00:00, 16.70it/s]
+2022-04-15 00:01:08,032 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-15 00:01:08,032 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-15 00:01:15,524 - INFO - tqdm - start_acc: 0.6275, end_acc: 0.6620, span_acc: 0.5378, em: 0.6688, f1: 0.7672, batch_loss: 2.7679, loss: 2.6706 ||: 100%|#########9| 264/265 [00:07<00:00, 34.82it/s]
+2022-04-15 00:01:15,552 - INFO - tqdm - start_acc: 0.6279, end_acc: 0.6623, span_acc: 0.5381, em: 0.6691, f1: 0.7673, batch_loss: 1.7524, loss: 2.6672 ||: 100%|##########| 265/265 [00:07<00:00, 35.24it/s]
+2022-04-15 00:01:15,552 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-15 00:01:15,553 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.679  |     0.669
+2022-04-15 00:01:15,553 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.761  |     0.662
+2022-04-15 00:01:15,553 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.813  |     0.767
+2022-04-15 00:01:15,553 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2475.121  |       N/A
+2022-04-15 00:01:15,554 - INFO - allennlp.training.callbacks.console_logger - loss               |     1.697  |     2.667
+2022-04-15 00:01:15,554 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.620  |     0.538
+2022-04-15 00:01:15,554 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.711  |     0.628
+2022-04-15 00:01:15,554 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-15 00:01:15,619 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:18.739122
+2022-04-15 00:01:15,619 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:21:04
+2022-04-15 00:01:15,619 - INFO - allennlp.training.gradient_descent_trainer - Epoch 11/19
+2022-04-15 00:01:15,619 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-15 00:01:15,619 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-15 00:01:15,619 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-15 00:01:15,619 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-15 00:01:25,647 - INFO - tqdm - start_acc: 0.7385, end_acc: 0.7844, span_acc: 0.6463, em: 0.7034, f1: 0.8338, batch_loss: 1.3587, loss: 1.4987 ||:   8%|7         | 167/2190 [00:10<02:20, 14.41it/s]
+2022-04-15 00:01:35,776 - INFO - tqdm - start_acc: 0.7386, end_acc: 0.7857, span_acc: 0.6483, em: 0.7072, f1: 0.8377, batch_loss: 2.1423, loss: 1.5012 ||:  16%|#5        | 340/2190 [00:20<01:56, 15.82it/s]
+2022-04-15 00:01:45,795 - INFO - tqdm - start_acc: 0.7346, end_acc: 0.7808, span_acc: 0.6429, em: 0.7002, f1: 0.8332, batch_loss: 1.7410, loss: 1.5351 ||:  23%|##3       | 505/2190 [00:30<01:51, 15.16it/s]
+2022-04-15 00:01:55,945 - INFO - tqdm - start_acc: 0.7320, end_acc: 0.7794, span_acc: 0.6413, em: 0.6984, f1: 0.8305, batch_loss: 1.3358, loss: 1.5423 ||:  31%|###       | 675/2190 [00:40<01:30, 16.77it/s]
+2022-04-15 00:02:05,971 - INFO - tqdm - start_acc: 0.7326, end_acc: 0.7795, span_acc: 0.6419, em: 0.6988, f1: 0.8304, batch_loss: 1.9233, loss: 1.5495 ||:  39%|###8      | 847/2190 [00:50<01:16, 17.66it/s]
+2022-04-15 00:02:16,076 - INFO - tqdm - start_acc: 0.7315, end_acc: 0.7797, span_acc: 0.6411, em: 0.6984, f1: 0.8296, batch_loss: 1.1825, loss: 1.5585 ||:  46%|####6     | 1015/2190 [01:00<01:06, 17.56it/s]
+2022-04-15 00:02:26,089 - INFO - tqdm - start_acc: 0.7302, end_acc: 0.7775, span_acc: 0.6392, em: 0.6968, f1: 0.8281, batch_loss: 1.6243, loss: 1.5676 ||:  54%|#####3    | 1180/2190 [01:10<01:14, 13.50it/s]
+2022-04-15 00:02:36,113 - INFO - tqdm - start_acc: 0.7290, end_acc: 0.7784, span_acc: 0.6395, em: 0.6973, f1: 0.8282, batch_loss: 1.6540, loss: 1.5736 ||:  62%|######1   | 1349/2190 [01:20<00:44, 18.70it/s]
+2022-04-15 00:02:46,132 - INFO - tqdm - start_acc: 0.7277, end_acc: 0.7766, span_acc: 0.6381, em: 0.6958, f1: 0.8267, batch_loss: 2.1492, loss: 1.5829 ||:  70%|######9   | 1524/2190 [01:30<00:37, 17.68it/s]
+2022-04-15 00:02:56,214 - INFO - tqdm - start_acc: 0.7251, end_acc: 0.7751, span_acc: 0.6357, em: 0.6935, f1: 0.8248, batch_loss: 1.9631, loss: 1.5967 ||:  77%|#######7  | 1694/2190 [01:40<00:27, 18.05it/s]
+2022-04-15 00:03:06,293 - INFO - tqdm - start_acc: 0.7238, end_acc: 0.7734, span_acc: 0.6341, em: 0.6915, f1: 0.8234, batch_loss: 0.8352, loss: 1.6069 ||:  85%|########5 | 1863/2190 [01:50<00:18, 17.46it/s]
+2022-04-15 00:03:16,328 - INFO - tqdm - start_acc: 0.7228, end_acc: 0.7723, span_acc: 0.6325, em: 0.6904, f1: 0.8227, batch_loss: 1.4092, loss: 1.6134 ||:  92%|#########2| 2025/2190 [02:00<00:09, 17.29it/s]
+2022-04-15 00:03:25,510 - INFO - tqdm - start_acc: 0.7222, end_acc: 0.7718, span_acc: 0.6318, em: 0.6895, f1: 0.8222, batch_loss: 1.5548, loss: 1.6184 ||: 100%|#########9| 2181/2190 [02:09<00:00, 17.19it/s]
+2022-04-15 00:03:25,672 - INFO - tqdm - start_acc: 0.7221, end_acc: 0.7718, span_acc: 0.6317, em: 0.6895, f1: 0.8221, batch_loss: 2.4343, loss: 1.6190 ||: 100%|#########9| 2183/2190 [02:10<00:00, 15.49it/s]
+2022-04-15 00:03:25,779 - INFO - tqdm - start_acc: 0.7221, end_acc: 0.7718, span_acc: 0.6318, em: 0.6895, f1: 0.8221, batch_loss: 1.8232, loss: 1.6193 ||: 100%|#########9| 2185/2190 [02:10<00:00, 16.30it/s]
+2022-04-15 00:03:25,935 - INFO - tqdm - start_acc: 0.7221, end_acc: 0.7718, span_acc: 0.6316, em: 0.6894, f1: 0.8222, batch_loss: 2.0088, loss: 1.6195 ||: 100%|#########9| 2188/2190 [02:10<00:00, 17.31it/s]
+2022-04-15 00:03:26,027 - INFO - tqdm - start_acc: 0.7221, end_acc: 0.7718, span_acc: 0.6316, em: 0.6894, f1: 0.8222, batch_loss: 1.4092, loss: 1.6195 ||: 100%|##########| 2190/2190 [02:10<00:00, 16.79it/s]
+2022-04-15 00:03:26,027 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-15 00:03:26,028 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-15 00:03:33,505 - INFO - tqdm - start_acc: 0.6203, end_acc: 0.6583, span_acc: 0.5283, em: 0.6601, f1: 0.7645, batch_loss: 2.3463, loss: 2.7589 ||: 100%|##########| 265/265 [00:07<00:00, 35.44it/s]
+2022-04-15 00:03:33,506 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-15 00:03:33,506 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.689  |     0.660
+2022-04-15 00:03:33,506 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.772  |     0.658
+2022-04-15 00:03:33,506 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.822  |     0.765
+2022-04-15 00:03:33,506 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2468.183  |       N/A
+2022-04-15 00:03:33,506 - INFO - allennlp.training.callbacks.console_logger - loss               |     1.619  |     2.759
+2022-04-15 00:03:33,506 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.632  |     0.528
+2022-04-15 00:03:33,506 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.722  |     0.620
+2022-04-15 00:03:33,506 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-15 00:03:33,568 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:17.948948
+2022-04-15 00:03:33,568 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:18:41
+2022-04-15 00:03:33,568 - INFO - allennlp.training.gradient_descent_trainer - Epoch 12/19
+2022-04-15 00:03:33,568 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-15 00:03:33,568 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-15 00:03:33,568 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-15 00:03:33,568 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-15 00:03:43,576 - INFO - tqdm - start_acc: 0.7647, end_acc: 0.8123, span_acc: 0.6760, em: 0.7345, f1: 0.8559, batch_loss: 1.4773, loss: 1.3333 ||:   6%|5         | 124/2190 [00:10<01:50, 18.63it/s]
+2022-04-15 00:03:53,692 - INFO - tqdm - start_acc: 0.7613, end_acc: 0.8100, span_acc: 0.6742, em: 0.7308, f1: 0.8562, batch_loss: 1.4870, loss: 1.3306 ||:  14%|#3        | 296/2190 [00:20<01:58, 15.99it/s]
+2022-04-15 00:04:03,765 - INFO - tqdm - start_acc: 0.7561, end_acc: 0.8082, span_acc: 0.6691, em: 0.7288, f1: 0.8539, batch_loss: 2.4065, loss: 1.3471 ||:  21%|##1       | 468/2190 [00:30<01:33, 18.50it/s]
+2022-04-15 00:04:13,792 - INFO - tqdm - start_acc: 0.7564, end_acc: 0.8097, span_acc: 0.6708, em: 0.7292, f1: 0.8543, batch_loss: 1.0676, loss: 1.3484 ||:  29%|##9       | 643/2190 [00:40<01:20, 19.33it/s]
+2022-04-15 00:04:23,876 - INFO - tqdm - start_acc: 0.7555, end_acc: 0.8086, span_acc: 0.6700, em: 0.7283, f1: 0.8533, batch_loss: 1.1851, loss: 1.3521 ||:  37%|###6      | 807/2190 [00:50<01:18, 17.68it/s]
+2022-04-15 00:04:33,881 - INFO - tqdm - start_acc: 0.7564, end_acc: 0.8087, span_acc: 0.6703, em: 0.7287, f1: 0.8542, batch_loss: 1.2238, loss: 1.3514 ||:  45%|####4     | 976/2190 [01:00<01:05, 18.66it/s]
+2022-04-15 00:04:43,900 - INFO - tqdm - start_acc: 0.7563, end_acc: 0.8083, span_acc: 0.6710, em: 0.7289, f1: 0.8537, batch_loss: 1.4222, loss: 1.3536 ||:  52%|#####2    | 1146/2190 [01:10<01:02, 16.68it/s]
+2022-04-15 00:04:53,993 - INFO - tqdm - start_acc: 0.7569, end_acc: 0.8091, span_acc: 0.6714, em: 0.7291, f1: 0.8540, batch_loss: 2.0517, loss: 1.3528 ||:  61%|######    | 1327/2190 [01:20<00:53, 16.17it/s]
+2022-04-15 00:05:04,077 - INFO - tqdm - start_acc: 0.7571, end_acc: 0.8083, span_acc: 0.6715, em: 0.7288, f1: 0.8536, batch_loss: 1.6650, loss: 1.3552 ||:  68%|######8   | 1495/2190 [01:30<00:38, 17.83it/s]
+2022-04-15 00:05:14,171 - INFO - tqdm - start_acc: 0.7570, end_acc: 0.8077, span_acc: 0.6713, em: 0.7279, f1: 0.8530, batch_loss: 1.1016, loss: 1.3563 ||:  76%|#######6  | 1668/2190 [01:40<00:25, 20.22it/s]
+2022-04-15 00:05:24,253 - INFO - tqdm - start_acc: 0.7566, end_acc: 0.8070, span_acc: 0.6708, em: 0.7275, f1: 0.8527, batch_loss: 2.0079, loss: 1.3604 ||:  84%|########3 | 1836/2190 [01:50<00:21, 16.16it/s]
+2022-04-15 00:05:34,298 - INFO - tqdm - start_acc: 0.7564, end_acc: 0.8070, span_acc: 0.6704, em: 0.7274, f1: 0.8525, batch_loss: 2.2072, loss: 1.3621 ||:  91%|#########1| 1997/2190 [02:00<00:11, 16.27it/s]
+2022-04-15 00:05:44,452 - INFO - tqdm - start_acc: 0.7564, end_acc: 0.8067, span_acc: 0.6706, em: 0.7274, f1: 0.8525, batch_loss: 1.8280, loss: 1.3630 ||:  99%|#########8| 2161/2190 [02:10<00:02, 12.59it/s]
+2022-04-15 00:05:45,585 - INFO - tqdm - start_acc: 0.7560, end_acc: 0.8066, span_acc: 0.6703, em: 0.7272, f1: 0.8524, batch_loss: 1.3057, loss: 1.3644 ||: 100%|#########9| 2181/2190 [02:12<00:00, 15.85it/s]
+2022-04-15 00:05:45,713 - INFO - tqdm - start_acc: 0.7561, end_acc: 0.8065, span_acc: 0.6703, em: 0.7272, f1: 0.8523, batch_loss: 1.7938, loss: 1.3647 ||: 100%|#########9| 2183/2190 [02:12<00:00, 15.80it/s]
+2022-04-15 00:05:45,851 - INFO - tqdm - start_acc: 0.7560, end_acc: 0.8065, span_acc: 0.6702, em: 0.7272, f1: 0.8523, batch_loss: 1.6193, loss: 1.3648 ||: 100%|#########9| 2185/2190 [02:12<00:00, 15.39it/s]
+2022-04-15 00:05:46,045 - INFO - tqdm - start_acc: 0.7560, end_acc: 0.8065, span_acc: 0.6701, em: 0.7271, f1: 0.8523, batch_loss: 1.9725, loss: 1.3651 ||: 100%|#########9| 2188/2190 [02:12<00:00, 15.41it/s]
+2022-04-15 00:05:46,162 - INFO - tqdm - start_acc: 0.7559, end_acc: 0.8065, span_acc: 0.6700, em: 0.7270, f1: 0.8523, batch_loss: 1.3900, loss: 1.3652 ||: 100%|##########| 2190/2190 [02:12<00:00, 15.82it/s]
+2022-04-15 00:05:46,167 - INFO - tqdm - start_acc: 0.7559, end_acc: 0.8065, span_acc: 0.6700, em: 0.7270, f1: 0.8523, batch_loss: 1.3900, loss: 1.3652 ||: 100%|##########| 2190/2190 [02:12<00:00, 16.52it/s]
+2022-04-15 00:05:46,167 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-15 00:05:46,168 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-15 00:05:53,655 - INFO - tqdm - start_acc: 0.6275, end_acc: 0.6615, span_acc: 0.5360, em: 0.6675, f1: 0.7710, batch_loss: 3.2605, loss: 2.8524 ||: 100%|##########| 265/265 [00:07<00:00, 35.40it/s]
+2022-04-15 00:05:53,655 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-15 00:05:53,655 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.727  |     0.667
+2022-04-15 00:05:53,655 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.806  |     0.661
+2022-04-15 00:05:53,655 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.852  |     0.771
+2022-04-15 00:05:53,655 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2469.833  |       N/A
+2022-04-15 00:05:53,655 - INFO - allennlp.training.callbacks.console_logger - loss               |     1.365  |     2.852
+2022-04-15 00:05:53,655 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.670  |     0.536
+2022-04-15 00:05:53,655 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.756  |     0.628
+2022-04-15 00:05:53,655 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-15 00:05:53,718 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:20.150582
+2022-04-15 00:05:53,718 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:16:21
+2022-04-15 00:05:53,719 - INFO - allennlp.training.gradient_descent_trainer - Epoch 13/19
+2022-04-15 00:05:53,719 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-15 00:05:53,719 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-15 00:05:53,719 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-15 00:05:53,719 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-15 00:06:03,841 - INFO - tqdm - start_acc: 0.7790, end_acc: 0.8279, span_acc: 0.6921, em: 0.7493, f1: 0.8737, batch_loss: 1.2207, loss: 1.1904 ||:   8%|7         | 173/2190 [00:10<01:58, 17.01it/s]
+2022-04-15 00:06:13,892 - INFO - tqdm - start_acc: 0.7778, end_acc: 0.8286, span_acc: 0.6941, em: 0.7535, f1: 0.8748, batch_loss: 1.3833, loss: 1.1908 ||:  16%|#5        | 344/2190 [00:20<01:51, 16.54it/s]
+2022-04-15 00:06:23,899 - INFO - tqdm - start_acc: 0.7772, end_acc: 0.8304, span_acc: 0.6947, em: 0.7531, f1: 0.8736, batch_loss: 2.1700, loss: 1.1912 ||:  23%|##3       | 509/2190 [00:30<01:44, 16.09it/s]
+2022-04-15 00:06:34,024 - INFO - tqdm - start_acc: 0.7746, end_acc: 0.8299, span_acc: 0.6928, em: 0.7504, f1: 0.8721, batch_loss: 1.2208, loss: 1.2042 ||:  31%|###1      | 683/2190 [00:40<01:17, 19.39it/s]
+2022-04-15 00:06:44,142 - INFO - tqdm - start_acc: 0.7755, end_acc: 0.8293, span_acc: 0.6938, em: 0.7501, f1: 0.8711, batch_loss: 1.2598, loss: 1.2067 ||:  39%|###9      | 857/2190 [00:50<01:18, 16.89it/s]
+2022-04-15 00:06:54,149 - INFO - tqdm - start_acc: 0.7736, end_acc: 0.8266, span_acc: 0.6904, em: 0.7479, f1: 0.8700, batch_loss: 1.4715, loss: 1.2204 ||:  47%|####6     | 1024/2190 [01:00<01:08, 16.91it/s]
+2022-04-15 00:07:04,170 - INFO - tqdm - start_acc: 0.7737, end_acc: 0.8260, span_acc: 0.6899, em: 0.7472, f1: 0.8692, batch_loss: 1.0189, loss: 1.2234 ||:  55%|#####4    | 1194/2190 [01:10<00:57, 17.44it/s]
+2022-04-15 00:07:14,209 - INFO - tqdm - start_acc: 0.7732, end_acc: 0.8247, span_acc: 0.6894, em: 0.7463, f1: 0.8686, batch_loss: 0.6990, loss: 1.2313 ||:  62%|######2   | 1367/2190 [01:20<00:41, 19.86it/s]
+2022-04-15 00:07:24,260 - INFO - tqdm - start_acc: 0.7722, end_acc: 0.8246, span_acc: 0.6887, em: 0.7457, f1: 0.8681, batch_loss: 0.7468, loss: 1.2348 ||:  70%|#######   | 1533/2190 [01:30<00:44, 14.84it/s]
+2022-04-15 00:07:34,279 - INFO - tqdm - start_acc: 0.7713, end_acc: 0.8237, span_acc: 0.6881, em: 0.7452, f1: 0.8675, batch_loss: 0.9906, loss: 1.2424 ||:  77%|#######7  | 1697/2190 [01:40<00:29, 16.47it/s]
+2022-04-15 00:07:44,377 - INFO - tqdm - start_acc: 0.7715, end_acc: 0.8226, span_acc: 0.6878, em: 0.7452, f1: 0.8673, batch_loss: 1.4669, loss: 1.2447 ||:  85%|########4 | 1861/2190 [01:50<00:19, 16.56it/s]
+2022-04-15 00:07:54,455 - INFO - tqdm - start_acc: 0.7702, end_acc: 0.8225, span_acc: 0.6871, em: 0.7452, f1: 0.8670, batch_loss: 1.6132, loss: 1.2498 ||:  93%|#########2| 2026/2190 [02:00<00:10, 16.08it/s]
+2022-04-15 00:08:03,540 - INFO - tqdm - start_acc: 0.7706, end_acc: 0.8226, span_acc: 0.6874, em: 0.7455, f1: 0.8670, batch_loss: 1.0979, loss: 1.2500 ||: 100%|#########9| 2180/2190 [02:09<00:00, 15.97it/s]
+2022-04-15 00:08:03,651 - INFO - tqdm - start_acc: 0.7706, end_acc: 0.8227, span_acc: 0.6875, em: 0.7455, f1: 0.8670, batch_loss: 1.2209, loss: 1.2497 ||: 100%|#########9| 2182/2190 [02:09<00:00, 16.48it/s]
+2022-04-15 00:08:03,787 - INFO - tqdm - start_acc: 0.7707, end_acc: 0.8227, span_acc: 0.6875, em: 0.7456, f1: 0.8671, batch_loss: 0.7841, loss: 1.2494 ||: 100%|#########9| 2184/2190 [02:10<00:00, 15.94it/s]
+2022-04-15 00:08:03,919 - INFO - tqdm - start_acc: 0.7707, end_acc: 0.8227, span_acc: 0.6874, em: 0.7455, f1: 0.8670, batch_loss: 1.5181, loss: 1.2499 ||: 100%|#########9| 2186/2190 [02:10<00:00, 15.70it/s]
+2022-04-15 00:08:04,030 - INFO - tqdm - start_acc: 0.7707, end_acc: 0.8226, span_acc: 0.6874, em: 0.7454, f1: 0.8670, batch_loss: 1.6278, loss: 1.2501 ||: 100%|#########9| 2188/2190 [02:10<00:00, 16.29it/s]
+2022-04-15 00:08:04,152 - INFO - tqdm - start_acc: 0.7707, end_acc: 0.8226, span_acc: 0.6873, em: 0.7454, f1: 0.8670, batch_loss: 0.8454, loss: 1.2500 ||: 100%|##########| 2190/2190 [02:10<00:00, 16.32it/s]
+2022-04-15 00:08:04,158 - INFO - tqdm - start_acc: 0.7707, end_acc: 0.8226, span_acc: 0.6873, em: 0.7454, f1: 0.8670, batch_loss: 0.8454, loss: 1.2500 ||: 100%|##########| 2190/2190 [02:10<00:00, 16.79it/s]
+2022-04-15 00:08:04,158 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-15 00:08:04,158 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-15 00:08:11,697 - INFO - tqdm - start_acc: 0.6265, end_acc: 0.6618, span_acc: 0.5401, em: 0.6670, f1: 0.7666, batch_loss: 3.4481, loss: 2.9686 ||: 100%|##########| 265/265 [00:07<00:00, 35.15it/s]
+2022-04-15 00:08:11,697 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-15 00:08:11,705 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.745  |     0.667
+2022-04-15 00:08:11,705 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.823  |     0.662
+2022-04-15 00:08:11,705 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.867  |     0.767
+2022-04-15 00:08:11,705 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2464.071  |       N/A
+2022-04-15 00:08:11,705 - INFO - allennlp.training.callbacks.console_logger - loss               |     1.250  |     2.969
+2022-04-15 00:08:11,705 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.687  |     0.540
+2022-04-15 00:08:11,705 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.771  |     0.626
+2022-04-15 00:08:11,705 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-15 00:08:11,766 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:18.047071
+2022-04-15 00:08:11,766 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:14:00
+2022-04-15 00:08:11,766 - INFO - allennlp.training.gradient_descent_trainer - Epoch 14/19
+2022-04-15 00:08:11,766 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-15 00:08:11,766 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-15 00:08:11,766 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-15 00:08:11,766 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-15 00:08:21,840 - INFO - tqdm - start_acc: 0.7903, end_acc: 0.8382, span_acc: 0.7091, em: 0.7687, f1: 0.8824, batch_loss: 0.9276, loss: 1.1608 ||:   8%|7         | 170/2190 [00:10<01:59, 16.94it/s]
+2022-04-15 00:08:31,995 - INFO - tqdm - start_acc: 0.7895, end_acc: 0.8386, span_acc: 0.7081, em: 0.7677, f1: 0.8829, batch_loss: 1.2080, loss: 1.1410 ||:  15%|#5        | 335/2190 [00:20<02:02, 15.16it/s]
+2022-04-15 00:08:42,101 - INFO - tqdm - start_acc: 0.7874, end_acc: 0.8394, span_acc: 0.7074, em: 0.7638, f1: 0.8821, batch_loss: 1.0407, loss: 1.1426 ||:  23%|##2       | 499/2190 [00:30<01:54, 14.70it/s]
+2022-04-15 00:08:52,168 - INFO - tqdm - start_acc: 0.7865, end_acc: 0.8385, span_acc: 0.7061, em: 0.7645, f1: 0.8817, batch_loss: 1.5274, loss: 1.1480 ||:  30%|###       | 667/2190 [00:40<01:15, 20.21it/s]
+2022-04-15 00:09:02,176 - INFO - tqdm - start_acc: 0.7853, end_acc: 0.8385, span_acc: 0.7055, em: 0.7629, f1: 0.8804, batch_loss: 0.7899, loss: 1.1541 ||:  38%|###8      | 834/2190 [00:50<01:25, 15.91it/s]
+2022-04-15 00:09:12,188 - INFO - tqdm - start_acc: 0.7843, end_acc: 0.8379, span_acc: 0.7038, em: 0.7612, f1: 0.8796, batch_loss: 0.6620, loss: 1.1523 ||:  46%|####5     | 1006/2190 [01:00<01:08, 17.39it/s]
+2022-04-15 00:09:22,200 - INFO - tqdm - start_acc: 0.7831, end_acc: 0.8366, span_acc: 0.7019, em: 0.7602, f1: 0.8788, batch_loss: 1.6541, loss: 1.1587 ||:  54%|#####3    | 1179/2190 [01:10<00:53, 18.87it/s]
+2022-04-15 00:09:32,309 - INFO - tqdm - start_acc: 0.7828, end_acc: 0.8360, span_acc: 0.7015, em: 0.7593, f1: 0.8782, batch_loss: 1.6427, loss: 1.1616 ||:  62%|######1   | 1348/2190 [01:20<00:51, 16.39it/s]
+2022-04-15 00:09:42,345 - INFO - tqdm - start_acc: 0.7820, end_acc: 0.8359, span_acc: 0.7009, em: 0.7590, f1: 0.8773, batch_loss: 0.8992, loss: 1.1662 ||:  69%|######9   | 1519/2190 [01:30<00:39, 17.06it/s]
+2022-04-15 00:09:52,367 - INFO - tqdm - start_acc: 0.7815, end_acc: 0.8350, span_acc: 0.7001, em: 0.7576, f1: 0.8767, batch_loss: 1.2322, loss: 1.1708 ||:  77%|#######7  | 1690/2190 [01:40<00:27, 18.23it/s]
+2022-04-15 00:10:02,383 - INFO - tqdm - start_acc: 0.7813, end_acc: 0.8348, span_acc: 0.7001, em: 0.7573, f1: 0.8765, batch_loss: 1.4501, loss: 1.1732 ||:  85%|########4 | 1853/2190 [01:50<00:21, 15.86it/s]
+2022-04-15 00:10:12,475 - INFO - tqdm - start_acc: 0.7810, end_acc: 0.8344, span_acc: 0.7001, em: 0.7571, f1: 0.8759, batch_loss: 1.1492, loss: 1.1761 ||:  92%|#########2| 2025/2190 [02:00<00:09, 17.52it/s]
+2022-04-15 00:10:21,626 - INFO - tqdm - start_acc: 0.7806, end_acc: 0.8341, span_acc: 0.7000, em: 0.7568, f1: 0.8754, batch_loss: 0.8860, loss: 1.1798 ||: 100%|#########9| 2180/2190 [02:09<00:00, 16.66it/s]
+2022-04-15 00:10:21,789 - INFO - tqdm - start_acc: 0.7805, end_acc: 0.8342, span_acc: 0.7000, em: 0.7568, f1: 0.8754, batch_loss: 1.0983, loss: 1.1798 ||: 100%|#########9| 2183/2190 [02:10<00:00, 17.29it/s]
+2022-04-15 00:10:21,925 - INFO - tqdm - start_acc: 0.7804, end_acc: 0.8341, span_acc: 0.6999, em: 0.7567, f1: 0.8753, batch_loss: 1.7037, loss: 1.1804 ||: 100%|#########9| 2186/2190 [02:10<00:00, 18.70it/s]
+2022-04-15 00:10:22,031 - INFO - tqdm - start_acc: 0.7805, end_acc: 0.8342, span_acc: 0.6999, em: 0.7567, f1: 0.8753, batch_loss: 1.0427, loss: 1.1803 ||: 100%|#########9| 2188/2190 [02:10<00:00, 18.74it/s]
+2022-04-15 00:10:22,219 - INFO - tqdm - start_acc: 0.7805, end_acc: 0.8342, span_acc: 0.7000, em: 0.7567, f1: 0.8753, batch_loss: 1.2575, loss: 1.1804 ||: 100%|##########| 2190/2190 [02:10<00:00, 15.59it/s]
+2022-04-15 00:10:22,225 - INFO - tqdm - start_acc: 0.7805, end_acc: 0.8342, span_acc: 0.7000, em: 0.7567, f1: 0.8753, batch_loss: 1.2575, loss: 1.1804 ||: 100%|##########| 2190/2190 [02:10<00:00, 16.79it/s]
+2022-04-15 00:10:22,225 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-15 00:10:22,225 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-15 00:10:29,784 - INFO - tqdm - start_acc: 0.6242, end_acc: 0.6637, span_acc: 0.5399, em: 0.6697, f1: 0.7689, batch_loss: 2.2237, loss: 3.0113 ||: 100%|##########| 265/265 [00:07<00:00, 35.35it/s]
+2022-04-15 00:10:29,785 - INFO - tqdm - start_acc: 0.6242, end_acc: 0.6637, span_acc: 0.5399, em: 0.6697, f1: 0.7689, batch_loss: 2.2237, loss: 3.0113 ||: 100%|##########| 265/265 [00:07<00:00, 35.05it/s]
+2022-04-15 00:10:29,786 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-15 00:10:29,786 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.757  |     0.670
+2022-04-15 00:10:29,787 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.834  |     0.664
+2022-04-15 00:10:29,787 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.875  |     0.769
+2022-04-15 00:10:29,787 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2475.631  |       N/A
+2022-04-15 00:10:29,787 - INFO - allennlp.training.callbacks.console_logger - loss               |     1.180  |     3.011
+2022-04-15 00:10:29,787 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.700  |     0.540
+2022-04-15 00:10:29,787 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.780  |     0.624
+2022-04-15 00:10:29,787 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-15 00:10:29,849 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:18.083174
+2022-04-15 00:10:29,849 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:11:39
+2022-04-15 00:10:29,849 - INFO - allennlp.training.gradient_descent_trainer - Epoch 15/19
+2022-04-15 00:10:29,849 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-15 00:10:29,849 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-15 00:10:29,849 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-15 00:10:29,849 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-15 00:10:39,920 - INFO - tqdm - start_acc: 0.8084, end_acc: 0.8530, span_acc: 0.7334, em: 0.7833, f1: 0.8933, batch_loss: 0.9212, loss: 1.0281 ||:   8%|7         | 169/2190 [00:10<01:59, 16.84it/s]
+2022-04-15 00:10:49,936 - INFO - tqdm - start_acc: 0.8039, end_acc: 0.8525, span_acc: 0.7286, em: 0.7836, f1: 0.8907, batch_loss: 1.5581, loss: 1.0398 ||:  16%|#5        | 344/2190 [00:20<01:43, 17.84it/s]
+2022-04-15 00:10:59,940 - INFO - tqdm - start_acc: 0.8055, end_acc: 0.8528, span_acc: 0.7282, em: 0.7842, f1: 0.8936, batch_loss: 1.3121, loss: 1.0339 ||:  23%|##3       | 512/2190 [00:30<01:39, 16.90it/s]
+2022-04-15 00:11:09,957 - INFO - tqdm - start_acc: 0.8030, end_acc: 0.8525, span_acc: 0.7264, em: 0.7819, f1: 0.8917, batch_loss: 0.7775, loss: 1.0392 ||:  31%|###1      | 682/2190 [00:40<01:25, 17.67it/s]
+2022-04-15 00:11:20,046 - INFO - tqdm - start_acc: 0.8017, end_acc: 0.8530, span_acc: 0.7270, em: 0.7822, f1: 0.8921, batch_loss: 0.9229, loss: 1.0389 ||:  39%|###8      | 848/2190 [00:50<01:23, 16.05it/s]
+2022-04-15 00:11:30,115 - INFO - tqdm - start_acc: 0.8008, end_acc: 0.8522, span_acc: 0.7256, em: 0.7806, f1: 0.8917, batch_loss: 1.2908, loss: 1.0428 ||:  47%|####6     | 1021/2190 [01:00<01:02, 18.77it/s]
+2022-04-15 00:11:40,193 - INFO - tqdm - start_acc: 0.8011, end_acc: 0.8522, span_acc: 0.7251, em: 0.7806, f1: 0.8919, batch_loss: 0.5037, loss: 1.0411 ||:  54%|#####4    | 1188/2190 [01:10<01:05, 15.33it/s]
+2022-04-15 00:11:50,264 - INFO - tqdm - start_acc: 0.8010, end_acc: 0.8525, span_acc: 0.7249, em: 0.7805, f1: 0.8920, batch_loss: 1.4472, loss: 1.0454 ||:  62%|######2   | 1364/2190 [01:20<00:44, 18.42it/s]
+2022-04-15 00:12:00,284 - INFO - tqdm - start_acc: 0.8024, end_acc: 0.8539, span_acc: 0.7268, em: 0.7823, f1: 0.8927, batch_loss: 0.8311, loss: 1.0375 ||:  70%|#######   | 1540/2190 [01:30<00:37, 17.42it/s]
+2022-04-15 00:12:10,288 - INFO - tqdm - start_acc: 0.8022, end_acc: 0.8542, span_acc: 0.7266, em: 0.7823, f1: 0.8925, batch_loss: 0.8425, loss: 1.0394 ||:  78%|#######7  | 1706/2190 [01:40<00:25, 18.82it/s]
+2022-04-15 00:12:20,401 - INFO - tqdm - start_acc: 0.8016, end_acc: 0.8537, span_acc: 0.7256, em: 0.7813, f1: 0.8921, batch_loss: 0.7999, loss: 1.0406 ||:  85%|########5 | 1865/2190 [01:50<00:19, 17.01it/s]
+2022-04-15 00:12:30,449 - INFO - tqdm - start_acc: 0.8011, end_acc: 0.8536, span_acc: 0.7254, em: 0.7814, f1: 0.8920, batch_loss: 1.1213, loss: 1.0421 ||:  93%|#########2| 2033/2190 [02:00<00:08, 19.19it/s]
+2022-04-15 00:12:39,566 - INFO - tqdm - start_acc: 0.8007, end_acc: 0.8537, span_acc: 0.7251, em: 0.7811, f1: 0.8918, batch_loss: 1.0566, loss: 1.0427 ||: 100%|#########9| 2180/2190 [02:09<00:00, 17.53it/s]
+2022-04-15 00:12:39,692 - INFO - tqdm - start_acc: 0.8007, end_acc: 0.8537, span_acc: 0.7251, em: 0.7811, f1: 0.8919, batch_loss: 0.7574, loss: 1.0427 ||: 100%|#########9| 2183/2190 [02:09<00:00, 19.29it/s]
+2022-04-15 00:12:39,811 - INFO - tqdm - start_acc: 0.8006, end_acc: 0.8537, span_acc: 0.7251, em: 0.7810, f1: 0.8918, batch_loss: 1.1313, loss: 1.0431 ||: 100%|#########9| 2185/2190 [02:09<00:00, 18.59it/s]
+2022-04-15 00:12:39,988 - INFO - tqdm - start_acc: 0.8007, end_acc: 0.8537, span_acc: 0.7251, em: 0.7811, f1: 0.8918, batch_loss: 0.7407, loss: 1.0431 ||: 100%|#########9| 2187/2190 [02:10<00:00, 15.90it/s]
+2022-04-15 00:12:40,099 - INFO - tqdm - start_acc: 0.8007, end_acc: 0.8537, span_acc: 0.7251, em: 0.7811, f1: 0.8918, batch_loss: 1.1634, loss: 1.0432 ||: 100%|#########9| 2189/2190 [02:10<00:00, 16.46it/s]
+2022-04-15 00:12:40,167 - INFO - tqdm - start_acc: 0.8006, end_acc: 0.8537, span_acc: 0.7251, em: 0.7810, f1: 0.8918, batch_loss: 1.0742, loss: 1.0433 ||: 100%|##########| 2190/2190 [02:10<00:00, 16.81it/s]
+2022-04-15 00:12:40,168 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-15 00:12:40,168 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-15 00:12:47,669 - INFO - tqdm - start_acc: 0.6273, end_acc: 0.6631, span_acc: 0.5413, em: 0.6700, f1: 0.7688, batch_loss: 1.9820, loss: 3.2069 ||: 100%|#########9| 264/265 [00:07<00:00, 35.89it/s]
+2022-04-15 00:12:47,691 - INFO - tqdm - start_acc: 0.6271, end_acc: 0.6633, span_acc: 0.5412, em: 0.6703, f1: 0.7689, batch_loss: 3.7306, loss: 3.2088 ||: 100%|##########| 265/265 [00:07<00:00, 35.23it/s]
+2022-04-15 00:12:47,691 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-15 00:12:47,692 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.781  |     0.670
+2022-04-15 00:12:47,692 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.854  |     0.663
+2022-04-15 00:12:47,692 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.892  |     0.769
+2022-04-15 00:12:47,692 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2465.899  |       N/A
+2022-04-15 00:12:47,692 - INFO - allennlp.training.callbacks.console_logger - loss               |     1.043  |     3.209
+2022-04-15 00:12:47,692 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.725  |     0.541
+2022-04-15 00:12:47,692 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.801  |     0.627
+2022-04-15 00:12:47,692 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-15 00:12:47,754 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:17.904898
+2022-04-15 00:12:47,754 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:09:19
+2022-04-15 00:12:47,754 - INFO - allennlp.training.gradient_descent_trainer - Epoch 16/19
+2022-04-15 00:12:47,754 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-15 00:12:47,754 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-15 00:12:47,754 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-15 00:12:47,754 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-15 00:12:57,906 - INFO - tqdm - start_acc: 0.8039, end_acc: 0.8634, span_acc: 0.7310, em: 0.7908, f1: 0.8971, batch_loss: 1.0435, loss: 0.9698 ||:   8%|7         | 166/2190 [00:10<02:07, 15.90it/s]
+2022-04-15 00:13:07,960 - INFO - tqdm - start_acc: 0.8120, end_acc: 0.8663, span_acc: 0.7407, em: 0.7938, f1: 0.8998, batch_loss: 1.2335, loss: 0.9485 ||:  15%|#5        | 332/2190 [00:20<02:00, 15.36it/s]
+2022-04-15 00:13:18,096 - INFO - tqdm - start_acc: 0.8112, end_acc: 0.8634, span_acc: 0.7384, em: 0.7926, f1: 0.8979, batch_loss: 1.8314, loss: 0.9577 ||:  23%|##3       | 507/2190 [00:30<01:37, 17.20it/s]
+2022-04-15 00:13:28,108 - INFO - tqdm - start_acc: 0.8101, end_acc: 0.8628, span_acc: 0.7362, em: 0.7902, f1: 0.8973, batch_loss: 0.8838, loss: 0.9628 ||:  31%|###       | 674/2190 [00:40<01:34, 16.07it/s]
+2022-04-15 00:13:38,117 - INFO - tqdm - start_acc: 0.8087, end_acc: 0.8626, span_acc: 0.7358, em: 0.7908, f1: 0.8973, batch_loss: 0.7553, loss: 0.9694 ||:  38%|###8      | 836/2190 [00:50<01:14, 18.09it/s]
+2022-04-15 00:13:48,156 - INFO - tqdm - start_acc: 0.8085, end_acc: 0.8635, span_acc: 0.7360, em: 0.7915, f1: 0.8979, batch_loss: 1.4990, loss: 0.9682 ||:  46%|####5     | 1003/2190 [01:00<01:07, 17.64it/s]
+2022-04-15 00:13:58,238 - INFO - tqdm - start_acc: 0.8088, end_acc: 0.8642, span_acc: 0.7367, em: 0.7922, f1: 0.8982, batch_loss: 1.2792, loss: 0.9663 ||:  54%|#####3    | 1178/2190 [01:10<00:55, 18.21it/s]
+2022-04-15 00:14:08,265 - INFO - tqdm - start_acc: 0.8073, end_acc: 0.8641, span_acc: 0.7351, em: 0.7903, f1: 0.8977, batch_loss: 0.9006, loss: 0.9717 ||:  61%|######1   | 1345/2190 [01:20<00:46, 18.07it/s]
+2022-04-15 00:14:18,278 - INFO - tqdm - start_acc: 0.8062, end_acc: 0.8635, span_acc: 0.7340, em: 0.7896, f1: 0.8975, batch_loss: 0.7934, loss: 0.9764 ||:  69%|######9   | 1515/2190 [01:30<00:39, 16.97it/s]
+2022-04-15 00:14:28,346 - INFO - tqdm - start_acc: 0.8060, end_acc: 0.8626, span_acc: 0.7330, em: 0.7887, f1: 0.8974, batch_loss: 0.8042, loss: 0.9791 ||:  77%|#######6  | 1686/2190 [01:40<00:30, 16.43it/s]
+2022-04-15 00:14:38,412 - INFO - tqdm - start_acc: 0.8057, end_acc: 0.8623, span_acc: 0.7328, em: 0.7882, f1: 0.8970, batch_loss: 0.8425, loss: 0.9799 ||:  85%|########4 | 1856/2190 [01:50<00:19, 16.71it/s]
+2022-04-15 00:14:48,517 - INFO - tqdm - start_acc: 0.8053, end_acc: 0.8617, span_acc: 0.7324, em: 0.7878, f1: 0.8967, batch_loss: 0.5801, loss: 0.9835 ||:  93%|#########2| 2026/2190 [02:00<00:09, 17.79it/s]
+2022-04-15 00:14:57,530 - INFO - tqdm - start_acc: 0.8056, end_acc: 0.8616, span_acc: 0.7326, em: 0.7879, f1: 0.8966, batch_loss: 1.3091, loss: 0.9846 ||: 100%|#########9| 2181/2190 [02:09<00:00, 17.03it/s]
+2022-04-15 00:14:57,667 - INFO - tqdm - start_acc: 0.8056, end_acc: 0.8616, span_acc: 0.7326, em: 0.7878, f1: 0.8966, batch_loss: 0.5717, loss: 0.9844 ||: 100%|#########9| 2183/2190 [02:09<00:00, 16.29it/s]
+2022-04-15 00:14:57,792 - INFO - tqdm - start_acc: 0.8056, end_acc: 0.8616, span_acc: 0.7326, em: 0.7879, f1: 0.8967, batch_loss: 1.0376, loss: 0.9843 ||: 100%|#########9| 2185/2190 [02:10<00:00, 16.21it/s]
+2022-04-15 00:14:57,942 - INFO - tqdm - start_acc: 0.8056, end_acc: 0.8617, span_acc: 0.7327, em: 0.7879, f1: 0.8967, batch_loss: 0.8591, loss: 0.9842 ||: 100%|#########9| 2187/2190 [02:10<00:00, 15.22it/s]
+2022-04-15 00:14:58,047 - INFO - tqdm - start_acc: 0.8055, end_acc: 0.8616, span_acc: 0.7326, em: 0.7879, f1: 0.8966, batch_loss: 1.4752, loss: 0.9846 ||: 100%|#########9| 2189/2190 [02:10<00:00, 16.21it/s]
+2022-04-15 00:14:58,145 - INFO - tqdm - start_acc: 0.8055, end_acc: 0.8616, span_acc: 0.7325, em: 0.7878, f1: 0.8966, batch_loss: 1.5016, loss: 0.9848 ||: 100%|##########| 2190/2190 [02:10<00:00, 16.80it/s]
+2022-04-15 00:14:58,145 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-15 00:14:58,146 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-15 00:15:05,612 - INFO - tqdm - start_acc: 0.6224, end_acc: 0.6580, span_acc: 0.5357, em: 0.6664, f1: 0.7661, batch_loss: 2.7785, loss: 3.2995 ||: 100%|#########9| 264/265 [00:07<00:00, 33.70it/s]
+2022-04-15 00:15:05,640 - INFO - tqdm - start_acc: 0.6225, end_acc: 0.6577, span_acc: 0.5357, em: 0.6664, f1: 0.7660, batch_loss: 3.9279, loss: 3.3019 ||: 100%|##########| 265/265 [00:07<00:00, 35.36it/s]
+2022-04-15 00:15:05,640 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-15 00:15:05,640 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.788  |     0.666
+2022-04-15 00:15:05,640 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.862  |     0.658
+2022-04-15 00:15:05,640 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.897  |     0.766
+2022-04-15 00:15:05,641 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2468.670  |       N/A
+2022-04-15 00:15:05,641 - INFO - allennlp.training.callbacks.console_logger - loss               |     0.985  |     3.302
+2022-04-15 00:15:05,641 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.733  |     0.536
+2022-04-15 00:15:05,641 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.805  |     0.623
+2022-04-15 00:15:05,641 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-15 00:15:05,702 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:17.948383
+2022-04-15 00:15:05,702 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:06:59
+2022-04-15 00:15:05,702 - INFO - allennlp.training.gradient_descent_trainer - Epoch 17/19
+2022-04-15 00:15:05,703 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-15 00:15:05,703 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-15 00:15:05,703 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-15 00:15:05,703 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-15 00:15:15,835 - INFO - tqdm - start_acc: 0.8135, end_acc: 0.8786, span_acc: 0.7463, em: 0.7988, f1: 0.9056, batch_loss: 1.4566, loss: 0.9070 ||:   8%|7         | 168/2190 [00:10<01:51, 18.09it/s]
+2022-04-15 00:15:25,908 - INFO - tqdm - start_acc: 0.8168, end_acc: 0.8739, span_acc: 0.7483, em: 0.7980, f1: 0.9029, batch_loss: 0.6244, loss: 0.9176 ||:  16%|#5        | 340/2190 [00:20<01:36, 19.08it/s]
+2022-04-15 00:15:35,923 - INFO - tqdm - start_acc: 0.8182, end_acc: 0.8741, span_acc: 0.7494, em: 0.8009, f1: 0.9052, batch_loss: 0.8586, loss: 0.9141 ||:  23%|##3       | 511/2190 [00:30<01:37, 17.26it/s]
+2022-04-15 00:15:46,003 - INFO - tqdm - start_acc: 0.8193, end_acc: 0.8727, span_acc: 0.7490, em: 0.8012, f1: 0.9047, batch_loss: 0.4881, loss: 0.9089 ||:  31%|###       | 672/2190 [00:40<01:25, 17.83it/s]
+2022-04-15 00:15:56,089 - INFO - tqdm - start_acc: 0.8171, end_acc: 0.8738, span_acc: 0.7481, em: 0.8006, f1: 0.9049, batch_loss: 0.9532, loss: 0.9125 ||:  38%|###8      | 843/2190 [00:50<01:11, 18.80it/s]
+2022-04-15 00:16:06,142 - INFO - tqdm - start_acc: 0.8168, end_acc: 0.8730, span_acc: 0.7475, em: 0.7997, f1: 0.9045, batch_loss: 0.7194, loss: 0.9161 ||:  46%|####6     | 1010/2190 [01:00<01:12, 16.23it/s]
+2022-04-15 00:16:16,215 - INFO - tqdm - start_acc: 0.8171, end_acc: 0.8721, span_acc: 0.7473, em: 0.7987, f1: 0.9036, batch_loss: 0.4826, loss: 0.9214 ||:  54%|#####3    | 1178/2190 [01:10<00:59, 17.06it/s]
+2022-04-15 00:16:26,343 - INFO - tqdm - start_acc: 0.8161, end_acc: 0.8708, span_acc: 0.7458, em: 0.7975, f1: 0.9027, batch_loss: 1.3049, loss: 0.9268 ||:  62%|######1   | 1357/2190 [01:20<00:43, 19.36it/s]
+2022-04-15 00:16:36,400 - INFO - tqdm - start_acc: 0.8157, end_acc: 0.8706, span_acc: 0.7454, em: 0.7976, f1: 0.9026, batch_loss: 1.2995, loss: 0.9294 ||:  70%|######9   | 1525/2190 [01:30<00:39, 16.76it/s]
+2022-04-15 00:16:46,404 - INFO - tqdm - start_acc: 0.8151, end_acc: 0.8702, span_acc: 0.7447, em: 0.7969, f1: 0.9024, batch_loss: 0.9298, loss: 0.9324 ||:  78%|#######7  | 1700/2190 [01:40<00:30, 16.12it/s]
+2022-04-15 00:16:56,539 - INFO - tqdm - start_acc: 0.8149, end_acc: 0.8697, span_acc: 0.7444, em: 0.7968, f1: 0.9023, batch_loss: 0.7020, loss: 0.9345 ||:  85%|########4 | 1860/2190 [01:50<00:20, 15.78it/s]
+2022-04-15 00:17:06,584 - INFO - tqdm - start_acc: 0.8146, end_acc: 0.8691, span_acc: 0.7438, em: 0.7965, f1: 0.9018, batch_loss: 1.0814, loss: 0.9375 ||:  93%|#########2| 2028/2190 [02:00<00:09, 16.80it/s]
+2022-04-15 00:17:15,599 - INFO - tqdm - start_acc: 0.8140, end_acc: 0.8688, span_acc: 0.7435, em: 0.7961, f1: 0.9014, batch_loss: 0.4718, loss: 0.9404 ||: 100%|#########9| 2180/2190 [02:09<00:00, 16.63it/s]
+2022-04-15 00:17:15,708 - INFO - tqdm - start_acc: 0.8140, end_acc: 0.8688, span_acc: 0.7434, em: 0.7961, f1: 0.9014, batch_loss: 1.0005, loss: 0.9405 ||: 100%|#########9| 2183/2190 [02:10<00:00, 19.25it/s]
+2022-04-15 00:17:15,930 - INFO - tqdm - start_acc: 0.8140, end_acc: 0.8688, span_acc: 0.7434, em: 0.7961, f1: 0.9014, batch_loss: 1.2761, loss: 0.9407 ||: 100%|#########9| 2186/2190 [02:10<00:00, 16.88it/s]
+2022-04-15 00:17:16,236 - INFO - tqdm - start_acc: 0.8140, end_acc: 0.8688, span_acc: 0.7434, em: 0.7961, f1: 0.9014, batch_loss: 1.5632, loss: 0.9410 ||: 100%|#########9| 2189/2190 [02:10<00:00, 13.70it/s]
+2022-04-15 00:17:16,300 - INFO - tqdm - start_acc: 0.8140, end_acc: 0.8688, span_acc: 0.7434, em: 0.7961, f1: 0.9014, batch_loss: 0.4822, loss: 0.9408 ||: 100%|##########| 2190/2190 [02:10<00:00, 16.77it/s]
+2022-04-15 00:17:16,300 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-15 00:17:16,301 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-15 00:17:23,838 - INFO - tqdm - start_acc: 0.6221, end_acc: 0.6563, span_acc: 0.5330, em: 0.6653, f1: 0.7645, batch_loss: 1.6835, loss: 3.3273 ||: 100%|##########| 265/265 [00:07<00:00, 36.50it/s]
+2022-04-15 00:17:23,838 - INFO - tqdm - start_acc: 0.6221, end_acc: 0.6563, span_acc: 0.5330, em: 0.6653, f1: 0.7645, batch_loss: 1.6835, loss: 3.3273 ||: 100%|##########| 265/265 [00:07<00:00, 35.16it/s]
+2022-04-15 00:17:23,839 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-15 00:17:23,839 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.796  |     0.665
+2022-04-15 00:17:23,839 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.869  |     0.656
+2022-04-15 00:17:23,839 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.901  |     0.765
+2022-04-15 00:17:23,839 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2470.500  |       N/A
+2022-04-15 00:17:23,839 - INFO - allennlp.training.callbacks.console_logger - loss               |     0.941  |     3.327
+2022-04-15 00:17:23,840 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.743  |     0.533
+2022-04-15 00:17:23,840 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.814  |     0.622
+2022-04-15 00:17:23,840 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-15 00:17:23,902 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:18.199604
+2022-04-15 00:17:23,902 - INFO - allennlp.training.gradient_descent_trainer - Estimated training time remaining: 0:04:39
+2022-04-15 00:17:23,902 - INFO - allennlp.training.gradient_descent_trainer - Epoch 18/19
+2022-04-15 00:17:23,902 - INFO - allennlp.training.gradient_descent_trainer - Worker 0 memory usage: 10G
+2022-04-15 00:17:23,902 - INFO - allennlp.training.gradient_descent_trainer - GPU 0 memory usage: 2.4G
+2022-04-15 00:17:23,902 - INFO - allennlp.training.gradient_descent_trainer - Training
+2022-04-15 00:17:23,903 - INFO - tqdm - 0%|          | 0/2190 [00:00<?, ?it/s]
+2022-04-15 00:17:33,997 - INFO - tqdm - start_acc: 0.8264, end_acc: 0.8819, span_acc: 0.7614, em: 0.8138, f1: 0.9142, batch_loss: 0.9301, loss: 0.8680 ||:   8%|7         | 170/2190 [00:10<02:03, 16.37it/s]
+2022-04-15 00:17:44,019 - INFO - tqdm - start_acc: 0.8232, end_acc: 0.8786, span_acc: 0.7556, em: 0.8069, f1: 0.9106, batch_loss: 0.9914, loss: 0.8843 ||:  15%|#5        | 331/2190 [00:20<02:03, 15.03it/s]
+2022-04-15 00:17:54,093 - INFO - tqdm - start_acc: 0.8230, end_acc: 0.8756, span_acc: 0.7536, em: 0.8051, f1: 0.9087, batch_loss: 0.7678, loss: 0.8840 ||:  23%|##3       | 507/2190 [00:30<02:04, 13.57it/s]
+2022-04-15 00:18:04,155 - INFO - tqdm - start_acc: 0.8234, end_acc: 0.8771, span_acc: 0.7553, em: 0.8059, f1: 0.9084, batch_loss: 0.8670, loss: 0.8806 ||:  31%|###       | 672/2190 [00:40<01:28, 17.12it/s]
+2022-04-15 00:18:14,225 - INFO - tqdm - start_acc: 0.8238, end_acc: 0.8790, span_acc: 0.7560, em: 0.8077, f1: 0.9096, batch_loss: 0.6624, loss: 0.8756 ||:  38%|###8      | 843/2190 [00:50<01:14, 17.97it/s]
+2022-04-15 00:18:24,331 - INFO - tqdm - start_acc: 0.8246, end_acc: 0.8787, span_acc: 0.7569, em: 0.8075, f1: 0.9092, batch_loss: 0.9016, loss: 0.8695 ||:  46%|####6     | 1014/2190 [01:00<01:18, 14.90it/s]
+2022-04-15 00:18:34,355 - INFO - tqdm - start_acc: 0.8243, end_acc: 0.8788, span_acc: 0.7567, em: 0.8070, f1: 0.9090, batch_loss: 0.7850, loss: 0.8715 ||:  54%|#####4    | 1184/2190 [01:10<01:04, 15.53it/s]
+2022-04-15 00:18:44,388 - INFO - tqdm - start_acc: 0.8239, end_acc: 0.8795, span_acc: 0.7566, em: 0.8073, f1: 0.9093, batch_loss: 1.1081, loss: 0.8706 ||:  62%|######1   | 1350/2190 [01:20<00:52, 16.10it/s]
+2022-04-15 00:18:54,467 - INFO - tqdm - start_acc: 0.8232, end_acc: 0.8788, span_acc: 0.7555, em: 0.8069, f1: 0.9092, batch_loss: 1.3703, loss: 0.8739 ||:  70%|######9   | 1526/2190 [01:30<00:34, 19.10it/s]
+2022-04-15 00:19:04,547 - INFO - tqdm - start_acc: 0.8228, end_acc: 0.8794, span_acc: 0.7554, em: 0.8070, f1: 0.9093, batch_loss: 0.8634, loss: 0.8754 ||:  77%|#######7  | 1688/2190 [01:40<00:32, 15.42it/s]
+2022-04-15 00:19:14,689 - INFO - tqdm - start_acc: 0.8227, end_acc: 0.8792, span_acc: 0.7551, em: 0.8074, f1: 0.9095, batch_loss: 0.6332, loss: 0.8771 ||:  85%|########4 | 1857/2190 [01:50<00:21, 15.74it/s]
+2022-04-15 00:19:24,833 - INFO - tqdm - start_acc: 0.8229, end_acc: 0.8793, span_acc: 0.7554, em: 0.8077, f1: 0.9096, batch_loss: 0.9021, loss: 0.8758 ||:  93%|#########2| 2029/2190 [02:00<00:10, 15.67it/s]
+2022-04-15 00:19:34,049 - INFO - tqdm - start_acc: 0.8230, end_acc: 0.8789, span_acc: 0.7553, em: 0.8074, f1: 0.9095, batch_loss: 0.7173, loss: 0.8757 ||: 100%|#########9| 2180/2190 [02:10<00:00, 18.50it/s]
+2022-04-15 00:19:34,196 - INFO - tqdm - start_acc: 0.8230, end_acc: 0.8789, span_acc: 0.7553, em: 0.8074, f1: 0.9095, batch_loss: 0.6179, loss: 0.8757 ||: 100%|#########9| 2182/2190 [02:10<00:00, 16.99it/s]
+2022-04-15 00:19:34,339 - INFO - tqdm - start_acc: 0.8230, end_acc: 0.8789, span_acc: 0.7553, em: 0.8074, f1: 0.9095, batch_loss: 1.0628, loss: 0.8760 ||: 100%|#########9| 2184/2190 [02:10<00:00, 16.10it/s]
+2022-04-15 00:19:34,495 - INFO - tqdm - start_acc: 0.8230, end_acc: 0.8789, span_acc: 0.7553, em: 0.8074, f1: 0.9095, batch_loss: 0.9478, loss: 0.8759 ||: 100%|#########9| 2186/2190 [02:10<00:00, 15.08it/s]
+2022-04-15 00:19:34,637 - INFO - tqdm - start_acc: 0.8231, end_acc: 0.8789, span_acc: 0.7554, em: 0.8075, f1: 0.9095, batch_loss: 0.8394, loss: 0.8758 ||: 100%|#########9| 2188/2190 [02:10<00:00, 14.76it/s]
+2022-04-15 00:19:34,738 - INFO - tqdm - start_acc: 0.8231, end_acc: 0.8789, span_acc: 0.7554, em: 0.8076, f1: 0.9095, batch_loss: 0.8295, loss: 0.8757 ||: 100%|##########| 2190/2190 [02:10<00:00, 15.93it/s]
+2022-04-15 00:19:34,743 - INFO - tqdm - start_acc: 0.8231, end_acc: 0.8789, span_acc: 0.7554, em: 0.8076, f1: 0.9095, batch_loss: 0.8295, loss: 0.8757 ||: 100%|##########| 2190/2190 [02:10<00:00, 16.74it/s]
+2022-04-15 00:19:34,744 - INFO - allennlp.training.gradient_descent_trainer - Validating
+2022-04-15 00:19:34,744 - INFO - tqdm - 0%|          | 0/265 [00:00<?, ?it/s]
+2022-04-15 00:19:42,424 - INFO - tqdm - start_acc: 0.6219, end_acc: 0.6570, span_acc: 0.5339, em: 0.6636, f1: 0.7641, batch_loss: 3.4203, loss: 3.5096 ||: 100%|##########| 265/265 [00:07<00:00, 34.50it/s]
+2022-04-15 00:19:42,425 - INFO - allennlp.training.callbacks.console_logger -                        Training |  Validation
+2022-04-15 00:19:42,425 - INFO - allennlp.training.callbacks.console_logger - em                 |     0.808  |     0.664
+2022-04-15 00:19:42,425 - INFO - allennlp.training.callbacks.console_logger - end_acc            |     0.879  |     0.657
+2022-04-15 00:19:42,426 - INFO - allennlp.training.callbacks.console_logger - f1                 |     0.910  |     0.764
+2022-04-15 00:19:42,426 - INFO - allennlp.training.callbacks.console_logger - gpu_0_memory_MB    |  2470.096  |       N/A
+2022-04-15 00:19:42,426 - INFO - allennlp.training.callbacks.console_logger - loss               |     0.876  |     3.510
+2022-04-15 00:19:42,426 - INFO - allennlp.training.callbacks.console_logger - span_acc           |     0.755  |     0.534
+2022-04-15 00:19:42,426 - INFO - allennlp.training.callbacks.console_logger - start_acc          |     0.823  |     0.622
+2022-04-15 00:19:42,426 - INFO - allennlp.training.callbacks.console_logger - worker_0_memory_MB |  10381.480  |       N/A
+2022-04-15 00:19:42,487 - INFO - allennlp.training.gradient_descent_trainer - Epoch duration: 0:02:18.584468
+2022-04-15 00:19:42,487 - INFO - allennlp.training.gradient_descent_trainer - Ran out of patience. Stopping training.
+2022-04-15 00:19:42,501 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 8,
+  "peak_worker_0_memory_MB": 10381.48046875,
+  "peak_gpu_0_memory_MB": 2475.63134765625,
+  "training_duration": "0:44:11.884161",
+  "epoch": 18,
+  "training_start_acc": 0.8231258347698033,
+  "training_end_acc": 0.8789255585109419,
+  "training_span_acc": 0.7554195824153244,
+  "training_em": 0.807554880763479,
+  "training_f1": 0.9095334428437689,
+  "training_loss": 0.8756814260597099,
+  "training_worker_0_memory_MB": 10381.48046875,
+  "training_gpu_0_memory_MB": 2470.09619140625,
+  "validation_start_acc": 0.6219489120151371,
+  "validation_end_acc": 0.6570482497634815,
+  "validation_span_acc": 0.5338694418164617,
+  "validation_em": 0.6635761589403973,
+  "validation_f1": 0.7640845347606655,
+  "validation_loss": 3.5095771780553853,
+  "best_validation_start_acc": 0.6342478713339641,
+  "best_validation_end_acc": 0.6695364238410596,
+  "best_validation_span_acc": 0.5470198675496689,
+  "best_validation_em": 0.6755912961210975,
+  "best_validation_f1": 0.7726551660020516,
+  "best_validation_loss": 2.6248820745720054
+}
+2022-04-15 00:19:42,501 - INFO - allennlp.models.archival - archiving weights and vocabulary to /home/kxt/project/allennlp-models/allennlp_models/rc/rctest/model.tar.gz
