@@ -46,30 +46,31 @@ def test1():
 #def profile():
 def user(username):
     # Post - For Buttons
+    user = User.query.filter_by(username=username).first_or_404()
     if request.method == "POST":
         if request.form["submit_button"] == "Add 1 Small Unit":
-            print('Add 1 Small Unit')
             # Database Code (Delete Print Above)
+            local_db.selectAndAddUserUnit(user.username,'SMALL','catonsville')
             return redirect(url_for('user', username=current_user.username))
         elif request.form["submit_button"] == "Remove 1 Small Unit":
-            print('Remove 1 Small Unit')
             # Database Code (Delete Print Above)
+            local_db.selectAndRemoveUserUnit(user.username,'SMALL','catonsville')
             return redirect(url_for('user', username=current_user.username))
         elif request.form["submit_button"] == "Add 1 Medium Unit":
-            print('Add 1 Medium Unit')
             # Database Code (Delete Print Above)
+            local_db.selectAndAddUserUnit(user.username,'MEDIUM','catonsville')
             return redirect(url_for('user', username=current_user.username))
         elif request.form["submit_button"] == "Remove 1 Medium Unit":
-            print('Remove 1 Medium Unit')
             # Database Code (Delete Print Above)
+            local_db.selectAndRemoveUserUnit(user.username,'MEDIUM','catonsville')
             return redirect(url_for('user', username=current_user.username))
         elif request.form["submit_button"] == "Add 1 Large Unit":
-            print('Add 1 Large Unit')
             # Database Code (Delete Print Above)
+            local_db.selectAndAddUserUnit(user.username,'LARGE','catonsville')
             return redirect(url_for('user', username=current_user.username))
         elif request.form["submit_button"] == "Remove 1 Large Unit":
-            print('Remove 1 Large Unit')
             # Database Code (Delete Print Above)
+            local_db.selectAndRemoveUserUnit(user.username,'LARGE','catonsville')
             return redirect(url_for('user', username=current_user.username)) 
         else: 
             print('Everything Else')
@@ -77,7 +78,7 @@ def user(username):
 
     # GET - Display Page
     elif request.method == 'GET':
-        user = User.query.filter_by(username=username).first_or_404()
+        #user = User.query.filter_by(username=username).first_or_404()
 
         # Database queries to display data on profile page
         ## Get units available for each unit size
