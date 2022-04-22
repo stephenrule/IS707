@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\flask",
+    "\\flask\\app",
+    "\\flask\\app\\templates"
   ],
-  "SelectedNode": "\\C:\\Users\\samue\\Source\\Repos\\IS707",
+  "SelectedNode": "\\flask\\db.py",
   "PreviewInSolutionExplorer": false
 }

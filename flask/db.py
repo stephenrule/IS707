@@ -69,7 +69,7 @@ def insertResponseData(cur):
         VALUES ('Test User Question', 'Test Bot Response')''')
 
 def getUnitAvailability(location, unitSize):
-    #returns number of open units
+    #returns number of open units of a given size
     con = sqlite3.connect('chat.db')
     cur = con.cursor()
     select_statement = '''SELECT COUNT(*) FROM storage WHERE storage_size = ? AND facility_id = ? AND customer_id IS NULL'''
@@ -102,14 +102,27 @@ def getLocationAddress(location):
     finally:
         con.close()
 
-def getOpenUnits(location):
+def getOpenUnits(location,unitSize):
     #return list of IDs of available units for a specific location
     con = sqlite3.connect('chat.db')
     cur = con.cursor()
-    select_statement = '''SELECT unit_number FROM storage WHERE ? = facility_id AND customer_id IS NULL'''
-    selectData = cur.execute(select_statement, [location])
+    select_statement = '''SELECT unit_number FROM storage WHERE ? = facility_id AND storage_size = ? AND customer_id IS NULL'''
+    params = location, unitSize
+    selectData = cur.execute(select_statement, params)
     try:
         return selectData.fetchall()
+    finally:
+        con.close()
+
+def getOneOpenUnit(location,unitSize):
+    #return one ID from available units for location
+    con = sqlite3.connect('chat.db')
+    cur = con.cursor()
+    select_statement = '''SELECT unit_number FROM storage WHERE ? = facility_id AND storage_size = ? AND customer_id IS NULL'''
+    params = location, unitSize
+    selectData = cur.execute(select_statement, params)
+    try:
+        return selectData.fetchone()
     finally:
         con.close()
 
@@ -135,6 +148,16 @@ def addUserUnit(userID, unitID, location):
     con.commit()
     con.close()
     #modify customer_id field in storage table and set as userID if location and unitID match
+
+def selectAndAddUserUnit(userID, unitSize, location):
+    #select next available unit of that size and assign it to user
+    
+    #Identify the unit that the user wants
+    unitRow = getOneOpenUnit(location, unitSize)
+    unitID = unitRow[0]
+    #add it for them!
+    addUserUnit(userID, unitID, location)
+
 
 def removeUserUnit(unitID, location):
     #given a unit ID and location, sets the userID field to null.
