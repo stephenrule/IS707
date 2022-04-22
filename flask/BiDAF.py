@@ -1,76 +1,11 @@
-import json
-import os
-import tempfile
-from copy import deepcopy
-from typing import Dict, Iterable, List
-import allennlp_models
 import numpy
-import torch
-from allennlp.common import JsonDict
-from allennlp.common.params import Params
-from allennlp.data import (
-    Field,
-    DataLoader,
-    DatasetReader,
-    Instance,
-    Vocabulary,
-    TextFieldTensors,
-)
 from allennlp.data.fields import LabelField, TextField, ListField, SpanField, SequenceLabelField, IndexField
-from allennlp.data.token_indexers import TokenIndexer, SingleIdTokenIndexer
-from allennlp.data.tokenizers import WhitespaceTokenizer
-from allennlp.data.tokenizers import Token, Tokenizer
-from allennlp.models import Model
 from allennlp.models.archival import archive_model, load_archive
-from allennlp.modules import TextFieldEmbedder, Seq2VecEncoder
-from allennlp.nn import util
-from allennlp.predictors import Predictor
-from allennlp.training import Trainer
-from allennlp.training.metrics import CategoricalAccuracy
-from overrides import overrides
 from allennlp.predictors.predictor import Predictor
 from allennlp.common.util import JsonDict
-
-import logging
-from typing import Any, Dict, List, Optional
-
-import torch
-from torch.nn.functional import nll_loss
-
-from allennlp.common.checks import check_dimensions_match
-from allennlp.data import Vocabulary
-from allennlp.models.model import Model
-from allennlp.modules import Highway
-from allennlp.modules import Seq2SeqEncoder, TimeDistributed, TextFieldEmbedder
-from allennlp.modules.matrix_attention import MatrixAttention
-from allennlp.nn import util, InitializerApplicator, RegularizerApplicator
-from allennlp.training.metrics import BooleanAccuracy, CategoricalAccuracy
-
-from allennlp_models.rc.metrics import SquadEmAndF1
-import json
-import logging
 from typing import Any, Dict, List, Tuple, Optional, Iterable
-
-from allennlp.common.file_utils import cached_path
-from allennlp.data.dataset_readers.dataset_reader import DatasetReader
 from allennlp.data.instance import Instance
-from allennlp.data.token_indexers import SingleIdTokenIndexer, TokenIndexer
-from allennlp.data.tokenizers import Token, Tokenizer, SpacyTokenizer
-
 from allennlp_models.rc.dataset_readers import utils
-
-logger = logging.getLogger(__name__)
-
-SQUAD2_NO_ANSWER_TOKEN = "@@<NO_ANSWER>@@"
-"""
-The default `no_answer_token` for the [`squad2`](#squad2) reader.
-"""
-from allennlp_models.rc.models.utils import (
-    get_best_span,
-    replace_masked_values_with_big_negative_number,
-)
-
-logger = logging.getLogger(__name__)
 
 
 @Predictor.register("Reading_comprehension")
