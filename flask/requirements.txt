@@ -6,3 +6,5 @@ flask-migrate
 flask-login
 email-validator
 flask-bootstrap
+allennlp
+allennlp_models

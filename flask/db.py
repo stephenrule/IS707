@@ -21,9 +21,12 @@ def standUpDB():
                     (customer_pk int PRIMARY KEY, customer_name varchar, customer_address varchar, customer_city varchar, customer_state varchar, customer_country varchar, customer_phone varchar, customer_id varchar)''')
     cur.execute('''CREATE TABLE storage
                     (storage_pk int PRIMARY KEY, unit_number int, storage_type char, storage_size varchar, storage_price int, facility_id varchar, customer_id varchar, FOREIGN KEY (facility_id) REFERENCES facility(facility_name), FOREIGN KEY (customer_id) REFERENCES customer(customer_id))''')
+    cur.execute('''CREATE TABLE response
+                    (respone_pk int PRIMARY KEY, user_question varchar, bot_response varchar)''')
     insertFacData(cur)
     insertCustData(cur)
     insertStorageData(cur)
+    insertResponseData(cur)
     con.commit()
     con.close()
 
@@ -31,6 +34,7 @@ def dropAllTables(cur):
     cur.execute( '''DROP TABLE IF EXISTS facility''')
     cur.execute( '''DROP TABLE IF EXISTS customer''')
     cur.execute( '''DROP TABLE IF EXISTS storage''')
+    cur.execute( '''DROP TABLE IF EXISTS response''')
 def insertFacData(cur):
     cur.execute('''INSERT INTO facility 
         (facility_name, facility_address, facility_city, facility_state, facility_country, facility_phone, facility_email)
@@ -58,6 +62,11 @@ def insertStorageData(cur):
             (unit_number, storage_type, storage_size, storage_price, facility_id)
             VALUES (?,?,?,?,?)'''
         cur.execute(sqlite_insert_params, data_tuple)
+
+def insertResponseData(cur):
+    cur.execute('''INSERT INTO response
+        (user_question, bot_response)
+        VALUES ('Test User Question', 'Test Bot Response')''')
 
 def getUnitAvailability(location, unitSize):
     #returns number of open units
@@ -160,6 +169,17 @@ def addSimpleUserAccount(cID):
     con.commit()
     con.close()
 
+def addResponse(user_msg, bot_rsp):
+    con = sqlite3.connect('chat.db')
+    cur = con.cursor()
+    insert_statement = '''INSERT INTO response
+        (user_question, bot_response)
+        VALUES (?,?)'''
+    params = user_msg, bot_rsp
+    insert = cur.execute(insert_statement, params)
+    con.commit()
+    con.close()
+
 
 # View Database
 def getUsers():
@@ -188,6 +208,17 @@ def getUnits():
     con = sqlite3.connect('chat.db')
     cur = con.cursor()
     select_statement = '''SELECT * FROM storage'''
+    selectData = cur.execute(select_statement)
+    try:
+        for row in selectData:
+            print(row)
+    finally:
+        con.close()
+
+def getResponse():
+    con = sqlite3.connect('chat.db')
+    cur = con.cursor()
+    select_statement = '''SELECT * FROM response'''
     selectData = cur.execute(select_statement)
     try:
         for row in selectData:

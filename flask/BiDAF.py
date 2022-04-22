@@ -134,8 +134,26 @@ class ReadingComprehension_Predictor(Predictor):
         return [new_instance]
 
 
-archive = load_archive('/home/kxt/project/IS707/BiDAF/model.tar.gz')
+archive = load_archive('../BiDAF/model.tar.gz')
 BF = ReadingComprehension_Predictor(archive.model, archive.dataset_reader)
-output = BF.predict("How old is mike?", "mike is 18 years old.")
-print(output["best_span_str"])
 
+# Test. First is the Question and second is the passage. 
+#output = BF.predict("How old is mike?", "mike is 18 years old.")
+#print(output["best_span_str"])
+
+
+#### Storage Facility Work
+def chatbot_ai(question):
+    passage = ("UMBC Storage is located at 1234 Hilltop Cir, Baltimore, MD, 21250. "  
+          "We are open 7 days a week from 9:00 AM to 5:00 PM Monday through Friday and open 9:00 AM to 8:00 PM on Saturday and Sunday. "
+          "Small storage unit is 5ft by 5ft with a total area of 25 square feet and cost $50. "
+          "Medium storage unit is 10ft by 10ft with a total area of 100 square feet and cost $75. "
+          "Large storage unit is 10ft by 20ft with a total area of 200 square feet and cost $95.")
+
+    output = BF.predict(question, passage)
+    return(output["best_span_str"])
+
+# Test1 - Works. Gave answer of $50
+#q1 = "What is the cost of a small storage unit?"
+#test1 = chatbot_ai(q1)
+#print(test1)

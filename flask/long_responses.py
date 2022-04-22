@@ -6,6 +6,8 @@ R_ADVICE = "If I were you, I would go to the internet and type exactly what you 
 def unknown():
     response = ['Could you please re-phrase that?', 
                 "...", 
-               "Sounds about right",
-               "What does that mean?"][random.randrange(4)]
+               #"Sounds about right",
+               #"What does that mean?",
+               "Please ask questions related to UMBC Storage.", 
+               "You can ask questions like size of a small storage unit or price of a large unit."][random.randrange(4)]
     return response

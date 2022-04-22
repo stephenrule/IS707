@@ -32,6 +32,9 @@ flask db init
 ## Update Database from models.py (Need to be in flask folder in CMD)
 flask db migrate -m "Some Message"
 flask db upgrade
+## Starting Over
+- Delete app.db and migrations folder
+- Delete chat.db
 
 # Python Database
 ## Initialize: In Python Shell (Need to be in flask folder in Python Shell)

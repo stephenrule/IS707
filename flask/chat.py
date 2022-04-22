@@ -8,6 +8,7 @@ import long_responses as long
 import random
 from flask import Flask, render_template, request
 import re
+import BiDAF
 
 
 #### Determines probability based on number of words that match and returns highest value (Percentage)
@@ -65,19 +66,22 @@ def check_all_messages(message, ai_string):
     response('Small Storage Unit Price: $50', ['small', 'storage', 'unit', 'price'], required_words=['small', 'price'])
     response('Medium Storage Unit Price: $75', ['medium', 'storage', 'unit', 'price'], required_words=['medium', 'price'])
     response('Large Storage Unit Price: $95', ['large', 'storage', 'unit', 'price'], required_words=['large', 'price'])
-    response('Small Units Available: ' + str(local_db.getUnitAvailability('SMALL', 'catonsville')), ['small', 'unit', 'units', 'available'], single_response=True)
-    
+        
     # Database responses
-    response(local_db.getUnitAvailability('MEDIUM', 'catonsville'), ['medium', 'unit', 'units', 'available'], single_response=True)
+    response('Small Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'SMALL')), ['small', 'units', 'available'], required_words=['small', 'units', 'available'])
+    response('Medium Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'MEDIUM')), ['medium', 'units', 'available'], required_words=['medium', 'units', 'available'])
+    response('Medium Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'LARGE')), ['large', 'units', 'available'], required_words=['large', 'units', 'available'])
     response('Small Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'SMALL')) + 
              ', Medium Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'MEDIUM')) +
              ', Large Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'LARGE'))
-             , ['test', 'unit', 'units', 'available'], single_response=True)
+             , ['units', 'available'], required_words=['units', 'available'])
 
     # Longer responses - long_responses.py
     response(long.R_ADVICE, ['give', 'advice'], required_words=['advice'])
     response(long.R_EATING, ['what', 'you', 'eat'], required_words=['you', 'eat'])
     
+
+    ##########
     best_match = max(highest_prob_list, key=highest_prob_list.get)
     # DEBUG - Shows us the probability for each response in a new line
     for key, value in highest_prob_list.items():
@@ -86,9 +90,21 @@ def check_all_messages(message, ai_string):
     #print(highest_prob_list)
 
     # FUTURE: AI Approach
-    print(ai_string)
-    #if highest_prob_list[best_match] < 1: 
-        #DO AI Approach (Variables: message (Tokenized), ai_string (String)) Note: message is tokenized list of lowercase words
+    print("####################################################")
+    print("AI String: " + str(ai_string))
+    print("Higest Prob List: " + str(highest_prob_list))
+    if highest_prob_list[best_match] < 1: 
+        #AI Approach (Variables: message (Tokenized), ai_string (String)) Note: message is tokenized list of lowercase words
+        print("#### AI APPROACH ####")
+        bot_response = BiDAF.chatbot_ai(ai_string)
+        print(bot_response)
+
+        # bot_response will probably never be empty but if doesn't know how to answer a question it usually responds with the entire passage.
+        ## if len is greater than 100 then we can assume its the passage and the bot doesn't know how to respond which puts is to the unknown responses. 
+        if bot_response != '' and len(bot_response) < 100:
+            highest_prob_list[bot_response] = 15
+            print("#### Added bot_response to highest_prob_list ####")
+            print(highest_prob_list)
 
         #bot_response = "AI Approach Returned Message"
         # Logic: If AI returns a message then assign 1. If AI returns nothing then return nothing 
@@ -97,6 +113,7 @@ def check_all_messages(message, ai_string):
 
 
     #return best_match
+    best_match = max(highest_prob_list, key=highest_prob_list.get)
     return long.unknown() if highest_prob_list[best_match] < 1 else best_match
 
 
@@ -108,4 +125,7 @@ def get_response(user_input):
     # Remove stop words - Use nltk
     #####################
     response = check_all_messages(split_message, user_input)
+
+    # Add user_input and respone to database to view later.
+    local_db.addResponse(user_input, response)
     return response
