@@ -138,6 +138,18 @@ def getUserUnits(userID, unitSize):
     finally:
         con.close()
 
+def getOneUserUnit(userID, unitSize):
+    #return list of unit IDs associated to a user ID
+    con = sqlite3.connect('chat.db')
+    cur = con.cursor()
+    select_statement = '''SELECT unit_number FROM storage WHERE customer_id = ? AND storage_size = ? '''
+    params = userID, unitSize
+    selectData = cur.execute(select_statement, params)
+    try:
+        return selectData.fetchone()
+    finally:
+        con.close()
+
 def addUserUnit(userID, unitID, location):
     #takes in userID and unitID, and sets storage unit as reserved
     con = sqlite3.connect('chat.db')
@@ -158,7 +170,6 @@ def selectAndAddUserUnit(userID, unitSize, location):
     #add it for them!
     addUserUnit(userID, unitID, location)
 
-
 def removeUserUnit(unitID, location):
     #given a unit ID and location, sets the userID field to null.
     con = sqlite3.connect('chat.db')
@@ -168,6 +179,14 @@ def removeUserUnit(unitID, location):
     update = cur.execute(update_statement, params)
     con.commit()
     con.close()
+
+def selectAndRemoveUserUnit(userID, unitSize, location):
+    #select a unit of that size and remove it from the user's possession
+    #ID the unit to be removed
+    unitRow = getOneUserUnit(userID, unitSize)
+    unitID = unitRow[0]
+    #take it from them!
+    removeUserUnit(unitID, location)
 
 def addUserAccount(cName, cAddr, cCity, cState, cCountry, cPhone, cID):
     con = sqlite3.connect('chat.db')
