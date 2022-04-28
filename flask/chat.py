@@ -9,6 +9,10 @@ import random
 from flask import Flask, render_template, request
 import re
 import BiDAF
+import nltk
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+from nltk.corpus import wordnet
 
 
 #### Determines probability based on number of words that match and returns highest value (Percentage)
@@ -36,6 +40,15 @@ def message_probability(user_message, recognised_words, single_response=False, r
     else:
         return 0
 
+def getSynSet(phrase):
+    synonyms = []
+
+    for syn in wordnet.synsets(phrase):
+        for i in syn.lemmas():
+            synonyms.append(i.name())
+    return synonyms
+
+
 # Take user input and see if any word matches predefined text
 def check_all_messages(message, ai_string):
     highest_prob_list = {}
@@ -57,7 +70,8 @@ def check_all_messages(message, ai_string):
     # NOTE: syns = wordnet.synsets
     # NOTE: Do a print statement of the results after lemmatizing and synsets just to see everything before applying rules
     response('Hello!', ['hello', 'hi', 'hey', 'sup', 'heyo'], single_response=True)
-    response('See you!', ['bye', 'goodbye'], single_response=True)
+    #response('See you!', ['bye', 'goodbye'], single_response=True)
+    response('See you!', getSynSet('bye'), single_response=True)
     response('I\'m doing fine, and you?', ['how', 'are', 'you', 'doing'], required_words=['how'])
     response('You\'re welcome!', ['thank', 'thanks'], single_response=True)
     response(login, ['website', 'login'], single_response=True)  
