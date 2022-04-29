@@ -1,4 +1,4 @@
-from turtle import hideturtle
+#from turtle import hideturtle
 from flask import request, render_template, flash, redirect, url_for
 from app import app, db
 from app.forms import LoginForm, RegistrationForm

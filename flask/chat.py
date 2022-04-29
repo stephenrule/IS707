@@ -46,6 +46,7 @@ def getSynSet(phrase):
     for syn in wordnet.synsets(phrase):
         for i in syn.lemmas():
             synonyms.append(i.name())
+    print(synonyms)
     return synonyms
 
 
@@ -136,7 +137,13 @@ def get_response(user_input):
     split_message = re.split(r'\s+|[,;?!.-]\s*', user_input.lower())
     ####################
     # Tokenize using NLTK (If works comment line above "split_message....")
+    #split_new = NLTK SPLITTING
+
     # Remove stop words - Use nltk
+    #split_new = NLTK stop word removal
+    
+    #Lemmatize
+    #split_new = Lemmatized words
     #####################
     response = check_all_messages(split_message, user_input)
 
