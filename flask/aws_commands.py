@@ -1,17 +1,9 @@
-#!/bin/bash
-from asyncio.base_futures import _format_callbacks
-from asyncio.constants import ACCEPT_RETRY_DELAY
-from asyncio.windows_utils import pipe
-from ensurepip import version
-import http
-from re import L
-from tkinter import Y
+#sudo yum update -y
+#sudo yum install git -y
+#git clone https://github.com/stephenrule/IS707.git
+#cd IS707
 
-
-sudo yum update -y
-sudo yum install git -y
-git clone https://github.com/stephenrule/IS707.git
-cd IS707
+# Assumption: Above is already complete
 sudo rm -rf Archive django Storage\ Facility.png
 cd flask
 sudo yum install gcc openssl-devel bzip2-devel libffi-devel -y
@@ -34,14 +26,15 @@ sudo yum groupinstall "Development Tools" -y
 # Might need scikit-learn==0.20.3 
 pip3.9 install -r requirements.txt --no-cache-dir
 pip3.9 install allennlp --no-cache-dir
-pip3.9 install allennlp_modules --no-cache-dir
+pip3.9 install allennlp_models --no-cache-dir
 sudo yum install python3-tkinter -y
 
 ## Note: I had to comment the line about tkinter from routes.py because there is no gui to use that command. Not sure what the import is for yet.
 
 # Get sqlite3
-sudo yum install sqlite-devel xy-devel -y
 cd /opt/Python-3.9.10
+sudo yum install sqlite-devel -y
+sudo yum install xz-devel -y
 sudo ./configure
 sudo make altinstall
 
