@@ -28,10 +28,10 @@ jobs:
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET.TARGET_DIR }}
+          #SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          #REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          #REMOTE_USER: ${{ secrets.USERNAME }}
+          #TARGET: ${{ secrets.TARGET.TARGET_DIR }}
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
