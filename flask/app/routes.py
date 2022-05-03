@@ -36,7 +36,9 @@ def home():
 # Note: Remove link in base.html and delete test.html when complete
 @app.route('/test')
 def test1():
-    return render_template("test.html")
+    response_item = local_db.getResponse()
+    print(response_item)
+    return render_template("test.html", len = len(response_item), responseItem=response_item)
 
 # Profile Page - Used to make purchases and update information
 # Thought: Display current information and have a form below to update the information

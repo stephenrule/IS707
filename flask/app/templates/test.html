@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Testing Page</h1
-
+    <h1>Evaluation Page</h1
+    
+    <ol>
+        <li>Date/Time, User Original Message, Chatbot Response Message</li>
+        {% for i in range (0, len) %}
+          <li>{{responseItem[i]}}</li>
+        {%endfor%}
+    </ol>
+    
+      
 {% endblock %}

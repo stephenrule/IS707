@@ -7,6 +7,7 @@ from os import getlogin
 import sqlite3
 import itertools as it
 from typing import get_args
+from datetime import date, datetime
 
 
 
@@ -22,7 +23,7 @@ def standUpDB():
     cur.execute('''CREATE TABLE storage
                     (storage_pk int PRIMARY KEY, unit_number int, storage_type char, storage_size varchar, storage_price int, facility_id varchar, customer_id varchar, FOREIGN KEY (facility_id) REFERENCES facility(facility_name), FOREIGN KEY (customer_id) REFERENCES customer(customer_id))''')
     cur.execute('''CREATE TABLE response
-                    (respone_pk int PRIMARY KEY, user_question varchar, bot_response varchar)''')
+                    (response_date datetime, user_question varchar, bot_response varchar)''')
     insertFacData(cur)
     insertCustData(cur)
     insertStorageData(cur)
@@ -65,8 +66,8 @@ def insertStorageData(cur):
 
 def insertResponseData(cur):
     cur.execute('''INSERT INTO response
-        (user_question, bot_response)
-        VALUES ('Test User Question', 'Test Bot Response')''')
+        (response_date, user_question, bot_response)
+        VALUES ('2022-05-02 09:00:00', 'Test User Question', 'Test Bot Response')''')
 
 def getUnitAvailability(location, unitSize):
     #returns number of open units of a given size
@@ -214,10 +215,12 @@ def addSimpleUserAccount(cID):
 def addResponse(user_msg, bot_rsp):
     con = sqlite3.connect('chat.db')
     cur = con.cursor()
+    today = datetime.today()
+    d1 = today.strftime("%Y-%m-%d %H:%M:%S")
     insert_statement = '''INSERT INTO response
-        (user_question, bot_response)
-        VALUES (?,?)'''
-    params = user_msg, bot_rsp
+        (response_date, user_question, bot_response)
+        VALUES (?,?,?)'''
+    params = d1, user_msg, bot_rsp
     insert = cur.execute(insert_statement, params)
     con.commit()
     con.close()
@@ -265,5 +268,6 @@ def getResponse():
     try:
         for row in selectData:
             print(row)
+            return selectData.fetchall()
     finally:
         con.close()
