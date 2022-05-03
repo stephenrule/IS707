@@ -12,7 +12,12 @@ import BiDAF
 import nltk
 nltk.download('wordnet')
 nltk.download('omw-1.4')
+nltk.download('punkt')
+nltk.download('stopwords')
 from nltk.corpus import wordnet
+from nltk.corpus import stopwords
+from nltk.tokenize import wordpunct_tokenize
+
 
 
 #### Determines probability based on number of words that match and returns highest value (Percentage)
@@ -134,13 +139,15 @@ def check_all_messages(message, ai_string):
 
 # Used to get the response
 def get_response(user_input):
-    split_message = re.split(r'\s+|[,;?!.-]\s*', user_input.lower())
+    #split_message = re.split(r'\s+|[,;?!.-]\s*', user_input.lower())
     ####################
     # Tokenize using NLTK (If works comment line above "split_message....")
-    #split_new = NLTK SPLITTING
+    split_message = wordpunct_tokenize(user_input.lower())
 
     # Remove stop words - Use nltk
     #split_new = NLTK stop word removal
+    stop_words = set(stopwords.words('english'))
+    filtered_sentence = [w for w in split_message if not w.lower() in stop_words]
     
     #Lemmatize
     #split_new = Lemmatized words
