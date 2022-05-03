@@ -5,6 +5,6 @@
     "\\flask\\app",
     "\\flask\\app\\templates"
   ],
-  "SelectedNode": "\\flask\\db.py",
+  "SelectedNode": "\\flask\\chat.py",
   "PreviewInSolutionExplorer": false
 }
