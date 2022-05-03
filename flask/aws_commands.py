@@ -2,10 +2,10 @@
 #sudo yum install git -y
 #git clone https://github.com/stephenrule/IS707.git
 #cd IS707
+#sudo rm -rf Archive django Storage\ Facility.png
+#cd flask
 
-# Assumption: Above is already complete
-sudo rm -rf Archive django Storage\ Facility.png
-cd flask
+# Assumption: Above is already complete: bash aws_commands.py
 sudo yum install gcc openssl-devel bzip2-devel libffi-devel -y
 cd /opt
 sudo wget https://www.python.org/ftp/python/3.9.10/Python-3.9.10.tgz
@@ -46,7 +46,7 @@ flask db migrate -m "init"
 flask db upgrade
 
 # Build DB 2
-python 3.9 standup.py
+python3.9 standup.py
 
 # Firewall - AWS Web Interface opens the port for us
 #sudo firewall-cmd --permanent --add-service=http
