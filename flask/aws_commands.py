@@ -61,6 +61,7 @@ python 3.9 standup.py
 #sudo iptables -L
 #sudo iptables -I INPUT -i eth0 -p tcp --dport 80 -m comment --comment "# Flask WebApp #" -j ACCEPT_RETRY_DELAY
 #sudo iptables -L -n
+#sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 5000
 
 
 # Run Flask
