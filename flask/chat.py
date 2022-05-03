@@ -152,7 +152,7 @@ def get_response(user_input):
     #Lemmatize
     #split_new = Lemmatized words
     #####################
-    response = check_all_messages(split_message, user_input)
+    response = check_all_messages(filtered_sentence, user_input)
 
     # Add user_input and respone to database to view later.
     local_db.addResponse(user_input, response)
