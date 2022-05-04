@@ -8,8 +8,8 @@ BLUE="\033[01;34m"     # Heading
 BOLD="\033[01;01m"     # Highlight
 RESET="\033[00m"       # Normal
 
-STAGE = 0
-TOTAL = 11
+STAGE=0
+TOTAL=11
 
 
 #sudo yum update -y
@@ -95,4 +95,4 @@ flask run --host 0.0.0.0
 ## Command: screen -ls
 ## Command: screen -r
 
-## Note: 80 is denied on ec2 but 5000 is save. Make sure to open 5000 from 
+## Note: 80 is denied on ec2 but 5000 is good. Make sure to open 5000 from aws interface 
