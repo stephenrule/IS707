@@ -41,14 +41,17 @@ jobs:
           name: id_rsa
           known_hosts: unnecessary
           
-      - name: deploy code
-        run: bash ./deploy_to_aws.sh
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          SOURCE: "./"
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: "/home/ec2-user/IS707"
+      #- name: deploy code
+        #run: bash ./deploy_to_aws.sh
+        #env:
+          #SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          #SOURCE: "./"
+          #REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          #REMOTE_USER: ${{ secrets.USERNAME }}
+          #TARGET: "/home/ec2-user/IS707"
+          
+      - name: deploy code 2
+        run: ssh ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} bash /home/ec2-user/IS707/flask/aws_commands.sh
 
           
   build:
