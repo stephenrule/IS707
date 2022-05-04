@@ -3,7 +3,7 @@
 echo 'Starting to Deploy...'
 ssh ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }}
 
-cd ${{ secrets.TARGET }}/flask
+cd /home/ec2-user/IS707/flask
 bash aws_commands.sh
 
 echo 'Deployment completed successfully'
