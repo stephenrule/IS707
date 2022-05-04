@@ -35,7 +35,7 @@ jobs:
           TARGET: "/home/ec2-user/IS707"
           
       - name: deploy code
-        run: sudo ./deploy_to_aws.sh
+        run: bash ./deploy_to_aws.sh
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           SOURCE: "./"
