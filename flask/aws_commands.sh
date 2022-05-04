@@ -89,8 +89,8 @@ python3.9 standup.py
 (( STAGE++ )); echo -e "\n\n ${GREEN}[+]${RESET} (${STAGE}/${TOTAL}) Yum install screen and start flask webapp ${GREEN}Test${RESET}"
 # Run Flask
 sudo yum install screen -y
-screen
-flask run --host 0.0.0.0
+#screen  # Not currently working
+#flask run --host 0.0.0.0 # Not currenlty working (Log into system and run)
 ## Command: Ctrl + A, D
 ## Command: screen -ls
 ## Command: screen -r
