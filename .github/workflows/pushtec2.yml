@@ -20,18 +20,19 @@ jobs:
     
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
         
       - name: Update
         run: sudo apt-get update
           
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@2.1.5 
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          SOURCE: "./"
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET.TARGET_DIR }}
+          TARGET: "/home/ec2-user/IS707"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
