@@ -91,7 +91,7 @@ def check_all_messages(message, ai_string, switch):
         # Database responses
         response('Small Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'SMALL')), ['small', 'units', 'available'], required_words=['small', 'units', 'available'])
         response('Medium Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'MEDIUM')), ['medium', 'units', 'available'], required_words=['medium', 'units', 'available'])
-        response('Medium Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'LARGE')), ['large', 'units', 'available'], required_words=['large', 'units', 'available'])
+        response('Large Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'LARGE')), ['large', 'units', 'available'], required_words=['large', 'units', 'available'])
         response('Small Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'SMALL')) + 
                 ', Medium Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'MEDIUM')) +
                 ', Large Units Available: ' + str(local_db.getUnitAvailability('catonsville', 'LARGE'))
