@@ -51,28 +51,36 @@ def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     if request.method == "POST":
         if request.form["submit_button"] == "Add 1 Small Unit":
-            # Database Code (Delete Print Above)
-            local_db.selectAndAddUserUnit(user.username,'SMALL','catonsville')
+            # Database Code
+            if(local_db.getUnitAvailability('catonsville', 'SMALL') > 0):
+                local_db.selectAndAddUserUnit(user.username,'SMALL','catonsville')
             return redirect(url_for('user', username=current_user.username))
         elif request.form["submit_button"] == "Remove 1 Small Unit":
-            # Database Code (Delete Print Above)
-            local_db.selectAndRemoveUserUnit(user.username,'SMALL','catonsville')
+            # Database Code
+            #if user has more than 0 small units, remove one
+            #get number of user small units with:
+            if(len(local_db.getUserUnits(user.username, 'SMALL')) > 0):
+                local_db.selectAndRemoveUserUnit(user.username,'SMALL','catonsville')
             return redirect(url_for('user', username=current_user.username))
         elif request.form["submit_button"] == "Add 1 Medium Unit":
-            # Database Code (Delete Print Above)
-            local_db.selectAndAddUserUnit(user.username,'MEDIUM','catonsville')
+            # Database Code
+            if(local_db.getUnitAvailability('catonsville', 'MEDIUM') > 0):
+                local_db.selectAndAddUserUnit(user.username,'MEDIUM','catonsville')
             return redirect(url_for('user', username=current_user.username))
         elif request.form["submit_button"] == "Remove 1 Medium Unit":
-            # Database Code (Delete Print Above)
-            local_db.selectAndRemoveUserUnit(user.username,'MEDIUM','catonsville')
+            # Database Code
+            if(len(local_db.getUserUnits(user.username, 'MEDIUM')) > 0):
+                local_db.selectAndRemoveUserUnit(user.username,'MEDIUM','catonsville')
             return redirect(url_for('user', username=current_user.username))
         elif request.form["submit_button"] == "Add 1 Large Unit":
-            # Database Code (Delete Print Above)
-            local_db.selectAndAddUserUnit(user.username,'LARGE','catonsville')
+            # Database Code
+            if(local_db.getUnitAvailability('catonsville', 'LARGE') > 0):
+                local_db.selectAndAddUserUnit(user.username,'LARGE','catonsville')
             return redirect(url_for('user', username=current_user.username))
         elif request.form["submit_button"] == "Remove 1 Large Unit":
-            # Database Code (Delete Print Above)
-            local_db.selectAndRemoveUserUnit(user.username,'LARGE','catonsville')
+            # Database Code
+            if(len(local_db.getUserUnits(user.username, 'LARGE')) > 0):
+                local_db.selectAndRemoveUserUnit(user.username,'LARGE','catonsville')
             return redirect(url_for('user', username=current_user.username)) 
         else: 
             print('Everything Else')
