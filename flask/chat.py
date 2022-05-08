@@ -17,6 +17,7 @@ nltk.download('stopwords')
 from nltk.corpus import wordnet
 from nltk.corpus import stopwords
 from nltk.tokenize import wordpunct_tokenize
+from nltk.stem import WordNetLemmatizer
 
 
 
@@ -151,6 +152,10 @@ def get_response(user_input):
     
     #Lemmatize
     #split_new = Lemmatized words
+    #lemmatizer = WordNetLemmatizer()
+    #lemmatizer.lemmatize("word")
+
+
     #####################
     response = check_all_messages(filtered_sentence, user_input)
 
