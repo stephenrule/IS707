@@ -20,18 +20,40 @@ jobs:
     
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
         
       - name: Update
         run: sudo apt-get update
           
-      #- name: Deploy to Server
-        #uses: easingthemes/ssh-deploy@main
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@v2.1.5 
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          SOURCE: "./"
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: "/home/ec2-user/IS707"
+          
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.EC2_SSH_KEY }}
+          name: id_rsa
+          known_hosts: unnecessary
+          
+      #- name: deploy code
+        #run: bash ./deploy_to_aws.sh
         #env:
           #SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          #SOURCE: "./"
           #REMOTE_HOST: ${{ secrets.HOST_DNS }}
           #REMOTE_USER: ${{ secrets.USERNAME }}
-          #TARGET: ${{ secrets.TARGET.TARGET_DIR }}
+          #TARGET: "/home/ec2-user/IS707"
+          
+      - name: deploy code 2
+        run: ssh ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} bash /home/ec2-user/IS707/flask/aws_commands.sh
+
+          
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -39,7 +61,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v1
 
       # Runs a single command using the runners shell
       - name: Run a one-line script

@@ -74,7 +74,7 @@ flask db init
 flask db migrate -m "init"
 flask db upgrade
 
-(( STAGE++ )); echo -e "\n\n ${GREEN}[+]${RESET} (${STAGE}/${TOTAL}) ${GREEN} Build DB 2 ${RESET}"
+(( STAGE++ )); echo -e "\n\n ${GREEN}[+]${RESET} (${STAGE}/${TOTAL}) Build DB 2 ${GREEN}Test${RESET}"
 # Build DB 2
 python3.9 standup.py
 
@@ -86,11 +86,11 @@ python3.9 standup.py
 #sudo iptables -L -n
 #sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 5000
 
-(( STAGE++ )); echo -e "\n\n ${GREEN}[+]${RESET} (${STAGE}/${TOTAL}) ${GREEN} Yum install screen and start flask webapp ${RESET}"
+(( STAGE++ )); echo -e "\n\n ${GREEN}[+]${RESET} (${STAGE}/${TOTAL}) Yum install screen and start flask webapp ${GREEN}Test${RESET}"
 # Run Flask
 sudo yum install screen -y
-screen
-flask run --host 0.0.0.0
+#screen  # Not currently working
+#flask run --host 0.0.0.0 # Not currenlty working (Log into system and run)
 ## Command: Ctrl + A, D
 ## Command: screen -ls
 ## Command: screen -r
